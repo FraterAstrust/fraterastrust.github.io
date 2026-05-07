@@ -1,0 +1,422 @@
+:root {
+    --gold: #d4af37;
+    --gold-dim: #8a6e1e;
+    --gold-glow: rgba(212,175,55,0.18);
+    --cyan: #00d1ff;
+    --cyan-dim: #006f87;
+    --bg: #060606;
+    --bg2: #0e0e0e;
+    --bg3: #111109;
+    --text: #ccc8b8;
+    --text-bright: #f0e68c;
+    --border: rgba(212,175,55,0.15);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.8;
+    background-image:
+        radial-gradient(ellipse at 15% 0%, rgba(0,80,160,0.06) 0%, transparent 55%),
+        radial-gradient(ellipse at 85% 100%, rgba(212,175,55,0.07) 0%, transparent 55%);
+    background-attachment: fixed;
+    text-align: center;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #080808; }
+::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 3px; }
+
+/* ── BACKGROUND SIGIL ── */
+.sigil-bg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 700px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.6;
+}
+.sigil-svg { width: 100%; height: 100%; animation: sigil-rotate 120s linear infinite; }
+@keyframes sigil-rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* ── PAGE WRAP ── */
+.page-wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2rem 2rem;
+}
+
+/* ── HEADER ── */
+.page-header {
+    padding: 2rem 0 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.header-ornament {
+    color: var(--gold-dim);
+    letter-spacing: 0.8rem;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.7;
+}
+
+.page-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 700;
+    color: var(--gold);
+    text-shadow: 0 0 40px rgba(212,175,55,0.35), 0 0 80px rgba(212,175,55,0.1);
+    line-height: 1.3;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.page-subtitle {
+    font-family: 'Cinzel', serif;
+    color: var(--cyan);
+    font-size: 0.82rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-bottom: 1.5rem;
+}
+
+.header-divider {
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    margin: 0 auto;
+}
+
+/* ── CARDS ── */
+.hero-card {
+    background: linear-gradient(135deg, var(--bg2) 0%, var(--bg3) 100%);
+    border: 1px solid var(--border);
+    padding: 2.2rem 2.4rem;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    text-align: left;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(212,175,55,0.08);
+}
+
+/* ── INTRO ── */
+.intro-card { text-align: center; }
+.intro-card p { max-width: 640px; margin: 0 auto; }
+
+.astrust-seal {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 0.7rem;
+    letter-spacing: 5px;
+    color: var(--gold-dim);
+    border: 1px solid var(--border);
+    display: inline-block;
+    padding: 0.3rem 1.2rem;
+    margin-bottom: 1.4rem;
+    border-radius: 2px;
+}
+
+/* ── SECTION TITLES ── */
+.section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+    text-align: center;
+}
+
+.section-intro {
+    text-align: center;
+    margin-bottom: 1.8rem;
+    opacity: 0.85;
+    font-style: italic;
+}
+
+/* ── SANCTUM GRID ── */
+.sanctum-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.sanctum-item {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(212,175,55,0.1);
+    border-radius: 4px;
+    padding: 1.2rem 1.2rem 1rem;
+    text-align: center;
+    transition: border-color 0.3s, background 0.3s;
+}
+
+.sanctum-item:hover {
+    border-color: rgba(212,175,55,0.3);
+    background: rgba(212,175,55,0.04);
+}
+
+.sanctum-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+.sanctum-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+    color: var(--text-bright);
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+}
+
+.sanctum-desc {
+    font-size: 0.9rem;
+    opacity: 0.75;
+    line-height: 1.5;
+}
+
+/* ── THRESHOLD ── */
+.threshold {
+    border: 1px solid rgba(0,209,255,0.15);
+    background: linear-gradient(135deg, rgba(0,30,50,0.6), rgba(6,6,6,0.9));
+    border-radius: 4px;
+    padding: 2.2rem 2.4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(0,209,255,0.04), inset 0 1px 0 rgba(0,209,255,0.06);
+}
+
+.threshold-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 4px;
+    color: var(--cyan);
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 0.5rem;
+}
+
+.threshold p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ── TIERS ── */
+.tiers-section { text-align: center; }
+
+.tiers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.2rem;
+    margin-top: 0.5rem;
+    align-items: start;
+}
+
+.tier {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.6rem 1.2rem 1.4rem;
+    background: rgba(255,255,255,0.02);
+    position: relative;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.tier:hover { transform: translateY(-3px); }
+
+.tier-top {
+    border-color: rgba(212,175,55,0.35);
+    background: rgba(212,175,55,0.04);
+    box-shadow: 0 0 30px rgba(212,175,55,0.08);
+}
+
+.tier-ribbon {
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: #000;
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 0.25rem 0.8rem;
+    border-radius: 0 0 4px 4px;
+    white-space: nowrap;
+}
+
+.tier-badge {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+.tier-top .tier-badge { color: var(--gold); }
+
+.tier-price {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.8rem;
+    color: var(--text-bright);
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+.tier-price span { font-size: 0.85rem; opacity: 0.6; font-family: 'EB Garamond', serif; }
+
+.tier-perks {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.4rem;
+    text-align: left;
+}
+
+.tier-perks li {
+    font-size: 0.88rem;
+    padding: 0.3rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    padding-left: 1rem;
+    position: relative;
+    opacity: 0.85;
+    line-height: 1.5;
+}
+
+.tier-perks li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--gold-dim);
+    opacity: 0.7;
+}
+
+/* ── BUTTONS ── */
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    border-radius: 3px;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+    width: 100%;
+    text-align: center;
+}
+
+.btn:hover { transform: translateY(-2px); opacity: 0.9; }
+
+.btn-outline {
+    border: 1px solid var(--border);
+    color: var(--text);
+    background: transparent;
+}
+.btn-outline:hover { border-color: var(--gold-dim); }
+
+.btn-gold {
+    background: var(--gold-dim);
+    color: #f0e68c;
+    border: 1px solid rgba(212,175,55,0.4);
+}
+
+.btn-cyan {
+    background: var(--cyan-dim);
+    color: #e0faff;
+    border: 1px solid rgba(0,209,255,0.3);
+}
+
+.btn-hero {
+    background: var(--gold);
+    color: #000;
+    font-size: 0.85rem;
+    padding: 1rem 2.4rem;
+    letter-spacing: 2px;
+    box-shadow: 0 0 30px rgba(212,175,55,0.3);
+    width: auto;
+}
+.btn-hero:hover {
+    box-shadow: 0 0 50px rgba(212,175,55,0.45);
+    transform: translateY(-3px);
+    opacity: 1;
+}
+
+/* ── CTA ── */
+.cta-section {
+    padding: 2rem 0 1rem;
+    text-align: center;
+}
+
+.cta-quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--text-bright);
+    opacity: 0.7;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.platform-badges {
+    margin-top: 1.4rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
+
+.badge {
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 0.3rem 0.9rem;
+    font-size: 0.78rem;
+    opacity: 0.75;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.5px;
+    color: var(--text);
+}
+
+/* ── FOOTER ── */
+footer {
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+    color: var(--gold-dim);
+    font-size: 0.78rem;
+    opacity: 0.6;
+}
+
+.footer-ornament {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 700px) {
+    .page-wrap { padding: 2rem 1.2rem; }
+    .hero-card, .threshold { padding: 1.6rem 1.4rem; }
+    .sanctum-grid { grid-template-columns: 1fr; gap: 0.8rem; }
+    .tiers-grid { grid-template-columns: 1fr; }
+    .tier { max-width: 380px; margin: 0 auto; width: 100%; }
+    .page-title { font-size: 1.5rem; }
+    .platform-badges { flex-direction: column; align-items: center; }
+    .btn { font-size: 0.75rem; }
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+    .tiers-grid { grid-template-columns: 1fr 1fr; }
+    .tier-free { grid-column: 1 / -1; max-width: 300px; margin: 0 auto; }
+}
