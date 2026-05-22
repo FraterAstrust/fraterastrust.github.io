@@ -217,10 +217,17 @@ body {
 
 .tiers-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.2rem;
     margin-top: 0.5rem;
     align-items: start;
+}
+
+.tiers-grid .tier:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 320px;
+    width: 100%;
 }
 
 .tier {
