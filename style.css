@@ -10,6 +10,7 @@
     --text: #ccc8b8;
     --text-bright: #f0e68c;
     --border: rgba(212,175,55,0.15);
+    --zelator: #8a9e6b;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -27,18 +28,16 @@ body {
     text-align: center;
 }
 
-::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #080808; }
-::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 3px; }
+::-webkit-scrollbar        { width: 5px; }
+::-webkit-scrollbar-track  { background: #080808; }
+::-webkit-scrollbar-thumb  { background: var(--gold-dim); border-radius: 3px; }
 
 /* ── BACKGROUND SIGIL ── */
 .sigil-bg {
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    width: 700px;
-    height: 700px;
+    width: 700px; height: 700px;
     pointer-events: none;
     z-index: 0;
     opacity: 0.6;
@@ -50,16 +49,13 @@ body {
 .page-wrap {
     position: relative;
     z-index: 1;
-    max-width: 800px;
+    max-width: 860px;
     margin: 0 auto;
     padding: 3rem 2rem 2rem;
 }
 
 /* ── HEADER ── */
-.page-header {
-    padding: 2rem 0 1.5rem;
-    margin-bottom: 2.5rem;
-}
+.page-header { padding: 2rem 0 1.5rem; margin-bottom: 2.5rem; }
 
 .header-ornament {
     color: var(--gold-dim);
@@ -91,8 +87,7 @@ body {
 }
 
 .header-divider {
-    width: 120px;
-    height: 1px;
+    width: 120px; height: 1px;
     background: linear-gradient(to right, transparent, var(--gold), transparent);
     margin: 0 auto;
 }
@@ -108,7 +103,6 @@ body {
     box-shadow: 0 8px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(212,175,55,0.08);
 }
 
-/* ── INTRO ── */
 .intro-card { text-align: center; }
 .intro-card p { max-width: 640px; margin: 0 auto; }
 
@@ -159,17 +153,12 @@ body {
     text-align: center;
     transition: border-color 0.3s, background 0.3s;
 }
-
 .sanctum-item:hover {
     border-color: rgba(212,175,55,0.3);
     background: rgba(212,175,55,0.04);
 }
 
-.sanctum-icon {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-    opacity: 0.8;
-}
+.sanctum-icon { font-size: 1.8rem; margin-bottom: 0.5rem; opacity: 0.8; }
 
 .sanctum-name {
     font-family: 'Cinzel', serif;
@@ -180,11 +169,7 @@ body {
     text-transform: uppercase;
 }
 
-.sanctum-desc {
-    font-size: 0.9rem;
-    opacity: 0.75;
-    line-height: 1.5;
-}
+.sanctum-desc { font-size: 0.9rem; opacity: 0.75; line-height: 1.5; }
 
 /* ── THRESHOLD ── */
 .threshold {
@@ -207,39 +192,101 @@ body {
     margin-bottom: 0.5rem;
 }
 
-.threshold p {
-    max-width: 600px;
-    margin: 0 auto;
-}
+.threshold p { max-width: 600px; margin: 0 auto; }
 
-/* ── TIERS ── */
+/* ── MEMBERSHIP SECTION ── */
 .tiers-section { text-align: center; }
 
-.tiers-grid {
+/* Free tier + enrolled banner row */
+.tier-free-row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.2rem;
-    margin-top: 0.5rem;
-    align-items: start;
+    grid-template-columns: 240px 1fr;
+    gap: 1.4rem;
+    margin-bottom: 1.4rem;
+    align-items: stretch;
+    text-align: left;
 }
 
-.tiers-grid .tier:last-child {
-    grid-column: 1 / -1;
-    justify-self: center;
-    max-width: 320px;
-    width: 100%;
+.tier-free-card {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.6rem 1.4rem;
+    background: rgba(255,255,255,0.02);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.tier-free-note {
+    font-size: 0.85rem;
+    opacity: 0.6;
+    font-style: italic;
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+.enrolled-banner {
+    border: 1px solid rgba(212,175,55,0.2);
+    border-radius: 4px;
+    padding: 1.4rem 1.6rem;
+    background: rgba(212,175,55,0.03);
+}
+
+.enrolled-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+}
+
+.enrolled-note {
+    font-size: 0.92rem;
+    opacity: 0.8;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.enrolled-perks {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem 1.4rem;
+}
+
+.enrolled-perks li {
+    font-size: 0.85rem;
+    opacity: 0.75;
+    position: relative;
+    padding-left: 1rem;
+}
+.enrolled-perks li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--gold-dim);
+}
+
+/* Paid tiers: 4-column grid */
+.tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    align-items: start;
 }
 
 .tier {
     border: 1px solid var(--border);
     border-radius: 4px;
-    padding: 1.6rem 1.2rem 1.4rem;
+    padding: 1.4rem 1.1rem 1.3rem;
     background: rgba(255,255,255,0.02);
     position: relative;
     text-align: center;
     transition: transform 0.2s;
 }
-
 .tier:hover { transform: translateY(-3px); }
 
 .tier-top {
@@ -248,10 +295,14 @@ body {
     box-shadow: 0 0 30px rgba(212,175,55,0.08);
 }
 
+.tier-scholar {
+    border-color: rgba(0,209,255,0.2);
+    background: rgba(0,209,255,0.02);
+}
+
 .tier-ribbon {
     position: absolute;
-    top: -1px;
-    left: 50%;
+    top: -1px; left: 50%;
     transform: translateX(-50%);
     background: var(--gold);
     color: #000;
@@ -271,37 +322,36 @@ body {
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--gold-dim);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
     margin-top: 0.5rem;
 }
 .tier-top .tier-badge { color: var(--gold); }
 
 .tier-price {
     font-family: 'Cinzel Decorative', serif;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     color: var(--text-bright);
-    margin-bottom: 1rem;
+    margin-bottom: 0.9rem;
     line-height: 1;
 }
-.tier-price span { font-size: 0.85rem; opacity: 0.6; font-family: 'EB Garamond', serif; }
+.tier-price span { font-size: 0.8rem; opacity: 0.6; font-family: 'EB Garamond', serif; }
 
 .tier-perks {
     list-style: none;
     padding: 0;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.2rem;
     text-align: left;
 }
 
 .tier-perks li {
-    font-size: 0.88rem;
-    padding: 0.3rem 0;
+    font-size: 0.84rem;
+    padding: 0.28rem 0;
     border-bottom: 1px solid rgba(255,255,255,0.04);
     padding-left: 1rem;
     position: relative;
     opacity: 0.85;
-    line-height: 1.5;
+    line-height: 1.4;
 }
-
 .tier-perks li::before {
     content: '–';
     position: absolute;
@@ -313,11 +363,11 @@ body {
 /* ── BUTTONS ── */
 .btn {
     display: inline-block;
-    padding: 0.7rem 1.4rem;
+    padding: 0.65rem 1.2rem;
     border-radius: 3px;
     text-decoration: none;
     font-family: 'Cinzel', serif;
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     font-weight: 600;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -325,7 +375,6 @@ body {
     width: 100%;
     text-align: center;
 }
-
 .btn:hover { transform: translateY(-2px); opacity: 0.9; }
 
 .btn-outline {
@@ -404,26 +453,29 @@ footer {
     font-size: 0.78rem;
     opacity: 0.6;
 }
-
-.footer-ornament {
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-    letter-spacing: 0.5rem;
-}
+.footer-ornament { font-size: 0.9rem; margin-bottom: 0.5rem; letter-spacing: 0.5rem; }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 700px) {
-    .page-wrap { padding: 2rem 1.2rem; }
+@media (max-width: 780px) {
+    .page-wrap    { padding: 2rem 1.2rem; }
     .hero-card, .threshold { padding: 1.6rem 1.4rem; }
     .sanctum-grid { grid-template-columns: 1fr; gap: 0.8rem; }
-    .tiers-grid { grid-template-columns: 1fr; }
-    .tier { max-width: 380px; margin: 0 auto; width: 100%; }
-    .page-title { font-size: 1.5rem; }
-    .platform-badges { flex-direction: column; align-items: center; }
-    .btn { font-size: 0.75rem; }
+
+    .tier-free-row {
+        grid-template-columns: 1fr;
+    }
+
+    .tiers-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.9rem;
+    }
+
+    .page-title        { font-size: 1.5rem; }
+    .platform-badges   { flex-direction: column; align-items: center; }
+    .btn-hero          { font-size: 0.78rem; padding: 0.9rem 1.8rem; }
 }
 
-@media (min-width: 701px) and (max-width: 900px) {
-    .tiers-grid { grid-template-columns: 1fr 1fr; }
-    .tier-free { grid-column: 1 / -1; max-width: 300px; margin: 0 auto; }
+@media (max-width: 480px) {
+    .tiers-grid { grid-template-columns: 1fr; }
+    .tier       { max-width: 340px; margin: 0 auto; width: 100%; }
 }
