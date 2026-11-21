@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METALWORKING :: THE SMELTER'S BENCH OF KEMET :: LIBRETH ARCHIVE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/wiki-style.css">
+    <style>
+        .page-header::before { content: '𓍍 𓋞 𓌉 𓈔'; }
+        .blue-block {
+            border: 1px solid rgba(0,180,220,0.25);
+            background: rgba(0,20,35,0.7);
+            padding: 1.3rem 1.8rem;
+            margin: 2rem 0;
+        }
+        .bb-title {
+            font-family: 'VT323', monospace;
+            color: var(--cyan);
+            letter-spacing: 0.1em;
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+        }
+        .practice-box {
+            border: 1px solid rgba(0,210,100,0.2);
+            background: rgba(0,25,12,0.6);
+            padding: 1.3rem 1.8rem;
+            margin: 2rem 0;
+        }
+        .practice-title {
+            font-family: 'Cinzel', serif;
+            color: #00e87a;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            margin-bottom: 0.7rem;
+        }
+        .metal-card { border-left: 3px solid rgba(212,175,55,0.4); }
+    </style>
+</head>
+<body data-page="metalworking">
+<div class="page-wrap">
+
+    <!-- HEADER -->
+    <header class="page-header">
+        <h1 class="page-title">PHARAONIC METALWORKING AND METALLURGY</h1>
+        <div style="font-family:'Cinzel',serif;font-size:1rem;color:var(--gold-dim);letter-spacing:0.3em;margin-top:0.5rem;">ḥmt · nbw · ḥḏ · biꜣ</div>
+        <p class="page-subtitle">// ORE, CRUCIBLE AND HAMMER :: SMELTING, CASTING, REFINING :: THE BENCH RECORD //</p>
+        <p class="page-epithet">How Egypt actually made its metals: the ores it dug, the fires it blew, the alloys it
+        mixed, and the operations its tomb painters recorded stroke by stroke — the procedural ground on which
+        the later alchemy of Kemet stands.</p>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb">
+        <a href="index.html">WIKI HOME</a> &gt; METALWORKING
+    </nav>
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc-block">
+        <div class="toc-title">// ARCHIVE CONTENTS //</div>
+        <ul class="toc-list">
+            <li><a href="#words">I. Words for Metal — the Vocabulary of the Bench</a></li>
+            <li><a href="#evidence">II. The Bench Record and Its Limits — How This Article Knows</a></li>
+            <li><a href="#copper-ores">III. Copper Ores — Malachite and the Green Stones That Smelt</a></li>
+            <li><a href="#copper-sources">IV. Where the Copper Came From — Sinai, the Eastern Desert, Timna, Cyprus</a></li>
+            <li><a href="#smelting">V. Smelting Copper, Step by Step — the Crucible Protocol</a></li>
+            <li><a href="#air">VI. Furnaces, Crucibles and Air — Blowpipe, Pot Bellows, Foot Bellows</a></li>
+            <li><a href="#slag">VII. Reading the Slag — and Refining the Raw Copper</a></li>
+            <li><a href="#arsenical">VIII. Arsenical Copper — the First Working Alloy</a></li>
+            <li><a href="#bronze">IX. Tin and the Bronze Problem — an Imported Ingredient</a></li>
+            <li><a href="#gold-sources">X. Gold Sources — the Three Golds of the Texts</a></li>
+            <li><a href="#gold-winning">XI. Winning the Gold — Panning, Washing Tables, Crushed Quartz</a></li>
+            <li><a href="#gold-as-found">XII. Gold as Found — Composition, Colour, and the Unrefined Norm</a></li>
+            <li><a href="#goldsmith">XIII. The Goldsmith's Bench — Sheet, Foil, Wire, Raising and Chasing</a></li>
+            <li><a href="#joining">XIV. Joining and Surface — Solder, Granulation, Inlay and Gilding</a></li>
+            <li><a href="#silver">XV. Silver — the White Gold That Had to Be Imported</a></li>
+            <li><a href="#electrum">XVI. Electrum — Between Gold and Silver</a></li>
+            <li><a href="#meteoric-iron">XVII. Iron from the Sky — Meteoric Iron, Gerzeh to Tutankhamun</a></li>
+            <li><a href="#smelted-iron">XVIII. Smelted Iron's Late Arrival — the Bloomery Problem</a></li>
+            <li><a href="#moulds">XIX. Casting I — Open Moulds and Piece Moulds</a></li>
+            <li><a href="#lost-wax">XX. Casting II — Lost Wax, Step by Step</a></li>
+            <li><a href="#sheet-work">XXI. Sheet Work — Raising, Annealing, and the Great Copper Statues</a></li>
+            <li><a href="#refining">XXII. Refining and Cupellation — the Evidence at Its Real Strength</a></li>
+            <li><a href="#rekhmire">XXIII. The Scenes as Documents — Rekhmire Read Step by Step</a></li>
+            <li><a href="#workshops">XXIV. Workshops and Workmen — Qantir, Amarna, the House of Gold</a></li>
+            <li><a href="#repeat-it">XXV. Repeat It — the Master Protocols in Brief</a></li>
+            <li><a href="#sources">XXVI. Sources and Scholarship</a></li>
+        </ul>
+    </div>
+
+    <!-- SECTION I -->
+    <section id="words">
+        <h2 class="section-head">I. Words for Metal — the Vocabulary of the Bench</h2>
+        <p>
+Egyptian metal vocabulary is workshop vocabulary: its oldest words name materials by how they present to the
+hand and the eye, not by chemical identity, and several of them cover ranges that modern analysis splits
+apart. The reader who keeps that in mind will not be misled when a single Egyptian word must be translated
+"copper" in one text and "bronze" in another. The metal was one material to its makers, graded by hardness
+and colour; the alloy boundary is ours.
+        </p>
+        <p>
+The base metal of the whole system is
+<i> ḥmt</i> [Gardiner: V28-G17-X1-U24] [𓎛𓅓𓏏𓍍] — copper, and by extension copper alloy, bronze: the word
+under which tools, weapons, vessels and statues are accounted for across three thousand years. Its
+determinative is itself a piece of equipment: the sign U24 depicts the distinctive spouted crucible of the
+Old and Middle Kingdom foundry, so that the writing system files the metal under the vessel it was melted in
+(Section VI). A later, more specific word for bronze,
+<i> ḥsmn</i> [Gardiner: V28-S29-G17-N35] [𓎛𓋴𓅓𓈖], comes into use alongside it; the analytical literature
+notes that both arsenical copper and tin bronze could be subsumed under the one term in the Middle Bronze
+Age, because to the eye and the file the two alloys, at working compositions, are near relations — hard,
+golden-tinted, castable copper (paraphrased from the discussion of the terms in Ogden, "Metals," in
+Nicholson and Shaw, <em>Ancient Egyptian Materials and Technology</em>, and in the more recent literature on
+Egyptian bronze terminology).
+        </p>
+        <p>
+Gold is
+<i> nbw</i> [Gardiner: N35-D58-G43-S12] [𓈖𓃀𓅱𓋞], written with the gold-collar sign as determinative — the
+finished jewel standing for the metal. Silver is
+<i> ḥḏ</i> [Gardiner: V28-D46] [𓎛𓂧], "the white (metal)," a word whose history is itself evidence: as
+Section XV sets out, silver was at first named as a kind of
+<i> nbw</i> [Gardiner: N35-D58-G43-S12] [𓈖𓃀𓅱𓋞] — "white gold" — before the short form stood alone. Iron is
+<i> biꜣ</i> [Gardiner: N34] [𓈔], a word that also carries the sense of the hard, dark mineral world more
+generally, and whose most famous compound, written here in transliteration only, is <i>biꜣ n pt</i>, "iron of
+heaven" — the name that already knows where the early metal came from (Section XVII). Lead, the quiet metal
+of weights, net sinkers and alloy additions, is
+<i> dḥt</i> [Gardiner: D46-V28-X1] [𓂧𓎛𓏏]. Electrum, the gold-silver alloy of Section XVI, is
+<i> ḏꜥm</i> [Gardiner: D46-D36-G17] [𓂧𓂝𓅓] from the Fifth Dynasty onward, with the older form
+<i> ꜥsm</i> [Gardiner: D36-S29-G17] [𓂝𓋴𓅓] beside it.
+        </p>
+        <p>
+Two units govern every transaction in this article. Metal was weighed, not counted, and the standard weight
+of the New Kingdom is the
+<i> dbn</i> [Gardiner: D46-D58-N35] [𓂧𓃀𓈖], the deben, of about 91 grams, divided into ten
+<i> qdt</i> [Gardiner: N29-D46-X1] [𓈎𓂧𓏏], kite, of about 9 grams. When a tomb scene shows a scribe recording
+a pile of rings on a balance (Section XXIII), this is the arithmetic being performed: metal as weighed value,
+in rings, ingots and scrap, against stone weights on the other pan.
+        </p>
+        <div class="blue-block">
+            <div class="bb-title">// READING THE TERMS IN THIS ARCHIVE //</div>
+            <p>
+Every technical Egyptian term in this article carries its Gardiner sign codes, and every bracketed glyph
+string has been composed sign by sign from the archive's V2 Gardiner map, so that the printed transliteration
+is exactly what the signs decode to. Determinative signs — the unpronounced classifiers at the ends of words,
+such as the crucible in
+<i> ḥmt</i> [Gardiner: V28-G17-X1-U24] [𓎛𓅓𓏏𓍍] and the collar in
+<i> nbw</i> [Gardiner: N35-D58-G43-S12] [𓈖𓃀𓅱𓋞] — are printed because the Egyptians wrote them, and are
+understood to contribute no sound. Where a spelling cannot be composed with confidence under that discipline,
+the article prints transliteration alone and says so in place. The full sign list is given in
+<a href="hieroglyph-reference.html" class="nl"> the hieroglyph reference</a>.
+        </p>
+        </div>
+        <p>
+A last preliminary, parallel to the one the archive's
+<a href="glass.html" class="nl"> glass</a> article makes for its own craft. The
+<a href="alchemy.html" class="nl"> alchemy</a> article of this archive rests the Egyptian root of the art on
+what it calls metallurgical metaphysics: gold as the flesh of the gods, silver as their bones, iron as the
+metal of heaven. That framing is real, and it is documented there. But metaphysics did not smelt a single
+ingot. Somebody crushed the ore, somebody's cheeks or feet drove the air, somebody read the slag and decided
+the charge had run clean. This article is that somebody's record: the procedural bench book of Egyptian
+metal, written to the archive's standing rule of maximum procedural detail for every repeatable physical
+process. Where the metaphysics and the bench meet — and they meet constantly, in temple workshops and tomb
+scenes — the article says so and moves on. The fire comes first here, because in the workshop it did.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION II -->
+    <section id="evidence">
+        <h2 class="section-head">II. The Bench Record and Its Limits — How This Article Knows</h2>
+        <p>
+No pharaonic recipe text for smelting survives. There is no Egyptian equivalent of a foundry manual: no
+papyrus tells the apprentice how much charcoal, how long a blast, how hot a crucible. The famous recipe
+papyri of the archive — the Leyden Papyrus X and the Stockholm Papyrus, treated in
+<a href="alchemy.html" class="nl"> Alchemy</a> — are Greco-Roman compilations of about 300 CE, and even they
+address the colouring, testing and imitation of finished metals far more than the extraction of metal from
+ore. Everything procedural in this article is therefore reconstructed, and the reconstruction rests on four
+kinds of evidence, which the article keeps labelled as it goes.
+        </p>
+        <div class="card-grid">
+            <div class="metal-card info-card">
+                <h4>1. PRODUCTION DEBRIS</h4>
+                <p>
+Crucibles and their slagged linings, furnace remains, tuyère nozzles, mould fragments, slag heaps, ore and
+part-smelted charges, excavated at Buhen, Timna, Qantir, Amarna and elsewhere. Debris is the strongest
+evidence: it is the process, interrupted and fossilised.
+        </p>
+            </div>
+            <div class="metal-card info-card">
+                <h4>2. THE OBJECTS, READ BACKWARD</h4>
+                <p>
+Chemical analysis and metallography of finished objects — grain structure, inclusions, composition — from
+which ore type, smelting practice, alloying intent and working sequence can be inferred. Thousands of such
+analyses underlie the composition figures quoted in this article, above all the corpora summarised by Lucas
+and Harris and by Ogden.
+        </p>
+            </div>
+            <div class="metal-card info-card">
+                <h4>3. THE SCENES</h4>
+                <p>
+Tomb and temple paintings of metalworkers, from Old Kingdom Saqqara to the great New Kingdom workshop
+registers of Rekhmire (TT100). The scenes are process documentation of a specific, limited kind: they show
+gestures, tools and sequence reliably, and proportions, temperatures and timings not at all. Section XXIII
+reads the greatest of them step by step.
+        </p>
+            </div>
+            <div class="metal-card info-card">
+                <h4>4. REPLICATION</h4>
+                <p>
+Modern experimental smelting — malachite reduced in clay crucibles under banks of blowpipes, furnaces
+rebuilt and fired — which establishes what the ancient installations could do, at what temperatures, with
+what yields. Replication proves possibility; debris proves practice. The article does not let the first
+overwrite the second.
+        </p>
+            </div>
+        </div>
+        <p>
+Two standing cautions govern everything that follows. The first is chronological honesty: Egyptian
+metalworking spans three millennia, and a technique attested in the New Kingdom must not be silently
+projected back into the Old, nor an Old Kingdom crucible scene read as a Ramesside foundry. Dates are given
+for techniques, not just for objects. The second is the distinction, observed throughout the archive's
+<a href="../../antiquity/first-metals.html" class="nl"> First Metals</a> article for the deeper past, between
+<em>native-metal use</em>, <em>smelting</em> and <em>alloying</em> — three different thresholds, crossed at
+different times for different metals. Gold begins at the first threshold and never needs the second; copper
+crosses all three; iron, in Egypt, spends two thousand years at the first threshold before the second is
+crossed at all. Much confusion in popular accounts dissolves once the thresholds are kept apart.
+        </p>
+        <p>
+The deeper-time background — native copper in Anatolia, the first secure smelting at Belovode about
+5000 BCE, the Balkan mines, Varna gold — is the subject of
+<a href="../../antiquity/first-metals.html" class="nl"> First Metals</a> in the Antiquity hub, and the
+Predynastic threshold of the story, where hammered native copper and the first smelted objects appear in the
+Nile Valley, is sketched in this archive's
+<a href="predynastic.html" class="nl"> Predynastic</a> article (its Section XXV). This article begins where
+those end: with a going concern, a state that mines by expedition, smelts by the crucible-load, and accounts
+for every deben.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION III -->
+    <section id="copper-ores">
+        <h2 class="section-head">III. Copper Ores — Malachite and the Green Stones That Smelt</h2>
+        <p>
+The copper ores of the Egyptian world are, in the zones the early smelters could reach, the bright secondary
+minerals of the weathered upper parts of copper deposits. Chief among them is <strong>malachite</strong>,
+the green copper carbonate — the same mineral Egyptians had ground for eye paint and pigment since
+Predynastic times, so that the smelter's ore was already a familiar, valued substance before anyone smelted
+it. Beside malachite stand <strong>azurite</strong>, its blue carbonate companion; <strong>cuprite</strong>,
+the red oxide; <strong>chrysocolla</strong> and <strong>atacamite</strong>, the blue-green silicate and
+chloride of arid-zone deposits such as Sinai's; and, deeper and later, the <strong>sulphide ores</strong> —
+chalcopyrite and its kin — which demand roasting before they will smelt and which belong, in Egypt, largely
+to the later history of the craft (Ogden, "Metals," summarising Lucas and Harris,
+<em>Ancient Egyptian Materials and Industries</em>).
+        </p>
+        <p>
+The choice among these ores was not cosmetic; it decided the whole shape of the smelt. The rich oxide and
+carbonate ores of the weathered zone are <em>self-fluxing in miniature</em>: heated with charcoal in a
+reducing atmosphere, malachite gives up its water and carbon dioxide, passes through the black oxide, and is
+stripped of its oxygen by carbon monoxide to leave metallic copper — a reaction a skilled crew could run in
+a crucible, at temperatures a bank of blowpipes could reach, leaving little or no slag if the ore was clean
+(Section V). The sulphide ores, by contrast, carry sulphur that must first be burned off in an oxidising
+roast, and iron that must be fluxed away into a true slag; they repay their trouble with abundance, but they
+belong to a more capital-intensive metallurgy. Egypt's long preference for the bright ores of Sinai and the
+Eastern Desert is thus a technological preference as much as a geological accident.
+        </p>
+        <h3 class="sub-head">Beneficiation — the Work Before the Fire</h3>
+        <p>
+Ore as dug is mostly not ore. The first procedural stage at any mine or treatment centre was
+<strong>beneficiation</strong>: hand-sorting the dug material to reject barren rock, then crushing the
+retained lumps — with stone mauls and grinding stones of the kind recovered at the mining sites — to a
+coarse, even grade. Ogden's summary stresses that even for the simplest ores some such pre-treatment was
+important to maximise yield, and the point is worth dwelling on, because it is where much of the labour of
+ancient metallurgy actually sat. Crushing does three things at once: it liberates the copper mineral from
+the gangue rock around it, it multiplies the surface area the furnace gases can attack, and it lets the
+sorter make a final visual pass, picking out the greenest fragments. A charge of well-sorted, evenly crushed
+malachite will smelt in a crucible with up to ninety per cent recovery under experimental conditions
+(Section V); a charge of unsorted mine-run rock will not smelt economically at all. The green dust on a
+workshop floor, unglamorous as it is, is the signature of the craft's first skilled act.
+        </p>
+        <p>
+Malachite's double life — pigment and ore — also means that not every ancient Egyptian occurrence of the
+mineral is metallurgical. The archive's rule, applied throughout this article, is that malachite in a grave
+or a cosmetic palette is pigment until production debris says otherwise, while malachite in a crucible, with
+copper prills in a slagged lining, is a smelt. The two uses drank from the same mines: the expeditions of
+Section IV went out for turquoise —
+<i> mfkꜣt</i> [Gardiner: G17-I9-V31-G1-X1] [𓅓𓆑𓎡𓄿𓏏] — and for the green copper minerals together, under the
+patronage of the same goddess,
+<a href="hathor.html" class="nl"> Hathor</a>, Lady of Turquoise, whose shrines stand at both great mining
+fields.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION IV -->
+    <section id="copper-sources">
+        <h2 class="section-head">IV. Where the Copper Came From — Sinai, the Eastern Desert, Timna, Cyprus</h2>
+        <p>
+Egypt has no copper in the Nile Valley itself. Every gram of the metal arrived by expedition, caravan or
+ship from the desert margins, and the geography of supply is therefore a geography of state reach. Ogden's
+survey names the main producing regions accessible to the Egyptians as the Eastern Desert and Sinai,
+including the Serabit el-Khadim region in the southwest, and Timna in the Wadi Arabah — to which the New
+Kingdom adds a fourth source, imported Cypriot copper arriving by sea.
+        </p>
+        <h3 class="sub-head">Sinai — Wadi Maghara and Serabit el-Khadim</h3>
+        <p>
+The southwestern Sinai fields are the best documented of the early sources because the expeditions carved
+their records on the rock. At <strong>Wadi Maghara</strong>, royal reliefs and inscriptions from the Third
+Dynasty onward — Djoser, Sekhemkhet and Sanakht among the earliest names, then Sneferu, Khufu and their
+successors — commemorate mining expeditions sent for turquoise and copper, and the ground matches the texts:
+copper slags, ores, crucibles, ingot moulds and other working debris of Old and Middle Kingdom date have
+been found there. Ogden, following Petrie and Lucas, raises the possibility that Maghara functioned in part
+as a treatment centre for ores won in the surrounding region rather than as a great mine in its own right —
+a distinction that matters, because it is the pattern of the whole industry: ore was commonly treated at or
+near the mines, since it is easier to transport and to tally ingots than bulky raw rock, fuel permitting.
+Some twenty kilometres northeast, <strong>Serabit el-Khadim</strong> pairs its turquoise mines with the
+temple of Hathor and with reported tuyères, moulds, crucibles and casting installations suggesting local ore
+treatment on site — though the inscriptions there speak of turquoise, and the relative weight of copper in
+the Serabit operation remains, on Ogden's reading, genuinely difficult to determine.
+        </p>
+        <p>
+The Sinai working rhythm was expeditionary and seasonal. A royal expedition — officials, soldiers,
+quarrymen, donkey trains — crossed to the fields, worked a campaign, and returned with the product; the
+inscriptions are its paperwork. Exploitation lapsed in the First Intermediate Period, restarted in the
+Eleventh Dynasty and became extensive in the Twelfth, with a growing documentary record. At
+<strong>Bir Nasib</strong> in Sinai, slag investigation has shown unfluxed copper production in Predynastic
+times and the use of iron-ore fluxes by some point in the Old Kingdom — the earliest dated marker, in this
+article's evidence, for the transition from the clean crucible smelt of Section V to the fluxed smelting of
+Section VII (el-Gayar and Rothenberg's slag study, as summarised by Ogden).
+        </p>
+        <h3 class="sub-head">The Eastern Desert</h3>
+        <p>
+Copper ores occur along almost the entire length of the Eastern Desert, from the latitude of the Faiyum
+south into Nubia, and the ancient workings are correspondingly scattered and, in many cases, still poorly
+dated. Ogden's survey picks out the cluster of deposits inland from Safaga and between Safaga and Quseir,
+with lead, zinc and nickel associations; ancient mines of uncertain date at el-Atawi and Wadi Sitra, due
+east of Luxor, plausibly supplying the temple workshops of Thebes; the Hammash area northeast of Aswan,
+with chalcopyrite ores and associated gold, worked from the Middle Kingdom if not earlier; and the Samiuki
+district near Ras Banas, whose mines Lucas — following Hume — called the most important copper deposits yet
+discovered in Egypt, with extensive underground workings, ore crushers and slag at Abu Seyal, "worked
+extensively" in ancient times, and abundant slag at Quban suggesting treatment there. A Twelfth Dynasty
+stele records an official, Hor, instructed to collect "copper from the land of Nubia" (paraphrased from
+Lucas's citation of the stele, in Ogden's survey). The Eastern Desert pattern is the Sinai pattern at larger
+scale and with thinner paperwork: many small workings, state expeditions at the documented end, and a long
+tail of exploitation whose chronology analysis has yet to fix.
+        </p>
+        <h3 class="sub-head">Timna — the Arabah Furnaces</h3>
+        <p>
+The Timna valley, in the southwestern Arabah some thirty kilometres north of the Gulf of Aqaba, holds the
+best-excavated copper industry in Egypt's wider world. Mining and local smelting there run from the fourth
+millennium BCE onward, through a long development that Beno Rothenberg's excavations first mapped: mines
+worked as cylindrical shafts linked to underground galleries, smelting camps with furnaces, workshops and
+slag heaps, and — for the Egyptian phase — the small shrine of Hathor at Site 200, its Egyptian layers
+carrying cartouches from Seti I or Ramesses II through Ramesses V, roughly 1280–1145 BCE. Copper production
+at Timna appears to have reached its peak under the Nineteenth and Twentieth Dynasties, in what Ian Shaw's
+assessment, quoted by Ogden, calls the largest-scale Egyptian copper-mining enterprise so far discovered;
+the workings have been associated with the copper mines of "Atika" named in Papyrus Harris. The smelted
+product left as plano-convex — bun-shaped — ingots, which Tylecote calculated at between about three and
+four kilograms each.
+        </p>
+        <p>
+Timna also carries this article's clearest lesson in evidentiary humility. The older literature assigned
+the whole industry to the Egyptian New Kingdom and, before Rothenberg, to Solomon. Work since 2012 under
+Erez Ben-Yosef, using radiocarbon dating and archaeomagnetism, has redated the peak of production at the
+great smelting camps to the early Iron Age, after the Egyptian withdrawal — the industry of local desert
+peoples, intensifying rather than collapsing when the empire left. Uzi Avner's reconsideration argues
+likewise that the advanced mining shafts were local work, not Egyptian. The archive therefore states the
+Timna position in its current, layered form: an Egyptian imperial phase is real — the Hathor shrine, the
+cartouches, the rock inscription of Ramesses III are not illusions — and it sits inside a much longer,
+substantially local industry that precedes and outlasts it. The furnaces of Section VI are described from
+Timna evidence because Timna preserves them best, not because every Timna furnace was an Egyptian furnace.
+        </p>
+        <h3 class="sub-head">Cyprus — Copper by Sea</h3>
+        <p>
+From the New Kingdom, literary references to copper imported from the north appear, and some of that copper
+undoubtedly originated in Cyprus. The evidence is visual as well as textual: oxhide ingots — the
+characteristic four-handled slab form of Cypriot copper export — are depicted among the goods arriving in
+the tomb of Rekhmire (Section XXIII), and the Uluburun shipwreck, lost off the Turkish coast in the
+fourteenth century BCE with a cargo of copper ingots assumed to be Cypriot metal bound ultimately for
+destinations including Egypt, shows the trade in cross-section. Cyprus does not replace the desert sources;
+it supplements them, at the top of the market, in the period of Egypt's greatest bronze demand.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION V -->
+    <section id="smelting">
+        <h2 class="section-head">V. Smelting Copper, Step by Step — the Crucible Protocol</h2>
+        <p>
+The earliest Egyptian smelting, and for centuries the standard one, was <strong>crucible smelting</strong>:
+ore reduced inside a clay vessel, over or in a charcoal fire, under a forced draught of blowpipes. The
+protocol below is the archive's reconstruction of that process for a clean oxide ore — malachite of the kind
+smelted at Buhen — assembled from the excavated debris, from Lucas and Harris's synthesis, from Ogden's
+summary of the experimental literature, and from the replication experiments of Paul Craddock and others,
+which have run exactly this smelt in modern times. Where a step is experimental inference rather than
+excavated fact, the text says so.
+        </p>
+        <div class="practice-box">
+            <div class="practice-title">// CRUCIBLE SMELTING OF MALACHITE — THE PROTOCOL //</div>
+            <p>1. <strong>Sort and crush.</strong> Hand-pick the ore, rejecting barren rock; crush the retained
+            malachite to a coarse, even grade (Section III). Weigh or measure the charge by basket or bowl —
+            the crucible, not the scales, is the unit of the early smelt.</p>
+            <p>2. <strong>Prepare the crucible.</strong> Take a coarse, heavily tempered clay crucible — the
+            fabric must survive thermal shock and a slagging charge. In the developed Old and Middle Kingdom
+            form this is the spouted crucible of Section VI, whose profile the hieroglyph for
+            <i> ḥmt</i> [Gardiner: V28-G17-X1-U24] [𓎛𓅓𓏏𓍍] preserves.</p>
+            <p>3. <strong>Charge.</strong> Fill the crucible with alternating or mixed layers of crushed ore
+            and charcoal. The charcoal is both fuel and reagent: burning in restricted air it generates the
+            carbon monoxide that strips oxygen from the ore.</p>
+            <p>4. <strong>Set the draught.</strong> Arrange the crucible in or over the charcoal hearth and set
+            the blowpipes — reeds tipped with clay nozzles to keep the reed from burning back — converging on
+            the charge. Experiments show a bank of three or more blowpipes can run the smelt; the crew blows
+            in rotation to keep the blast continuous.</p>
+            <p>5. <strong>Raise and hold the heat.</strong> Blow the charge up through the decomposition of the
+            carbonate — water and carbon dioxide driven off, green malachite blackening to copper oxide — and
+            into the reducing zone, where carbon monoxide converts the oxide to metal. The working range is
+            set by the chemistry: reduction proceeds well below copper's melting point of 1083 °C, but the
+            metal must then be melted and gathered, so the crucible's hot zone is driven to and held around
+            or above that point.</p>
+            <p>6. <strong>Judge the smelt.</strong> The smelter reads the fire by colour, the behaviour of the
+            charge's surface, and experience. There is no instrument. This judgment — when the metal has
+            reduced, coalesced and settled — is the craft's central skill, and it is invisible in the debris
+            except by its results.</p>
+            <p>7. <strong>Recover the metal.</strong> With clean malachite, little or no slag forms: the copper
+            gathers as prills and small masses among the charcoal and crucible debris, and is picked out after
+            cooling, or the charge is tipped and the metal separated by crushing the cooled mass. Experimental
+            smelts of simple oxide ores on this pattern have achieved up to ninety per cent recovery of the
+            copper present (Craddock's experiments, as summarised by Ogden).</p>
+            <p>8. <strong>Consolidate.</strong> Remelt the recovered prills and fragments together in a fresh
+            crucible to a single pourable mass — the point at which smelting hands over to the melting and
+            casting operations of Sections XIX–XX.</p>
+        </div>
+        <p>
+The evidentiary anchor for the protocol is <strong>Buhen</strong>, the Egyptian colonial town below the
+Second Cataract in Nubia, where excavation in 1962 revealed an Old Kingdom copper-working establishment
+inside a massive, crude stone enclosure wall — a "copper factory," in the excavator Emery's phrase, of a
+settlement whose jar seals and inscriptions name kings from Khafre and Menkaure of the Fourth Dynasty to
+Userkaf, Sahure and Niuserre of the Fifth. The smelting evidence spread through the site: cylindrical
+furnaces, copper ore and slag, pottery moulds and crucibles. Analysis of the Buhen material by el-Gayar and
+Jones found the ore to be primarily malachite of low iron content — with a reported, and subsequently
+questioned, high gold content, on which see Section VII — and the combination of abundant crucible
+fragments, malachite, atacamite and copper prills, with little slag, has been read as the signature of
+exactly the crucible smelting described above (Craddock's reading, in Ogden's summary). Buhen's position is
+the industry's logic in one site: a fortified colonial outpost, supplied from the north, smelting Nubian ore
+at the frontier and sending consolidated metal down the river.
+        </p>
+        <p>
+How early does the protocol run? If arsenic and nickel impurities in finished objects are accepted as
+markers of smelted rather than native copper — the standard reading — then smelted copper, fairly impure,
+was being produced in Egypt by about 4000 BCE, and the low iron contents of the earliest Predynastic and
+First Dynasty objects (averaging about 0.03 per cent in Ogden's summary of the analyses) are consistent
+with primitive crucible smelting of clean ores, before fluxing raised the iron signature (Section VII). The
+crucible itself is attested remarkably early in developed form: an example of the spouted foundry type was
+found in a Second Dynasty context, about 2800 BCE, at Elkab in Upper Egypt (Claes and colleagues, 2019).
+The smelt, in other words, was already a mature, standardised operation when the pyramid age opened.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION VI -->
+    <section id="air">
+        <h2 class="section-head">VI. Furnaces, Crucibles and Air — Blowpipe, Pot Bellows, Foot Bellows</h2>
+        <p>
+Metallurgy is applied air. Charcoal burning in still air will not melt copper in useful quantity; the whole
+history of Egyptian furnace technology is the history of forcing more air, more controllably, into the fire.
+The sequence of air-moving devices is one of the few technological progressions the tomb scenes let us date
+directly, and Broschat's survey for the <em>UCLA Encyclopedia of Egyptology</em> ("Gold, Electrum, and
+Silver," 2024) states its outline plainly: depictions of metalworking run from the Old Kingdom onward, and
+among the innovations they reveal is the introduction of bellows alongside blowpipes, the practice observed
+from the New Kingdom onward. The fuller sequence, assembled from scenes and surviving equipment, runs as
+follows.
+        </p>
+        <div class="card-grid">
+            <div class="metal-card info-card">
+                <h4>THE BLOWPIPE — MOUTH POWER</h4>
+                <p>
+A reed tube, tipped with a clay nozzle (the tuyère) that resists the fire, through which one worker blows
+directly into the hearth or crucible. Human lungs give a weak, pulsating blast, but a bank of blowers in
+rotation gives a workable one — enough, as the experiments of Section V show, to smelt malachite in a
+crucible and to melt metal for casting. The blowpipe never disappears: it remains the precision instrument
+for small, hot, local work — brazing, soldering, gold melting — into the New Kingdom and beyond, long after
+bellows take over the heavy draught.
+        </p>
+            </div>
+            <div class="metal-card info-card">
+                <h4>THE POT BELLOWS — HAND AND FOOT</h4>
+                <p>
+A wide-mouthed pottery vessel whose top is closed by a loose skin diaphragm, with a pipe near its base
+leading to the furnace. Raise the skin by its cords and air enters; press it down and the air is driven
+through the pipe. Worked in pairs, pot bellows give a stronger and steadier blast than lungs. Christopher
+Davey's corpus study of Near Eastern pot bellows (1979, reviewed 2019) remains the standard treatment.
+Ogden notes little certain evidence for bellows in Egypt until pot bellows appear in the Middle Kingdom —
+the point at which smelting at scale, and the melting of large castings, becomes straightforward.
+        </p>
+            </div>
+            <div class="metal-card info-card">
+                <h4>THE FOOT / DISH BELLOWS — THE NEW KINGDOM FOUNDRY</h4>
+                <p>
+In the great New Kingdom scenes the blower stands with a bellows under each foot — bag or dish bellows
+worked by body weight — treading them alternately while hauling each collapsed skin up again by a cord in
+the hand, so that one man's full strength drives a near-continuous blast through reed pipes to the hearth.
+Rekhmire's foundry (Section XXIII) shows several such blowers fanning four charcoal hearths at once: this
+is the air supply that melts temple doors. Skin bag bellows belong to the same family of devices; the
+concertina bellows of the first millennium BCE is a later, Near Eastern introduction.
+        </p>
+            </div>
+        </div>
+        <h3 class="sub-head">The Crucible as a Designed Object</h3>
+        <p>
+The characteristic Egyptian foundry crucible of the Old and Middle Kingdoms deserves a paragraph of its
+own, because it is a designed solution to a specific handling problem and because a modern analysis has
+recently reopened the question of what it was for. The type — depicted in Old Kingdom tomb scenes such as
+Mereruka's at Saqqara, where it is employed in the casting of copper, and fossilised as the determinative of
+<i> ḥmt</i> [Gardiner: V28-G17-X1-U24] [𓎛𓅓𓏏𓍍] — carries a low-sitting opening or spout near its base,
+bridged above by the continuing crucible wall. Davey's study of the type showed that such a vessel cannot
+hold liquid standing upright; it works reclined, and casting is achieved by a rocking or tilting motion that
+brings the spout forward and down. Later First Intermediate Period and Middle Kingdom examples add a
+bowl-shaped base that lets the vessel stand and retain a melt upright — the form adapting as foundry
+practice changed.
+        </p>
+        <p>
+In 2021 Davey, Rademakers and colleagues published the microanalysis of a well-preserved crucible fragment
+of this Middle Kingdom type from the fortress at Buhen, now in the Petrie Museum (<em>Journal of
+Archaeological Science: Reports</em> 36). The fragment held numerous prills of a very arsenic- and
+nickel-rich copper alloy in what looks like a smelting slag, and the strongly reducing conditions preserved
+near the low spout led the authors to judge that this crucible was most likely used for <em>smelting</em> a
+very rich secondary copper-arsenic ore — not, as the type's depiction in casting scenes might suggest, for
+the more oxidising work of refining raw copper, nor for simple casting of a ready alloy. The authors state
+the ambiguity themselves and argue the alternatives in the paper; the archive follows them in treating the
+Buhen crucible as evidence that the same vessel family served at more than one station of the process, and
+that a crucible's shape alone does not disclose its last firing. It is a model of how this article treats
+its best evidence: closely, and at its stated strength.
+        </p>
+        <h3 class="sub-head">Furnaces Proper — Shafts, Slag Tapping, and the Qantir Foundry</h3>
+        <p>
+Where production outgrew the crucible, Egypt and its mining world built furnaces. The simplest smelting
+shaft furnace, in Craddock and Meeks's description quoted by Ogden, was probably the size and shape of a
+small upturned bucket lacking its bottom — a short clay shaft over a hearth, charged from above, blown
+through tuyères at its base. Timna preserves the developed form: shaft furnaces in which fluxed charges
+(Section VII) were smelted down to plano-convex ingots of three to four kilograms, in smelting camps whose
+slag heaps record campaign after campaign. The further refinement — a furnace from which the molten slag
+could be <em>tapped</em>, run off while still liquid rather than cooled and broken out — can probably be
+dated in Sinai to the middle to late New Kingdom, and it matters because tapped slag is cleaner metal: the
+average iron content of Egyptian copper-alloy objects falls to about 0.14 per cent by the late New Kingdom,
+a shift for which Ogden lists the tapped-slag furnace, a change to sulphide ores, and manganese fluxing
+among the candidate explanations, without pretending the record chooses between them.
+        </p>
+        <p>
+The foundry at the other end of the process — melting and casting at industrial scale — is best seen at
+<strong>Qantir</strong>, ancient Piramesse, the Ramesside capital in the eastern Delta, where Edgar Pusch's
+excavations uncovered a late Eighteenth- to early Nineteenth-Dynasty metalworking site covering over
+30,000 square metres: crucibles, tuyères, moulds, waste, slag and metalworking tools in quantity, including
+very large-scale copper-alloy casting, with foreign — including Hittite — armour, weaponry and tools among
+the products, pointing to foreign craftsmen working alongside Egyptian ones. The same city, in another
+quarter and another material, provides the archive's proof of primary glass production (see
+<a href="glass.html" class="nl"> Glass</a>, Section VI); Qantir was an industrial capital in the full sense,
+and its foundry is the excavated counterpart of the painted foundry of Rekhmire, two centuries older, in
+Section XXIII.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION VII -->
+    <section id="slag">
+        <h2 class="section-head">VII. Reading the Slag — and Refining the Raw Copper</h2>
+        <p>
+Slag is the smelter's waste and the archaeometallurgist's text. It is the non-metallic fraction of the
+charge — gangue rock, flux, ash, unreduced ore — fused in the fire into a glassy or stony mass, and its
+composition records, with a fidelity no tomb painting attempts, what was charged, how hot the furnace ran,
+how strongly reducing its atmosphere was, and how much metal was lost into it. A slag full of copper prills
+is a failed or an interrupted smelt; a clean, fully fused slag that ran liquid is a mastered one. The
+distinctions of Sections V–VI — slagless crucible smelting against fluxed furnace smelting — are read off
+slag and its absence in exactly this way.
+        </p>
+        <p>
+<strong>Fluxing</strong> is the deliberate addition of material to make the waste fraction melt and
+separate. For copper, the general early flux was iron oxide: smelt oxide copper ores with iron oxide and
+the iron minerals gather into a slag mass while the copper reduces — the copper emerging either as prills to
+be picked from the crushed, cooled mass, or, at higher temperatures held longer, as a puddle at the furnace
+base that cools to a plano-convex bun ingot. The tracer of the transition survives in the metal itself.
+Early, unfluxed crucible copper carries very little iron — the 0.03 per cent average of the earliest objects
+in Section V. With the introduction of fluxing, iron levels in Egyptian copper jump to an average of about
+0.33 per cent, a rise Ogden dates to the Second Dynasty on the analytical evidence, with the Buhen smelting
+site's copper averaging about 0.5 per cent iron, and the Sixth Dynasty copper of Pepi I's great statue
+(Section XXI) at 0.7 per cent iron with 1.1 per cent nickel — iron enough, in Ogden's phrase, to indicate a
+true fluxing process. Iron in the object is thus not contamination to be apologised for; it is the
+fingerprint of the furnace regime that made the metal.
+        </p>
+        <p>
+Too much fingerprint ruins the metal. Freshly smelted copper can carry several per cent of iron from its
+flux — levels up to about ten per cent can enter during smelting — and copper so charged is almost
+impossible to cast or hammer. It must be <strong>refined</strong>, and the first refining is disarmingly
+simple: remelt the raw copper and let the iron oxidise at the surface of the melt, skimming off the oxidised
+impurities as they form, until the iron content falls to around 0.5 per cent, at which point the metal
+works. That an ingot found in the Wadi Arabah, not far from Timna, left its smelting site in an unrefined
+state shows the division of labour plainly: refining could be deferred to the receiving workshop, and raw,
+iron-rich copper travelled as a semi-finished material. Refining in this sense — the oxidative cleaning of
+a single metal — must be kept distinct from the cupellation and parting of Section XXII, which separate one
+precious metal from another; the Egyptian evidence for the first is routine and early, for the second late
+and contested, and this article does not blur them.
+        </p>
+        <p>
+One Buhen result belongs here as a standing warning. The ore samples from the Old Kingdom smelting site
+were reported by el-Gayar and Jones to carry a remarkably high gold content, and the copper derived from
+them to include gold particles — a result that, if sound, would make Buhen's copper a precious-metal
+carrier of the first interest. Ogden records the sequel without drama: in view of the ready solubility of
+gold in copper, the results have been questioned (Craddock and Giumlia-Mair), and a more southern source
+for the Buhen ore is in any case likely on other grounds. The archive's verdict follows the literature:
+reported, questioned, unresolved — and a clean example of an analytical claim held at exactly the strength
+its critics leave it.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION VIII -->
+    <section id="arsenical">
+        <h2 class="section-head">VIII. Arsenical Copper — the First Working Alloy</h2>
+        <p>
+Pure copper is soft, gummy to cast, and blunt to use. The first material that systematically bettered it in
+Egypt was copper carrying <strong>arsenic</strong>. Arsenic enters copper from the ore body itself — many
+copper deposits are naturally arsenical — and its effects are the classic alloy effects: markedly greater
+hardness in the wrought metal, a vital property for tools and weapons; easier casting, the molten metal
+flowing more freely; and, at the surface of a casting, an arsenic-rich, silvery skin produced by inverse
+segregation as the metal cools, which made arsenical copper attractive for objects meant to shine pale.
+The Buhen crucible of Section VI, with its arsenic- and nickel-rich prills, shows the alloy in production
+at a Middle Kingdom frontier fortress; the Dynasty 6 mirror disc from Edfu analysed at 7.5 weight per cent
+arsenic with about one per cent antimony shows it at the mirror-maker's bench.
+        </p>
+        <p>
+Was it deliberate? The question is the Egyptian form of the general problem the archive's
+<a href="../../antiquity/first-metals.html" class="nl"> First Metals</a> article treats for the wider world,
+and the Egyptian evidence supports the same layered answer. The working convention in the analytical
+literature is that copper with more than about one per cent arsenic represents the deliberate use of
+arsenic-rich ores, or the intentional combining of arsenic-bearing and plain ores; below that line, arsenic
+is read as accident. Ogden's summary adds the chronological argument: the higher arsenic levels that appear
+during the Old Kingdom were, on Kaczmarczyk and Hedges's assessment, almost certainly not fortuitous — up
+to seven per cent was found in axes in the British Museum — and the frequent association of high arsenic
+with <em>low</em> levels of other impurities argues for intentional selection, since a merely dirty ore
+would raise everything at once. What analysis cannot yet do, Ogden states plainly, is distinguish
+definitively between the deliberate choice of a naturally arsenical ore and the deliberate addition of an
+arsenic mineral to a plain charge. The smiths, on the evidence, learned to prefer and to select for the
+effect; the exact gesture by which they dosed it is beyond recovery.
+        </p>
+        <p>
+The working history that follows is one of long dominance and slow displacement. Arsenical copper is the
+standard hard copper alloy of the Old and Middle Kingdoms; it persists, in noticeable amounts, into the New
+Kingdom — arsenic appears in copper-based pigments up to the time of Hatshepsut — and then falls away
+sharply as tin bronze takes over (Section IX), a succession Ogden reads as itself an argument that the
+earlier arsenic had been intentional: accidents do not get replaced on schedule. After the New Kingdom,
+arsenic in Egyptian copper alloys is typically under one per cent and presumably mostly fortuitous, with
+intriguing exceptions — Late Period figures of the child god Harpocrates recur with high arsenic (and high
+tin, in other examples), raising the possibility, which Ogden leaves open, of a deliberate pale alloy for a
+child god's pale skin.
+        </p>
+        <div class="caution-note">
+            <div class="cn-title">// THE COST IN THE WORKSHOP //</div>
+            <p>
+Arsenic is a poison, and arsenical smelting and remelting release arsenical fumes. The Egyptian smiths who
+ran arsenical charges campaign after campaign worked in that exposure without protection, and the
+occupational cost — chronic arsenic poisoning is cumulative and disabling — is part of this material's
+history, as it is wherever arsenical copper was made (compare
+<a href="../../antiquity/first-metals.html" class="nl"> First Metals</a>, Section XII). The archive records
+the hazard as history; modern replication of arsenical smelting belongs in controlled laboratory conditions,
+not in open workshop practice.
+        </p>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION IX -->
+    <section id="bronze">
+        <h2 class="section-head">IX. Tin and the Bronze Problem — an Imported Ingredient</h2>
+        <p>
+Bronze proper — copper alloyed with <strong>tin</strong> — outperforms arsenical copper on almost every
+bench criterion. Ten per cent of tin drops the alloy's melting point from copper's 1083 °C to about
+1005 °C, greatly increases the fluidity of the melt and so the fidelity of castings, and hardens the metal
+beyond arsenic's gift, without arsenic's toxicity to the smith. The effects are, in Ogden's summary, not
+dissimilar to arsenic's but more dramatic. Egypt's difficulty was never knowledge of the alloy. It was
+supply: <strong>Egypt has no tin</strong>. Cassiterite, the tin ore, does not occur in the Egyptian deserts
+in workable quantity, and every grain of tin in every Egyptian bronze arrived by trade, from sources that
+remain — here as across the Bronze Age world — an open research problem, the "tin problem" of the
+<a href="../../antiquity/first-metals.html" class="nl"> First Metals</a> article (its Section XIII). Bronze in
+Egypt is therefore an index of trade reach as much as of foundry skill.
+        </p>
+        <p>
+The chronology, on the analyses, is a long dawn rather than a revolution. Using the same one per cent
+dividing line as for arsenic, deliberate tin alloying is attested sporadically very early: several Early
+Dynastic objects exceed one per cent tin, with the highest early levels — seven and nine per cent — in a
+ewer and basin from the tomb of the Second Dynasty king Khasekhemwy. A Sixth Dynasty vessel analysed at
+almost six per cent. Yet true bronzes were still the minority in the Middle Kingdom: the superb hollow-cast
+figure of a man now in the Louvre (E27153) carries about five per cent tin with about one per cent arsenic,
+a mixed alloy typical of the transitional repertoire, while an old analysis of a Twelfth Dynasty bracelet
+fragment from the Dahshur treasure reported just over sixteen per cent tin — a figure the archive repeats
+as Berthelot's 1895 result, from the heroic age of wet chemistry, rather than as a modern measurement.
+Through the New Kingdom, copper and arsenical copper still share the stage with bronze — Lucas remarked
+that there was still more copper than bronze in the tomb of Tutankhamun — and only from the Ramesside period
+onwards is tin present in the majority of copper-alloy objects. The majority of Egyptian bronzes, across
+all periods, carry up to about ten per cent tin, with higher levels occasional and very rarely above about
+sixteen per cent: the classical foundry range, arrived at by a state that had to import the decisive
+ingredient across deserts and seas.
+        </p>
+        <p>
+How the tin was added changed with its availability. Ogden's assessment is that early additions were
+presumably made in the form of tin ore charged with the copper, while the New Kingdom pattern — tin
+appearing in glazes and pigments from the reign of Thutmose III, unusual tin alloys multiplying, tin
+becoming far more readily available — agrees with additions of <em>metallic</em> tin, weighed and melted
+into the copper at the foundry. The foundry gesture itself, at that point, is simple and is what the
+Rekhmire scenes show (Section XXIII): copper melted in the crucible under charcoal, the tin added to the
+melt, the whole stirred and skimmed, and poured before the tin can oxidise away. Alloying, at bench level,
+is the last five minutes of the melt — which is why the scenes of alloying and the scenes of casting are the
+same scenes.
+        </p>
+        <h3 class="sub-head">Lead Joins the Alloy</h3>
+        <p>
+A third ingredient completes the classical repertoire. Between one and three per cent of
+<strong>lead</strong> in a copper alloy eases casting without costing strength, and lead levels as low as
+one per cent may sometimes be deliberate; but as a major component, lead is late. Levels over about two per
+cent are rare before the late New Kingdom; the deliberate large-scale addition of lead — up to twenty-five
+per cent and more in later examples, dropping a copper-tin alloy's melting range below 800 °C and making
+the mass production of cast statuettes fluid and forgiving — is generally dated from the Nineteenth
+Dynasty, and high-lead bronze is characteristically a Late Period and Ptolemaic material. Lead was kept out
+of alloys meant for edges: a leaded bronze casts beautifully and cuts badly. The alloy menu of the mature
+Egyptian foundry is thus a set of deliberate trade-offs among hardness, fluidity, colour and cost, made
+object by object — and the analyses, read in bulk, show the foundries making them consistently.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION X -->
+    <section id="gold-sources">
+        <h2 class="section-head">X. Gold Sources — the Three Golds of the Texts</h2>
+        <p>
+Gold is the metal Egypt had. Where copper and tin index the state's reach outward, gold indexes its grip on
+its own deserts and its southern frontier — and the Egyptians themselves organised the supply by origin.
+Ogden's survey, following Vercoutter, records that the texts define three gold regions. The gold of the
+Eastern Desert, from the Hammamat to Abbad country, was <strong>"gold of Koptos,"</strong> named for the
+Nile town that controlled the desert roads and much of the Eastern Desert's produce. Further south came
+<strong>"gold of Wawat,"</strong> won through the Wadi Allaqi and Wadi Gabgaba systems, its caravan routes
+starting from the fortress of Quban — a settlement that may itself have been founded to protect those
+routes and to process the region's produce, copper included. From still further south, from what is now
+Sudan and toward Ethiopia, came <strong>"gold of Kush,"</strong> the gold of empire and tribute.
+        </p>
+        <p>
+The scale of the winning is documented archaeologically as well as textually. The combined Egyptian
+Geological Survey and Munich University surveys of 1989–1993 studied around 130 ancient gold-mining sites in
+the Eastern Desert, between roughly the twenty-second and twenty-eighth parallels, and found extensive
+mining activity from Predynastic times onward, with the kinds of deposit exploited changing as recovery
+technique improved: alluvial gold first and longest, the gold of wadi gravels gathered and washed; vein
+gold — gold locked in quartz reefs, demanding crushing and grinding before washing — increasingly from the
+Middle Kingdom. In the Old and Middle Kingdoms the directly evidenced exploitation is of the Koptos gold;
+the documentary record makes Wawat's gold vital from the Middle Kingdom into the later New Kingdom; the
+late New Kingdom focus swings back to the Eastern Desert, the swing to which the famous Turin papyrus map
+of the gold mines — a Twentieth Dynasty document, among the oldest surviving maps in the world — is usually
+connected. Greaves and Little's verdict of 1929, quoted by Lucas and repeated by Ogden because nothing has
+displaced it, closes the survey: no workable deposits of gold have been discovered that the ancient
+Egyptians overlooked.
+        </p>
+        <p>
+The gold country had its own sacred geography, and the archive notes it without leaving the bench. The
+expeditions moved under divine patronage — Hathor in Sinai, the desert gods on the eastern roads — and the
+metal they brought back entered the economy already named by its origin, graded by the treasury's
+reckoners, one of whom, a "reckoner of gold" named Thuthotep, left his graffito at the remote Abrak well
+some 240 kilometres southeast of Aswan about 2000 BCE. Prospecting at that distance was systematic work:
+Ogden notes that the prospectors, lacking geochemistry, read landforms, rock colours and even the
+vegetation associated with deposits — practical geology, transmitted as craft knowledge.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION XI -->
+    <section id="gold-winning">
+        <h2 class="section-head">XI. Winning the Gold — Panning, Washing Tables, Crushed Quartz</h2>
+        <p>
+Gold's winning is a separation by weight, and its procedures are the oldest continuously intelligible
+processes in this article: they can be watched, essentially unchanged, at artisanal gold workings today.
+Gold is roughly twice as dense as the copper of Section V and many times denser than sand; water, correctly
+managed, will carry the sand away and leave the gold. The Egyptian evidence — scenes, installations, and
+the installations' later classical description — supports the following sequence, given here at the
+archive's full procedural standard.
+        </p>
+        <div class="practice-box">
+            <div class="practice-title">// GOLD-WASHING — ALLUVIAL AND VEIN //</div>
+            <p>1. <strong>Gather the feed.</strong> For alluvial gold: scoop the sands and fine gravels of a
+            wadi bed or old river bed where gold has concentrated. For vein gold: dig the gold-bearing quartz
+            from the reef, and crush and grind it — laboriously, on stone — to a powder from which the gold
+            can be freed.</p>
+            <p>2. <strong>Pan, for small work.</strong> Scoop the sand with water into a pan-like vessel and
+            swirl: the sand and water slosh out over the sides while the far heavier gold particles settle
+            and remain in the bottom of the pan.</p>
+            <p>3. <strong>Wash, for production work.</strong> Run the sand and water down over a sloping
+            <strong>washing table</strong> fitted with grooves, ridges or other arrangements to trap the gold
+            grains as the lighter material washes over and away. Ancient gold-washing tables of this kind
+            have been reported and illustrated by Vercoutter (1959).</p>
+            <p>4. <strong>Collect and clean.</strong> Gather the trapped concentrate; re-wash as needed; pick
+            out visible grains and nuggets by hand.</p>
+            <p>5. <strong>Melt to ingots.</strong> For security and for the tally, melt the won gold into ingots
+            — unless it is present as relatively large nuggets, which travel as they are. New Kingdom
+            paintings show the transport of both nuggets and ring ingots: the ring is at once ingot, unit of
+            account, and the form in which the treasury's balances receive it (Section XXIII).</p>
+        </div>
+        <p>
+The scenes anchor the protocol in time. The earliest representation of gold recovery is in the tomb of
+Baqt III at Beni Hassan (BH15), of about 1900 BCE, showing gold ore being sorted or washed, perhaps ground,
+with a vertical object that may be a gravity washing table depicted in plan view (Chappaz's reading, in
+Ogden's summary). The Ramesside tomb at Saqqara of Khacy — whose title was "goldwasher of the treasury of
+Pharaoh" — shows the fuller sequence: grinding, a sloping washing table, and melting, the three stations of
+the protocol in one register. And the Twelfth Dynasty stele of the official Simunt (British Museum EA828)
+supplies the labour behind the images: Simunt records that he went south to bring back gold for Amenemhat
+II, and that he set men, women and children to dig out the quartz, crush it and wash it. The archive quotes
+no words of the stele, which it has not read in the original for this article; the content is paraphrased
+from Ogden's summary, and the division of labour it records — whole communities set to the crushing and
+washing — is the human cost line of every gold object in this archive. The Middle Kingdom stele of Sa
+Hathor, of the same reign, records a southern expedition to supervise gold-mining and gold-washing in one
+breath: winning and washing were a single operation in the administration's mind.
+        </p>
+        <p>
+A classical coda, labelled as such. The fullest surviving description of Egyptian gold mining — the
+division of labour by age and strength, the crushing, the washing tables — comes from Agatharchides, as
+preserved by Diodorus Siculus, describing the mines of the Ptolemaic period, worked by prisoners of war,
+slaves and convicts. Ogden's warning stands and this article repeats it: the Dynastic-period descriptions
+are far less explicit, and Agatharchides' harrowing picture must not be read backward onto the pharaonic
+workforce without the label. What the pharaonic record itself shows — Simunt's stele above all — is coerced
+and communal labour at the crushing stones; how far its regime resembled the Ptolemaic one, the evidence
+does not say.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION XII -->
+    <section id="gold-as-found">
+        <h2 class="section-head">XII. Gold as Found — Composition, Colour, and the Unrefined Norm</h2>
+        <p>
+Native gold is never pure gold. The predominant accompanying element is <strong>silver</strong>,
+homogeneously alloyed in the natural metal in anything from mere traces up to fifty per cent or more;
+copper in as-mined gold is typically under about two per cent, with detectable traces of iron, tin and
+platinum-group metals besides — the silvery-grey platinum inclusions being extremely common in Egyptian
+gold objects. The consequence governs all Egyptian goldwork: the metal arrived at the bench already an
+alloy, of variable and unmeasured composition, ranging in colour from rich yellow through pale electrum
+whites depending on its silver content, and the goldsmith's first skill was reading it — by colour, by
+feel, by behaviour under the hammer — since no assay in the modern sense existed to read it for him.
+Broschat's survey makes the complementary point from the objects: the variety of natural alloys in Egypt
+shows goldsmiths skilled in distinguishing them by sensory and aesthetic characteristics and by physical
+properties such as melting point and hardness, and in melting and mixing to create custom alloys tailored
+to a purpose, or to achieve a metal of a different colour.
+        </p>
+        <p>
+On top of nature, the bench added its own alloying. Analysis of gold objects from Predynastic times onward
+shows copper present at levels far above natural impurity, so that deliberate copper addition is certain —
+a feature shared with contemporary Sumerian goldwork — presumably, as Ogden argues, for the copper's
+beneficial effect on the colour of gold-silver alloys, warming a pale electrum toward gold; the deliberate
+addition of considerable copper to produce a red gold is seemingly an Amarna-period phenomenon. Copper in
+Egyptian gold can range up to about ten per cent, the upper levels more typical after the middle New
+Kingdom. The modern classificatory line — metal over seventy-five per cent gold is "gold," below it
+"electrum," with "aurian silver" proposed for alloys of five to fifty per cent gold — falls, as Ogden
+notes, most inconveniently at about the median composition of much Egyptian goldwork, and reflects the
+ancient classification poorly; Section XVI treats electrum on its own terms.
+        </p>
+        <p>
+The decisive fact for Section XXII is stated here, where it belongs: because as-mined gold could not be
+accurately assessed, standardised fineness was impossible until gold could be <em>refined</em> to a known
+pure state and then alloyed down by weighed additions. On the analytical evidence Ogden surveys — his own
+largely unpublished analyses included — Egyptian gold objects before the Late Period were generally
+<strong>unrefined</strong>: gold as mined, or as recycled, with copper sometimes added. That is the norm
+against which every claim for early refining must be measured, and Section XXII measures them.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION XIII -->
+    <section id="goldsmith">
+        <h2 class="section-head">XIII. The Goldsmith's Bench — Sheet, Foil, Wire, Raising and Chasing</h2>
+        <p>
+Goldsmithing is cold work punctuated by heat. Gold and its alloys are forged, in Broschat's summary of the
+technique, by "kneading" the metal between hammer and anvil — the wall paintings show fist-sized, unshafted
+stone hammers for the work — and nearly everything the Egyptian goldsmith made begins as an ingot hammered
+into sheet. The production of many objects, and the plating of many more, required first the casting of
+numerous ingots, which were then hammered into sheets and foils of varying thickness: sheet strong enough
+to support its own weight for vessels and jewellery; foil, in the measured range of surviving examples,
+between about one and fifty micrometres thick, for gilding; with gold beaters of Tutankhamun's time able to
+produce foils and sheets at least 57 by 52 centimetres in extent. Forging a flat sheet of uniform thickness
+is, as Broschat insists, a challenging task demanding great skill despite its monotonous appearance — every
+hammer blow moves the metal, and the sheet remembers every unevenness.
+        </p>
+        <h3 class="sub-head">Raising, Sinking, Chasing, Repoussé</h3>
+        <p>
+A vessel begins as a flat disc of sheet and becomes a bowl by <strong>raising</strong> — hammering the disc
+in overlapping courses over a stake, gathering the metal upward into walls — or by <strong>sinking</strong>
+it into a hollow. Decoration is then worked by <strong>chasing</strong>: blunt chisels and punches driven
+across the surface to displace and compact the metal — never cutting it away — building relief line by line,
+the punch walked along an intended contour and struck repeatedly, or driven once to stamp a motif.
+<strong>Repoussé</strong> works the relief from the back, the sheet supported on a yielding mass of pitch
+or putty that hardens when cool and softens when warmed, so the piece can be held, worked, released and
+re-set; fine detail is then lowered and sharpened again from the front. Broschat's examples fix the
+techniques in objects: the silver bowl attributed to the general Djehuti, of the reign of Thutmose III, and
+the animal-fight scene in repoussé on the scabbard of Tutankhamun's golden dagger. True
+<strong>engraving</strong> — cutting metal away with a sharp tool — is the exception in pharaonic work, rare
+before the first century BCE, when effective iron tools made it practical; the pharaonic surface is a
+displaced surface, not a cut one, and the distinction is diagnostic when objects are examined.
+        </p>
+        <h3 class="sub-head">Annealing — the Bench's Breathing</h3>
+        <p>
+Every shaping process work-hardens the metal: hammered gold, silver and copper alloys stiffen as their
+crystal structure deforms, until the piece will crack rather than move. The remedy is
+<strong>annealing</strong> — heating the workpiece to several hundred degrees, at which the deformed
+crystals recrystallise, the internal stress dissolves, and the metal becomes pliable again while keeping
+the shape already achieved — then continuing the hammering. A raised vessel is annealed many times between
+its disc and its finished form. The operation is so fundamental that the tomb scenes caption it: in the
+Fifth Dynasty tomb of Wepemnofret at Giza, among the earliest metalworking scenes of all, Ogden identifies
+probably the earliest reference to annealing, in a hieroglyphic caption he renders, with its uncertainty
+marked, as "There is no cracking (?) if it is heated excellently" (Ogden, "Metals," quoting the scene's
+caption in translation). The caption is the bench speaking: heat, rightly judged, is what stands between
+the work and the crack.
+        </p>
+        <h3 class="sub-head">Wire</h3>
+        <p>
+Wire is sheet's linear form, and Egyptian wire was made, not drawn. Broschat's survey, following the
+standard literature, distinguishes wires hammered from square rods toward a rounder section from wires made
+by rolling or twisting thin strips of sheet or rod — the latter recognisable under magnification by the
+fine diagonal line that spirals along them, visible, for example, in the wire of Tutankhamun's golden
+dagger. Rare examples show signs of strip-drawing, pulling a strip through a perforated drawplate, but the
+technique is exceptional in pharaonic work and must not be generalised. Wire became rings and loops joining
+an object's parts, chains, and the filigree — wire laid in scrolling patterns and fixed to a ground — that
+together with granulation (Section XIV) forms the summit of the Middle and New Kingdom jeweller's art.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION XIV -->
+    <section id="joining">
+        <h2 class="section-head">XIV. Joining and Surface — Solder, Granulation, Inlay and Gilding</h2>
+        <p>
+A complex jewel is an assembly, and assembly is a thermal problem: the joining material must melt below
+the melting point of the parts it joins, and a piece with several joints must be built in descending order
+of melting temperature, so that each new soldering does not undo the last. Egyptian goldsmiths commanded
+two distinct joining technologies, and the analytical literature distinguishes them by their traces.
+        </p>
+        <p>
+<strong>Hard solder</strong>, documented in Egypt since at least the Middle Kingdom, is a true filler
+alloy — usually a gold-copper alloy — applied as pallions, small pellet-like pieces, at the joint. Heated,
+the solder melts, wets both faces and freezes into a material bond that fills the seam. <strong>Colloidal
+soldering</strong> — also called copper-salt or diffusion soldering — adds no filler at all: a mixture of a
+copper-bearing mineral or copper salt with an organic binder or glue is painted at the joint and used first
+as an adhesive to hold the parts in place; in the charcoal fire the copper compound is reduced to metallic
+copper, which alloys with and diffuses into the adjoining gold surfaces, bonding them with nothing added
+and at most a slight reddish blush at the seam. Colloidal soldering was the technique for the joints under
+least stress and of greatest delicacy — filigree wires and granules — because it holds the assembly together
+before firing and leaves no blob of solder to flood the detail.
+        </p>
+        <h3 class="sub-head">Granulation, Step by Step</h3>
+        <p>
+Granulation — decoration built from tiny spheres of gold fused to a surface — is attested in Egypt by the
+Middle Kingdom, on the cylinder amulets and the great Dahshur and Lahun jewels, and its protocol, as
+Broschat's survey reconstructs it from the objects, runs:
+        </p>
+        <div class="practice-box">
+            <div class="practice-title">// GRANULATION — THE PROTOCOL //</div>
+            <p>1. <strong>Make the granules.</strong> Melt small pieces of sheet metal or wire on charcoal;
+            surface tension draws each molten fragment into a sphere. The charcoal bed is the mould — a
+            granule is a droplet that froze round.</p>
+            <p>2. <strong>Sort.</strong> Grade the cooled granules by size, a process that may have involved
+            sieving through sieves of various apertures. Uniformity of granule is the visible signature of
+            quality in the finished work.</p>
+            <p>3. <strong>Lay the pattern.</strong> Arrange the granules on the object's surface in the design —
+            geometric patterns of triangles, diamonds and zigzags, small hieroglyphs, figurative and floral
+            motifs — held in place by the organic binder of the colloidal solder mixture, painted at the
+            contact points.</p>
+            <p>4. <strong>Fire.</strong> Heat the whole piece in the charcoal fire. The binder chars away; the
+            copper compound reduces; copper diffuses into granule and ground alike, and each sphere bonds at
+            its point of contact without melting — the granule keeps its roundness because the bond forms
+            below the gold's melting point.</p>
+            <p>5. <strong>Judge.</strong> The failure modes are written on surviving pieces: granules melted
+            by excessive heat, granules lost where the bond failed. Broschat's figures of the Khnumit
+            necklace's star pendants show both — open-work granulation of the highest ambition, with some
+            granules slumped in the firing and others gone.</p>
+        </div>
+        <h3 class="sub-head">Inlay, Cloisons, and Gilding</h3>
+        <p>
+Egyptian polychromy set colour <em>into</em> metal. Inlays of coloured stone, faience and — from the New
+Kingdom — glass were seated in recesses cut or built into the object, or in <strong>cloisons</strong>:
+cells made by soldering thin strips of metal on edge onto a base plate, each cell then receiving its stone
+or paste, as on the pectoral of Sithathoryunet, whose soldered gold strips still draw the design. The
+technique is conventionally called cloisonné, with Broschat's caveat that the recess-set form is closer to
+champlevé and that both terms properly belong to enamel, a hot-glass technique not common in pre-Ptolemaic
+Egypt; the Egyptian inlay is stone and paste in metal cells, not fused glass. Metals were also inlaid into
+metals — electrum into silver, precious metals into the artificially blackened copper alloy the texts call
+<i>ḥmt km</i>, "black copper" (transliteration only; the alloy, a copper-gold alloy patinated to a black
+surface, is treated in the literature of Giumlia-Mair and Quirke) — the earliest known damascene work
+including the electrum-inlaid inscription on a silver scarab from the tomb of Wah.
+        </p>
+        <p>
+<strong>Gilding</strong>, finally, is foil put to work: gold sheet and foil fixed to wood, ivory, leather,
+textile, faience, glass, stone and base metal by glues, by hammering or pressing into scored channels, or
+over a preparatory layer of gesso — the calcium carbonate or sulphate ground that carries the gold on so
+many wooden objects, and that is documented even on the copper alloy of Pepi I's statue. The life-size
+copper statue's gilded fingernails (Section XXI) are the technique at monumental scale. What pharaonic
+gilding is <em>not</em> is mercury gilding: the amalgam process, in which gold-mercury paste is applied and
+the mercury driven off by heat, is an import from East Asia of much later date, becoming the Mediterranean
+standard only in Roman times. No mercury film gilds a pharaonic object, and claims that assume one are an
+anachronism of the same order as natron glass in a New Kingdom crucible.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION XV -->
+    <section id="silver">
+        <h2 class="section-head">XV. Silver — the White Gold That Had to Be Imported</h2>
+        <p>
+Silver inverts gold's story. Egypt's deserts yield no known workable silver source: Broschat's survey
+states the position directly — Egypt lacks known mineralogical sources of silver, so much of its silver
+must have been imported from neighbouring countries — and the documentary record agrees from its beginning.
+The royal annals of the Fourth Dynasty king Sneferu already mention silver as an imported commodity. The
+late Sixth Dynasty biographic inscription of the official Iny lists silver imported through the trading hub
+of Byblos in Lebanon. In the Eighteenth Dynasty Annals of Thutmose III, silver rings appear three times —
+twice in the tribute from Syria, once from Babylon. A recent study of the silver of Queen Hetepheres'
+bracelets argues, on isotopic and elemental grounds, for an origin in the Cyclades or the Lavrion mines of
+Attica: Egyptian silver, from first to last, is other people's geology. The one local hypothesis — silver
+extracted from Egypt's own argentiferous galena — fails on the ores themselves, whose silver content is too
+low to support it, and analyses of Egyptian silver objects do not support a galena origin for them either
+(Gale and Stos-Gale's programme, as summarised by Broschat).
+        </p>
+        <p>
+Scarcity priced the metal. The vocabulary records the early valuation: at first the single word
+<i> nbw</i> [Gardiner: N35-D58-G43-S12] [𓈖𓃀𓅱𓋞] served for gold, silver and electrum alike; in the Fourth
+Dynasty the phrase <i>nbw ḥḏ</i>, "white gold," was established for silver, abbreviated by the Fifth Dynasty
+to
+<i> ḥḏ</i> [Gardiner: V28-D46] [𓎛𓂧] alone, at the same time as
+<i> ḏꜥm</i> [Gardiner: D46-D36-G17] [𓂧𓂝𓅓] was introduced for the silvery gold alloys. Harris's study of the
+commodity lists, as summarised by Broschat, shows silver <em>preceding</em> gold in the lists until the
+Middle Kingdom — the order of honour reflecting the rarer metal's higher standing — while by the New Kingdom
+the gold-to-silver ratio had settled at about <strong>two to one</strong> (Černý's figure): a deben of gold
+worth two deben of silver, the imported white metal now the cheaper of the pair, on its way to becoming the
+standard material of account in the first millennium BCE. The el-Tod treasure of the Middle Kingdom — a
+hoard of predominantly silver vessels and ingots, with ten gold ingots, plausibly of Anatolian origin —
+shows the import trade in physical form: silver arriving as finished plate and as bullion, to be weighed,
+hoarded and reworked.
+        </p>
+        <p>
+Silver was worked exactly as gold was worked — sheet, foil, raising, chasing, casting — with the techniques
+of Sections XIII–XIV, and its surviving masterworks, from the silver vessels of Thutmose III's foreign wives
+to the silver coffins of the Third Intermediate Period kings at Tanis, are goldsmiths' work in the white
+metal. Its scarcity in the record is compounded by its chemistry: silver tarnishes and corrodes where gold
+endures, so the surviving corpus understates the ancient one by more than loss alone would explain.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION XVI -->
+    <section id="electrum">
+        <h2 class="section-head">XVI. Electrum — Between Gold and Silver</h2>
+        <p>
+Electrum is gold and silver in one metal — in nature, the commonest form in which "gold" comes out of the
+Egyptian ground. Egyptian sources of the metal could carry silver up to forty-four weight per cent in the
+grains analysed from Wadi Hammamat (Osman and colleagues' mine study, cited by Broschat), and the full
+natural series runs unbroken from silver, through aurian silver and electrum, to gold: there is no line in
+the geology, only lines in the vocabulary, and the vocabulary drew them late (Section XV). Pliny the Elder's
+much later definition — electrum as gold with more than a fifth part silver — is a Roman attempt to fence a
+continuum the Egyptians had lived inside for two thousand years.
+        </p>
+        <p>
+The bench treated electrum as a material in its own right, not as spoiled gold. Its pale, luminous colour —
+between the sun of gold and the moon of silver — was a positive value in the Egyptian system of colour, and
+electrum was specified for objects that wanted exactly that light: the caps of obelisks, catching first and
+last sun, in the
+<a href="alchemy.html" class="nl"> alchemy</a> article's account; inlaid inscriptions and details where its
+brightness reads against both parent metals; jewellery in which goldsmiths who could read their alloys by
+eye (Section XII) deployed the natural range deliberately. Artificial electrum — gold and silver melted
+together to a chosen paleness — is analytically difficult to distinguish from the natural alloy, a small
+lead content being the usual, not invariable, indicator of a man-made mixture, since the silver of a
+man-made alloy was itself smelted metal. The archive's position follows Ogden's: the Egyptians worked the
+continuum knowingly, named its stations as their administration required, and left the hard boundaries to
+us.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION XVII -->
+    <section id="meteoric-iron">
+        <h2 class="section-head">XVII. Iron from the Sky — Meteoric Iron, Gerzeh to Tutankhamun</h2>
+        <p>
+Egypt's first iron fell out of the sky, and the Egyptians said so:
+<i> biꜣ</i> [Gardiner: N34] [𓈔] <i>n pt</i>, "iron of heaven" (the compound is printed in transliteration;
+its first element carries the bracket). Iron meteorites — the cores of shattered asteroids, delivered as
+lumps of iron-nickel alloy — need no smelting: they are metal already, harder and more brittle than copper,
+workable by a smith who already commands hammer and anneal. The analytical signature is the nickel: iron
+meteorites carry it at levels terrestrial smelted iron almost never shows, together, in unaltered metal,
+with the Widmanstätten pattern — the intergrown crystal lamellae that form as meteoritic metal cools over
+geological time, and that no furnace can reproduce.
+        </p>
+        <h3 class="sub-head">The Gerzeh Beads — c. 3200 BCE</h3>
+        <p>
+The earliest known iron artefacts in Egypt are nine small tubular beads from two burials at the Predynastic
+cemetery of Gerzeh, securely dated to about 3200 BCE (Rehren and colleagues,
+<em>Journal of Archaeological Science</em> 40, 2013). Their manufacture is a sheet-metal protocol in
+miniature, established by neutron and X-ray examination of beads so corroded that in some no metal survives
+at all: the meteoritic iron was hammered — carefully, since the alloy is hard and brittle — into thin sheet,
+and the sheet was then rolled or bent into tubes. The beads were strung with lapis lazuli, gold and
+carnelian: meteoritic iron entered the record as a precious material, on a necklace, in the company of the
+costliest substances its owners knew. A companion study of a bead from Gerzeh tomb 67 (Johnson and
+colleagues, <em>Meteoritics and Planetary Science</em> 48, 2013) found the surviving metal fragments
+retaining a chemistry of approximately thirty weight per cent nickel, with thin bands of the nickel-rich
+mineral taenite preserving a distorted Widmanstätten pattern — distorted by cold-working — in a bead of
+which only about 2.4 per cent of the volume remains metal at all. Two independent teams, two methods, one
+conclusion: the first iron in Egypt is meteoritic, and fourth-millennium smiths had already mastered the
+smithing of a difficult iron-nickel alloy nearly two millennia before iron smelting reached them.
+        </p>
+        <h3 class="sub-head">Tutankhamun's Dagger</h3>
+        <p>
+The famous case is the iron dagger laid against Tutankhamun's right thigh, found in 1925 with its gold
+hilt, rock crystal pommel and decorated gold sheath — an iron blade, in the fourteenth century BCE, in a
+tomb where iron was rarer than gold. Its origin was debated for ninety years on conflicting analyses. In
+2016 Comelli and colleagues settled the composition by portable X-ray fluorescence, non-destructively, in
+the Egyptian Museum in Cairo (<em>Meteoritics and Planetary Science</em> 51): the blade is iron with
+<strong>10.8 weight per cent nickel and 0.58 per cent cobalt</strong> — a composition, and a
+nickel-to-cobalt ratio, that sit squarely with the iron meteorites and against terrestrial smelted iron. In
+2022 Matsui and colleagues, mapping the blade's surface chemistry in two dimensions, refined the nickel
+figure to 11.8 ± 0.5 weight per cent and reported discontinuous nickel-rich bands arranged with a cubic
+symmetry consistent with a Widmanstätten pattern — the meteorite's crystal architecture still legible in
+the finished blade, which constrains how the blade was worked, since sustained high heat would have erased
+it. The archive states the resulting position at its real strength: the dagger's metal is meteoritic beyond
+reasonable doubt; which meteorite it came from is not established (the 2016 team's comparison found one
+compatible modern find, the Kharga octahedrite, among twenty candidates — a compatibility, not an
+identification); and whether the blade was forged in Egypt or arrived as a foreign gift, as other fine iron
+objects are documented arriving at the Egyptian court in the Amarna Letters, the analyses do not decide.
+        </p>
+        <p>
+Between Gerzeh and Tutankhamun the record is a scatter: a handful of small iron objects across two thousand
+years, some certainly meteoritic, some — like the corroded pieces wholly devoid of nickel that Craddock
+nevertheless judges almost certainly meteoritic, against Lucas's contrary reading — argued case by case;
+and the celebrated iron plate from the Great Pyramid's masonry, championed and re-championed since 1837,
+whose fullest reassessment (Craddock and Lang) concluded that its structure and composition strongly
+suggest it is of no great antiquity. The archive lists it as it lists the Buhen gold: a famous claim, held
+at the strength its examiners leave it. Meteoric iron was always a fortuitous supply — a fall, a find, a
+gift — and no industry can be built on weather. For iron to become a working metal, Egypt needed the second
+threshold: smelting. Section XVIII explains why it came so late.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION XVIII -->
+    <section id="smelted-iron">
+        <h2 class="section-head">XVIII. Smelted Iron's Late Arrival — the Bloomery Problem</h2>
+        <p>
+The paradox of Egyptian iron is that the ores are abundant and the temperatures were already there. Iron
+ores — magnetite, haematite, the ores of the Bahariya Oasis and the Aswan sandstones — occur widely in
+Egypt, but in Dynastic times they were exploited, on Ogden's summary, seemingly seldom if ever for anything
+beyond pigments and the fluxing of copper smelts. Iron smelting itself requires about 1100–1150 °C — no
+hotter than a copper furnace already ran. The difficulty is not the fire. It is the product.
+        </p>
+        <p>
+A copper smelt ends in liquid metal that gathers, pours and casts. An iron smelt, at any temperature an
+ancient furnace could hold, ends in a <strong>bloom</strong>: a spongy, solid mass of iron intergrown with
+slag, which never melted and cannot be poured. The bloom must be reheated and hammered, repeatedly, to
+expel the slag and consolidate the metal into wrought iron — labour-intensive forging for a material that,
+as Ogden states the bench verdict, could be hammered into serviceable tools and weapons but offered little
+if any advantage in hardness or edge over the copper alloys it would replace; its one noticeable benefit
+was a tendency to bend rather than break. Only <strong>carburisation</strong> — holding the iron in
+charcoal until carbon enters its surface, making a steel that can be quench-hardened and tempered — turns
+smelted iron into a superior metal, and carburised, quenched and tempered pieces are sporadic in the Near
+East from the middle of the second millennium BCE, not an Egyptian industry. Against an established,
+state-supplied bronze system of mines, expeditions, foundries and recycling, wrought iron had no economic
+case. Egypt's lateness with iron is not ignorance; it is a rational industry declining a worse product
+until the product improved.
+        </p>
+        <p>
+The chronology of the turn, on the evidence, is correspondingly late and at first foreign-flavoured. Fine
+iron objects, daggers among them, reach the Egyptian court as gifts from foreign rulers in the Amarna
+Letters; New Kingdom Egyptian examples remain rarities like Tutankhamun's. Petrie identified two Delta
+sites — Naukratis and Tell Defenna (Daphnae) — as iron-working places of the sixth century BCE, on large
+quantities of iron slag; Ogden's caution applies and this article repeats it: copper smelting also produces
+copious iron slag, so the Delta slag is not, alone, definitive proof of iron smelting (the same caution the
+Gerzeh literature applies). By the middle of the first millennium BCE iron production had increased
+dramatically around Egypt while Egypt itself lagged — Moorey's observation, quoted by Ogden, is that iron
+became cheaper than copper in Mesopotamia only around 600 BCE, the era of the Persian conquest, whose armies'
+iron equipment has been seen as one factor in Egypt's fall. The largest early group of Egyptian iron objects,
+some two dozen woodworking tools of the seventh century BCE found in the Delta in association with a Western
+Asiatic bronze helmet — four of them steel — shows the new metal arriving, characteristically, in foreign
+company. Full iron production on Egyptian soil, at centres such as Meroë to the south, belongs to the
+post-pharaonic story and lies beyond this article's centre of gravity.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION XIX -->
+    <section id="moulds">
+        <h2 class="section-head">XIX. Casting I — Open Moulds and Piece Moulds</h2>
+        <p>
+Casting is the foundry's defining act — the Egyptian word for it,
+<i> wdḥ</i> [Gardiner: G43-D46-V28] [𓅱𓂧𓎛], "pouring," is the same word the
+<a href="glass.html" class="nl"> glass</a> article meets for the pouring of molten glass — and its simplest
+instrument is the <strong>open mould</strong>: a single cavity cut into stone or formed in clay, open to the
+air, into which metal is poured and from which the cooled casting is lifted. Open moulds make flat-backed,
+simple things supremely well: ingots first of all — the bun ingots of the smelting sites and the bar and
+ring forms of the treasury — and blanks, the rough shapes that the hammer would finish. Broschat's survey
+notes open moulds used primarily for creating blanks that could be further worked into an object; the open
+mould is the foundry's roughing-out tool, and its products are supposed to be unfinished.
+        </p>
+        <p>
+<strong>Piece moulds</strong> — two or more fitted parts, of stone or clay, enclosing a cavity — cast
+simple three-dimensional forms with a front and a back: axes, adzes, mirrors' discs, simple figures. The
+mould parts are keyed to register, bound or weighted together, and poured through a gate; the casting is
+freed by opening the mould, which survives to cast again, so piece moulds are the technology of repetition
+for simple shapes. Limestone moulds excavated at Amarna — one carrying a fish motif, beside a finished gold
+foil fish of similar form — were used for casting jewellery elements or for pressing and chasing gold foil
+into shape (Broschat's survey, after Kemp); the two uses are cousins, since a mould that shapes hot metal
+by pouring can shape cold foil by pressure. The pouring itself is a two-man act in the scenes: one worker
+tips the crucible with tongs while his colleague, in Bernd Scheel's classic description of the Rekhmire
+imagery in <em>Egyptian Metalworking and Tools</em>, holds back the dross and contamination at the
+crucible's lip so that clean metal alone enters the mould. Slag in a casting is a ruined casting; the
+second man's stick is quality control.
+        </p>
+        <p>
+Between the open mould and the lost-wax process of Section XX stands the question of scale. Piece moulds
+and open moulds serve the small and the repeatable. The great castings of the Egyptian record — the temple
+doors of Rekhmire's foundry, cast in moulds furnished with multiple filling openings so that several
+crucibles' worth of bronze could enter one vast, thin casting in a single coordinated pour — were one-off
+engineering: a mould built for one door, one pour, one day on which four hearths, their bellows crews and
+their crucible teams had to arrive at readiness together (Section XXIII). Large hollow statuary took the
+other road, the road of wax and core, to which the article now turns.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION XX -->
+    <section id="lost-wax">
+        <h2 class="section-head">XX. Casting II — Lost Wax, Step by Step</h2>
+        <p>
+Most metal statues from Egypt are cast, not hammered, and the majority were made by the <strong>direct
+lost-wax process</strong> — <em>cire perdue</em> — in which a wax model is encased in clay, the wax is
+melted out and lost, and metal takes its exact place. The process is described here in its full sequence,
+assembled from the Art Institute of Chicago's technical summary of Egyptian copper-alloy statuettes (Emily
+Teeter, "About Copper Alloy Statuettes," 2025) and Broschat's <em>UEE</em> survey, which agree in every
+structural particular. Every casting so made is unique: model and mould are both destroyed in the making.
+        </p>
+        <div class="practice-box">
+            <div class="practice-title">// LOST-WAX CASTING — THE PROTOCOL //</div>
+            <p>1. <strong>Model in wax.</strong> For a solid statuette, model the figure entire in wax. For a
+            hollow casting — which saves metal and casts more soundly at size — first form a core of clay,
+            sand and organic material in the rough shape of the figure, smaller than the finished object by
+            the intended wall thickness, and model the wax over the core to full form and final detail.</p>
+            <p>2. <strong>Add the plumbing.</strong> Attach wax rods: a sprue or funnel through which the metal
+            will be poured in, and vents through which air will escape as the metal rises. A casting that
+            cannot breathe cannot fill.</p>
+            <p>3. <strong>Pin the core.</strong> For hollow work, drive small metal rods — core supports or
+            chaplets — through the wax into the core, so that when the wax is gone the core still hangs
+            exactly centred in the empty mould, held by the pins.</p>
+            <p>4. <strong>Invest.</strong> Coat the whole assembly in clay, the investment, building a mould
+            around the wax with the sprue and vent channels preserved.</p>
+            <p>5. <strong>Burn out.</strong> Heat the mould in a kiln. The wax melts and runs out — the "lost"
+            wax — and the firing hardens the mould and burns away the last wax traces, leaving a clean cavity
+            that is the figure's exact negative, with the core suspended inside it for hollow work.</p>
+            <p>6. <strong>Pour.</strong> Melt the metal in crucibles (Sections VI, IX) and pour it through the
+            sprue into the hot mould, where it flows into the space the wax occupied — for hollow work, into
+            the thin shell between core and investment.</p>
+            <p>7. <strong>Break out.</strong> When the metal has cooled and set, break the investment away. The
+            mould dies so the figure can live; there is no second casting from it.</p>
+            <p>8. <strong>Fettle and finish.</strong> Cut away sprue, vents and the protruding ends of the core
+            supports; file the chaplet points flush — where the pins were of the same metal as the casting
+            they vanish into its surface; extract the core, commonly through an opening left at the base;
+            chase the surface to final detail (Section XIII); join separately cast parts by solder or by
+            mortise-and-tenon joints, as wooden statuary was joined; inlay, gild and polish as the commission
+            requires (Section XIV).</p>
+        </div>
+        <p>
+Two corollaries matter for reading museum collections. First, serial production is possible without any
+mould surviving: plaster or stone moulds of the Late and Greco-Roman periods, once thought to be for casting
+metal directly, are now understood to have been used to produce the <em>wax models</em> — near-duplicate
+waxes, each then invested and cast by the protocol above, so that a temple's hundred identical gods are a
+hundred individual castings from a family of identical waxes. Second, the chaplets and core are diagnostic:
+an Egyptian hollow bronze that retains core material, or shows the filed points of its core pins, is telling
+the examiner exactly how it was made, and technical examination reads those traces as this protocol predicts.
+The great age of the process in Egypt is the first millennium BCE, when the temple statuette industry
+reached industrial scale — Garland and Bannister's famous observation, quoted by Ogden, that the draining
+of the lake at Karnak provided almost a glut of certain varieties of figure, gives the scale — but the
+process itself, and the hollow casting it enables, are already mature in the Middle Kingdom figure of
+Section IX.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION XXI -->
+    <section id="sheet-work">
+        <h2 class="section-head">XXI. Sheet Work — Raising, Annealing, and the Great Copper Statues</h2>
+        <p>
+Not everything large was cast. The most famous large metal objects of the Old Kingdom were
+<em>hammered</em>: the over-life-size copper statue of Pepi I from Hierakonpolis (Cairo JE33034), with its
+smaller companion figure, was built up from copper sheet worked over a core, its parts shaped by hammering
+and joined, its fingernails gilded — a goldsmith's construction at the scale of a man. Its metal is itself a
+document: the most reliable analysis (Desch's, as reported by Ogden) gives almost pure copper with 0.7 per
+cent iron and 1.1 per cent nickel — fluxed-smelting copper (Section VII) of high purity, without tin,
+worked by the sheet techniques of Section XIII at monumental ambition. A Sixth Dynasty state that could
+raise, anneal, join and finish copper sheet into a king's image at over life size commanded the whole cold
+side of the craft as completely as the hot.
+        </p>
+        <p>
+Sheet work at this level is a discipline of cycles: hammer until the metal stiffens, anneal until it
+relents, hammer again (Section XIII). Vessels show the same discipline at domestic scale — the copper and
+bronze vessels of the Rekhmire registers being beaten out, chased and polished in sequence — and mirrors,
+whose discs were cast or hammered and then ground and polished to reflect, close the repertoire. The
+finishing operations deserve their sentence: chasing sharpens the design, grinding and polishing with
+progressively finer abrasives bring the surface up, and the polished object is the first moment in the whole
+long process, from ore heap to mirror, at which the metal looks like the substance of the temple treasury.
+Everything before that moment is matte, blackened, slagged and sooty — which is why the scenes that show
+polishing show it last, as a separate station with its own workmen (Section XXIII).
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION XXII -->
+    <section id="refining">
+        <h2 class="section-head">XXII. Refining and Cupellation — the Evidence at Its Real Strength</h2>
+        <p>
+This section is the article's adjudication section, and it is written differently from the rest: claim by
+claim, with the strength of the evidence stated for each. Refining is where the literature on Egyptian metal
+most often outruns its evidence, because refining is where metallurgy touches the alchemical imagination —
+the purification of gold is too good a story to leave unclaimed. The archive's rule applies with full force:
+the claim is printed at the strength the evidence leaves it, no stronger.
+        </p>
+        <h3 class="sub-head">What the Processes Are</h3>
+        <p>
+<strong>Cupellation</strong> separates precious metal from base metal by oxidation. The impure metal is
+melted with lead in a shallow, porous vessel — the cupel — under a strong oxidising blast at around
+1000 °C. The lead and the base metals oxidise; the lead oxide, litharge, is skimmed or absorbed into the
+cupel's porous fabric; the precious metal, which does not oxidise, remains as a bright button. Cupellation
+cleans gold or silver of copper, lead and their like. What it cannot do is separate silver from gold: both
+survive the cupel together. That second separation — <strong>parting</strong> — is achieved by
+<strong>cementation</strong>: the gold-silver alloy, beaten thin or granulated to expose maximum surface,
+is packed in a closed vessel with salt and porous material and held hot for an extended period, during
+which the silver is converted to silver chloride and absorbed into the cement, leaving refined gold behind.
+The two processes answer two different questions, and much confusion in the secondary literature comes from
+using "refining" for both.
+        </p>
+        <h3 class="sub-head">Where Cupellation Is Attested</h3>
+        <p>
+Cupellation is old and, in the wider world, well evidenced. Lucas's synthesis, carried in the standard
+histories, has silver being produced in the Near East by about 2000 BCE from argentiferous galena by
+cupellation — the galena smelted to lead, the lead cupelled away, the silver remaining — and production
+evidence of the fourth millennium BCE, such as the late Uruk silver production at Habuba Kabira in Syria
+identified by Pernicka and colleagues, pushes the process's attested use earlier still in the region. The
+earliest <em>unequivocal</em> archaeological evidence for gold <em>parting</em>, by contrast, is the
+refinery excavated at Sardis in Lydia, of the era of Croesus in the sixth century BCE, where Ramage,
+Craddock and Cowell documented the cementation process in its installations and waste. Broschat's
+<em>UEE</em> survey states the current consensus in one sentence, which this article adopts: until further
+evidence emerges, it must be assumed that the separation or refining of gold was not invented until the
+seventh century BCE, in Lydia.
+        </p>
+        <h3 class="sub-head">The Egyptian Ledger</h3>
+        <p>
+For pharaonic Egypt, then, the ledger reads as follows. <strong>Refining of base-metal content — plausible,
+indirectly depicted, never excavated.</strong> Ogden examines the New Kingdom scene in the tomb of Puyemre
+(TT39) in which gold is melted with one man working foot bellows while a second stirs the crucible and
+blows into it through a blowpipe: the blowing, he argues, would help oxidise base metals present,
+particularly if lead or lead oxide had been added — "true cupellation" in his parenthesis — but with no
+significant loss of silver, and thus little overall increase in the purity of typical as-mined Egyptian
+gold. A scene consistent with oxidative refining of gold's base metals is therefore attested; a cupellation
+installation, a cupel, a litharge cake from a pharaonic context — none is part of the excavated record this
+article can cite. <strong>Parting — not attested for pharaonic Egypt.</strong> Broschat's survey is
+explicit: the knowledge of how to separate silver from gold was not present in Egypt until sometime between
+the seventh and fifth centuries BCE — which is to say, at the very end of, or after, the pharaonic
+sequence — and Ogden's verdict concurs from the objects: refining was not used in the day-to-day jewellery
+industry before the Late Period, and was perhaps introduced by the Persians. The phrases in the texts that
+speak of "gold of two times" and "gold of three times" have been read since Lucas as suggesting refining;
+the archive records the reading and the caution together — repeated melting and skimming, which any foundry
+practised, would justify such phrases without any parting at all.
+        </p>
+        <p>
+Two further exhibits are entered with their labels attached. The Amarna Letter EA 10 records a Babylonian
+king's complaint about Egyptian gold losing weight when put through Mesopotamian fires — often published as
+evidence of a more efficient, silver-removing refining abroad. Ogden's discussion states the alternatives
+plainly: the letter must be assumed to refer to such a process, <em>unless</em> the batch sent was one of
+the gold-copper alloys typical of the Amarna period, whose base-metal content would burn away in any
+competent remelting and produce exactly the reported loss. The letter proves a complaint; it does not prove
+a process. And the newest claim: a 2025 study by Albarède, Blichert-Toft and Pinto (<em>npj Heritage
+Science</em>), reading lead isotopes and elemental patterns in Egyptian and Persian silver objects in the
+Louvre, argues that salt-cementation parting was already practised in the Middle Bronze Age, over a
+millennium before Sardis — the silver of some objects bearing, on their interpretation, the signature of
+silver recovered from gold cementation. The archive reports the study as what it is: a serious,
+peer-reviewed reinterpretation of analytical data that would, if sustained, rewrite this section; it is not
+an excavated refinery, it has not displaced the Sardis anchor in the consensus Broschat summarises, and the
+authors themselves frame parts of the chain — whether the silver chloride of cementation was reclaimed or
+discarded — as open questions. The claim is logged here, at that strength, for the reader who meets it
+elsewhere stated as settled fact.
+        </p>
+        <p>
+One hypothesis completes the ledger. Antimonial litharge — lead oxide carrying antimony — was used in
+Egyptian glassmaking from the New Kingdom (Section X of the
+<a href="glass.html" class="nl"> glass</a> article treats the antimonate opacifiers), and it has been
+suggested in the literature that a supply of litharge in quantity implies cupellation being practised
+somewhere in the chain that fed the glass workshops. The suggestion is entered here as a suggestion: litharge
+can arise from lead processing that is not precious-metal cupellation, and no pharaonic cupellation hearth
+has been excavated to confirm it. What pharaonic Egypt demonstrably refined, early and routinely, was its
+copper (Section VII) and its gold's base-metal content at most; the purification of gold from silver, the
+operation on which the later alchemy of the recipe papyri dreams, belongs in Egypt to the first millennium
+BCE and after. The bench record says so, and this article lets it.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION XXIII -->
+    <section id="rekhmire">
+        <h2 class="section-head">XXIII. The Scenes as Documents — Rekhmire Read Step by Step</h2>
+        <p>
+The tomb of the vizier Rekhmire at Thebes (TT100), of the reign of Thutmose III, about 1460 BCE, preserves
+the most complete metalworking documentation to survive from pharaonic Egypt: registers of the temple
+workshops of Amun, published by Norman de Garis Davies (1943) and read by every subsequent student of the
+craft, Ogden and Scheel among them. The scenes are not illustrations of the craft in general; they are a
+specific production, the casting of bronze doors for the temple of Amun, shown from raw material to finished
+object. Read in sequence, as the archive now reads them, they are the closest thing Egypt left to the
+foundry manual it never wrote.
+        </p>
+        <p>
+<strong>Step one — the metal arrives.</strong> The sequence opens with supply: ingots and scrap delivered
+to the workshop, including the oxhide ingots of the Cypriot trade (Section IV), and gold arriving in the
+ring form in which the treasury handled it. <strong>Step two — weighing.</strong> Scribes record the metal
+on balances — gold rings weighed against stone weights, the deben arithmetic of Section I performed in
+public, under the vizier's inspection. Nothing enters the melt unweighed; nothing will leave it
+unaccounted. <strong>Step three — the hearths.</strong> The foundry register shows four charcoal hearths
+fired at once, each fanned by dish bellows worked with the feet (Section VI): several blowers, a battery of
+air, because the melt to come is not a crucible of jewellery metal but the charge for monumental doors.
+<strong>Step four — melting and alloying.</strong> Crucibles stand in the hearths; the copper melts; the
+alloying addition — the tin of Section IX — is made at the crucible; overseers supervise the melt with
+blowpipe and stirring rod, the gestures Puyemre's parallel scene (TT39) shows in gold. <strong>Step five —
+the pour.</strong> Crucible teams converge on the door mould: a great flat mould, furnished with multiple
+filling openings, receiving molten bronze from several crucibles in one coordinated operation — the
+military precision of the pour is the register's whole point, since a door casting that freezes halfway is
+a door lost. <strong>Step six — finishing.</strong> The final registers move to the cold bench: vessels and
+objects beaten out, chased with hammer and punch on the anvil, and polished — the smiths of the last
+station, with brazier, blowpipe and tongs laid out above them in Scheel's famous plate, turning matte
+castings into temple furniture.
+        </p>
+        <p>
+The same tomb's precious-metal registers complete the documentation for gold and silver: craftsmen making,
+in the accompanying text's paraphrase as published in the secondary literature, vessels for the god in gold
+and silver — weighing, melting, casting, soldering, hammering, engraving and polishing all depicted, the
+full verb list of Sections XIII–XIV performed by named trades. And Rekhmire does not stand alone. The Old
+Kingdom had already fixed the genre: the tombs of Mereruka and Pepiankh show melting with the spouted
+crucible of Section VI; Wepemnofret's workshop captions the annealing of Section XIII; the tomb of Puyemre
+supplies the gold-melting scene on which Section XXII's cupellation discussion turns; Baqt III and Khacy
+document gold-winning (Section XI). Read together, the scenes give the craft's <em>chaîne opératoire</em>
+across two thousand years — and read critically, with Davies's plates against the excavated debris of
+Buhen, Timna and Qantir, they check out: the tools match the finds, the gestures match the physics, and
+where a scene is ambiguous, as at Puyemre, this article has said so rather than resolving it by wish.
+        </p>
+        <p>
+What the scenes cannot give is equally definite, and the archive closes the section with it. No scene shows
+smelting at the mine — the valley's painters painted workshops, not desert camps — so the smelt of Section V
+rests on debris and replication alone. No scene gives a temperature, a timing or a proportion. And every
+scene is a vizier's or a noble's monument, showing the workshop as the administration wished it remembered:
+ordered, supervised, complete. The slag heaps, which show the failures, the re-runs and the waste, are the
+necessary correction, and this article has used them as one throughout.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION XXIV -->
+    <section id="workshops">
+        <h2 class="section-head">XXIV. Workshops and Workmen — Qantir, Amarna, the House of Gold</h2>
+        <p>
+Egyptian metalworking lived in institutions. At the summit stood the temple and palace workshops — the
+foundry of Amun's temple at Thebes whose work Rekhmire inspects, the <strong>House of Gold</strong>, the
+treasury workshop in which, despite its name, not only gold but other precious materials were worked and
+stored — and the temple workshops treated in this archive's
+<a href="temple-laboratory.html" class="nl"> temple laboratory</a> article, where the production of cult
+metalwork sat inside the ritual economy of the temple itself. Below the summit, production spread through
+city workshops and into houses: the excavated record refuses any picture of a craft confined to temple
+courts.
+        </p>
+        <p>
+The two great excavated cases frame the range. At <strong>Qantir</strong> (Section VI) stands the state
+foundry at full industrial scale: thirty thousand square metres of crucibles, moulds and casting waste,
+foreign armour among its products and foreign craftsmen, on the evidence, among its workforce — production
+as an arm of the Ramesside military state. At <strong>Amarna</strong>, a generation earlier and at the
+opposite organisational pole, the domestic workshop complex M50.14–16 in the Main City South — excavated by
+Woolley in 1922 as a glass workshop and re-excavated by the Amarna Project in 2014 and 2017 — yielded glass,
+faience and stone working in quantity, and, in the 2017 season, crucibles containing remains of copper alloy:
+metalworking practised inside a house-sized jewellery workshop, in a suburb, alongside the vitreous crafts.
+Anna Hodgkinson's publication of the site and Frederik Rademakers's study of its metallurgical remains make
+M50.14–16 the type-site of the small end of the industry — scrap bronze remelted, small castings poured,
+in a courtyard economy that the state industry of Qantir presupposes as its base.
+        </p>
+        <p>
+For the workmen themselves, the documentary capital is
+<a href="deir-el-medina.html" class="nl"> Deir el-Medina</a>, the New Kingdom craftsmen's village of the
+Theban necropolis, whose ostraca and papyri record a state workforce's rations, absences, disputes and
+deliveries in unmatched detail. The village's crew served the royal tombs rather than the foundries, and
+this article does not pretend otherwise; but its records are the archive's best window onto how Egyptian
+craft production was organised at the level of the working life — gang structure, overseers and scribes,
+materials issued by weight and accounted on return, skill transmitted inside families — and the metalworkers
+of the temple workshops belonged to the same administrative world, under overseers of works and overseers
+of goldsmiths whose titles the inscriptions preserve. The stela of the overseer of artisans Irtisen, which
+Broschat notes may allude to lost-wax casting while boasting of hereditary expertise passed from father to
+son, gives the craftsman's own voice to the structure: the knowledge was a patrimony, guarded as one.
+        </p>
+        <p>
+Status followed skill. The Timna evidence of Section IV carries the point into the desert: excavation of
+the great smelting camp on the so-called Slaves' Hill showed, on the excavators' reading of the faunal and
+material record, metalworkers of high status on a rich diet — specialists the industry could not afford to
+waste, not the expendable gang of the older imagination. From the reckoner of gold at the Abrak well to the
+bellows crews of Rekhmire, the bench record of Egyptian metal is a record of valued, organised, hereditary
+expertise — the human infrastructure without which no protocol in this article runs.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION XXV -->
+    <section id="repeat-it">
+        <h2 class="section-head">XXV. Repeat It — the Master Protocols in Brief</h2>
+        <p>
+The archive's standing practice for procedural articles is to end the technical account with the processes
+restated as numbered protocols, stripped of commentary. The full protocols stand in Sections V (crucible
+smelting), XI (gold-washing), XIV (granulation) and XX (lost wax). What follows condenses the two remaining
+master sequences of the Egyptian foundry — the bronze melt and the door-scale pour — from the sections
+indicated, as the bench summary of the whole article.
+        </p>
+        <div class="practice-box">
+            <div class="practice-title">// THE BRONZE MELT AND THE GREAT POUR — CONDENSED //</div>
+            <p>1. Weigh the charge: copper, by ingot and scrap, against the deben weights; record it (Sections I,
+            XXIII). Weigh the tin separately — in the mature foundry, up to about one part in ten for standard
+            bronze (Section IX).</p>
+            <p>2. Set the hearths: charcoal laid, bellows crews posted — foot bellows for a great melt, one
+            blower to a hearth pair, relieving in rotation (Section VI).</p>
+            <p>3. Charge the crucibles with copper under a covering of charcoal, which keeps the melt from the
+            air and the tin, once added, from oxidising away.</p>
+            <p>4. Blow the crucibles to full melting heat — past 1083 °C for the copper, the melt judged by eye
+            and by the rod.</p>
+            <p>5. Add the tin to the molten copper; stir the alloy together; skim the dross from the surface
+            (Sections IX, XIX).</p>
+            <p>6. Prove the mould ready: built, dried, its filling openings clear — for a door casting, a mould
+            with multiple gates, so the whole thin casting fills before any part can freeze (Sections XIX,
+            XXIII).</p>
+            <p>7. Pour in coordination: crucible teams in sequence, each pourer tipping with tongs, each
+            attendant holding back the crucible's dross with a stick so clean metal alone runs (Section XIX).</p>
+            <p>8. Cool undisturbed; break or open the mould; fettle the casting — gates cut, surface chased,
+            the work passed to the cold bench for beating, chasing and polishing (Sections XIII, XXI,
+            XXIII).</p>
+        </div>
+        <p>
+And the whole article in one sentence: Egypt dug bright ores in Sinai and the Eastern Desert and gold in
+the south, smelted copper in crucibles under blowpipes and then in fluxed furnaces under bellows, hardened
+it first with arsenic and then with imported tin, washed its gold from gravel and crushed quartz and worked
+it unrefined by hammer, solder and granule, imported its silver and named it white gold, treasured the iron
+that fell from the sky for two thousand years before it learned to smelt the iron under its feet — and
+painted the entire operation, station by station, on the walls of its tombs. The recipe papyri of
+<a href="alchemy.html" class="nl"> Alchemy</a>, when they come, inherit every one of those stations. They
+invent almost none of them.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SECTION XXVI -->
+    <section id="sources">
+        <h2 class="section-head">XXVI. Sources and Scholarship</h2>
+        <p>
+This article's rule has been applied throughout: procedural claims are tied to excavated debris, published
+analysis, excavated installations or labelled reconstruction and replication; translations are paraphrased
+and named rather than quoted at length, the single short caption rendering of Section XIII being given in
+its source's own wording with its uncertainty mark preserved. Each source below was read for this article.
+        </p>
+        <h3 class="sub-head">The Standard Syntheses</h3>
+        <p>
+<strong>Lucas and Harris 1962</strong> — Alfred Lucas, <em>Ancient Egyptian Materials and Industries</em>,
+4th edition, revised by J. R. Harris: the foundational treatment of Egyptian metals, ores, alloys and
+refining, cited throughout in the discussions of Buhen, the Pepi I statue, silver's valuation and the
+"gold of two times." <strong>Ogden 2000</strong> — Jack Ogden, "Metals," in Paul T. Nicholson and Ian Shaw
+(eds.), <em>Ancient Egyptian Materials and Technology</em> (Cambridge University Press): the modern
+standard survey, read in full for this article — copper sources and smelting, the fluxing tracer, arsenical
+and tin alloys, lead, gold regions and washing, refining and cupellation, iron — and the source of the
+composition figures quoted throughout, themselves drawn from the analytical corpora of Riederer,
+Kaczmarczyk and Hedges, Cowell and others there cited. <strong>Broschat 2024</strong> — Katja Broschat,
+"Gold, Electrum, and Silver," <em>UCLA Encyclopedia of Egyptology</em>: read in full — precious-metal
+sources and imports, workshop evidence, sheet and foil, wire, chasing and annealing, hard and colloidal
+solder, granulation, lost-wax casting, inlay, the parting adjudication of Section XXII and the silver
+valuation of Section XV. <strong>Scheel 1989</strong> — Bernd Scheel, <em>Egyptian Metalworking and
+Tools</em> (Shire Egyptology): the scene-by-scene reading of the tomb documentation, Rekhmire above all.
+        </p>
+        <h3 class="sub-head">Analytical and Excavation Studies</h3>
+        <p>
+<strong>Comelli et al. 2016</strong> — Daniela Comelli and colleagues, "The meteoritic origin of
+Tutankhamun's iron dagger blade," <em>Meteoritics and Planetary Science</em> 51: the portable XRF
+determination (10.8 wt% Ni, 0.58 wt% Co) of Section XVII, with <strong>Matsui et al. 2022</strong> in the
+same journal for the two-dimensional mapping, the revised nickel figure and the Widmanstätten evidence.
+<strong>Rehren et al. 2013</strong> — Thilo Rehren and colleagues on the Gerzeh beads,
+<em>Journal of Archaeological Science</em> 40 (c. 3200 BCE; hammered sheet rolled to tubes), with
+<strong>Johnson et al. 2013</strong>, <em>Meteoritics and Planetary Science</em> 48, for the tomb 67 bead's
+surviving metal at about thirty weight per cent nickel. <strong>Davey, Rademakers et al. 2021</strong> —
+"Egyptian Middle Kingdom copper: analysis of a crucible from Buhen in the Petrie Museum,"
+<em>Journal of Archaeological Science: Reports</em> 36: the spouted crucible's handling and the
+arsenic-nickel smelting interpretation of Section VI, with Davey's pot-bellows corpus (1979; review 2019)
+for Section VI's air supply. <strong>El-Gayar and Jones 1989</strong> on the Buhen ores and copper, as
+discussed and in part questioned by Ogden and by Craddock and Giumlia-Mair. <strong>Rothenberg</strong> on
+Timna, with the Central Timna Valley Project's redating under <strong>Ben-Yosef</strong> and Avner's
+reconsideration, for Section IV's layered position. <strong>Pusch 1990</strong> on the Qantir foundry and
+<strong>Hodgkinson and Rademakers</strong> on Amarna M50.14–16, for Section XXIV. <strong>Teeter
+2025</strong> — Emily Teeter, "About Copper Alloy Statuettes," Art Institute of Chicago, for the lost-wax
+protocol of Section XX. <strong>Albarède, Blichert-Toft and Pinto 2025</strong>, <em>npj Heritage
+Science</em>, for the Middle Bronze Age cementation claim, entered in Section XXII at the strength there
+stated. Museum and encyclopedia records consulted include the Metropolitan Museum's essays on turquoise in
+ancient Egypt and its facsimile record for the Rekhmire metalworkers scene (31.6.11, after Nina de Garis
+Davies).
+        </p>
+        <p>
+Readers following the threads outward should begin with the archive's own
+<a href="alchemy.html" class="nl"> Alchemy</a>, whose metallurgical metaphysics this article grounds;
+<a href="glass.html" class="nl"> Glass</a>, the sister pyrotechnology, sharing furnaces, crucibles,
+litharge and the Qantir industrial quarter; the
+<a href="temple-laboratory.html" class="nl"> temple laboratory</a>, for the workshops as ritual
+institutions; <a href="deir-el-medina.html" class="nl"> Deir el-Medina</a>, for the craftsmen's documented
+lives; and, for everything before the state,
+<a href="../../antiquity/first-metals.html" class="nl"> First Metals</a> in the Antiquity hub.
+        </p>
+    </section>
+
+    <div class="glyph-marker">𓍍 𓋞 𓌉 𓈔</div>
+
+    <!-- RELATED LINKS -->
+    <div class="related-links">
+        <h3>// RELATED ARCHIVES //</h3>
+        <ul>
+            <li><a href="alchemy.html">Alchemy — the Sacred Art of Kemet</a></li>
+            <li><a href="glass.html">Glass in Ancient Egypt</a></li>
+            <li><a href="temple-laboratory.html">The Temple Laboratory</a></li>
+            <li><a href="deir-el-medina.html">Deir el-Medina — the Place of Truth</a></li>
+            <li><a href="predynastic.html">The Predynastic Period</a></li>
+            <li><a href="amarna-period.html">The Amarna Period</a></li>
+            <li><a href="new-kingdom.html">The New Kingdom</a></li>
+            <li><a href="hathor.html">Hathor — Lady of Turquoise</a></li>
+            <li><a href="color-symbolism.html">Colour Symbolism</a></li>
+            <li><a href="hieroglyph-reference.html">Hieroglyph Reference</a></li>
+            <li><a href="timeline.html">Timeline of Egyptian History</a></li>
+            <li><a href="../../antiquity/first-metals.html">First Metals (Antiquity Hub)</a></li>
+        </ul>
+    </div>
+
+    <div style="text-align:center;margin-top:2rem;">
+        <a href="index.html" class="back-btn">← RETURN TO ARCHIVE INDEX</a>
+    </div>
+
+</div><!-- /page-wrap -->
+
+<footer>
+    <p>// LIBRETH ARCHIVE :: EGYPTOLOGY DIVISION //<br> <span style="font-size:1.5rem;letter-spacing:0.3rem;opacity:0.3;">𓍍 𓋞 𓌉 𓈔</span><br> METALWORKING RESONANCE: ORE TO INGOT // CRUCIBLE, BELLOWS AND HAMMER</p>
+</footer>
+
+</body>
+</html>
