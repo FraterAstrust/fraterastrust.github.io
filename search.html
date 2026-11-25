@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARCHIVE SEARCH :: LIBRETH ARCHIVE</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=VT323&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --gold: #d4af37;
+        --gold-dim: #8a6e1e;
+        --gold-glow: rgba(212,175,55,0.15);
+        --cyan: #00d1ff;
+        --cyan-dim: #006f87;
+        --bg: #080808;
+        --bg2: #0d0d0d;
+        --text: #ccc8b8;
+        --text-bright: #f0e68c;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+        background-color: var(--bg);
+        color: var(--text);
+        font-family: 'Crimson Pro', Georgia, serif;
+        font-size: 18px;
+        line-height: 1.8;
+        background-image:
+            radial-gradient(ellipse at 20% 10%, rgba(0,80,160,0.04) 0%, transparent 60%),
+            radial-gradient(ellipse at 80% 90%, rgba(212,175,55,0.05) 0%, transparent 60%);
+        background-attachment: fixed;
+        text-align: center;
+    }
+    .page-wrap { width: 100%; max-width: 1000px; margin: 0 auto; padding: 2rem 1rem 6rem; }
+    .page-header { text-align: center; padding: clamp(2.5rem, 8vw, 4rem) 0 clamp(1.5rem, 6vw, 2.5rem); }
+    .page-title {
+        font-family: 'Cinzel', serif;
+        font-size: clamp(1.6rem, 6vw, 2.6rem);
+        font-weight: 700;
+        color: var(--gold);
+        text-shadow: 0 0 30px rgba(212,175,55,0.4), 0 0 60px rgba(212,175,55,0.1);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    }
+    .page-subtitle {
+        font-family: 'VT323', monospace;
+        font-size: 1.05rem;
+        color: var(--cyan-dim);
+        margin-top: 0.8rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+    /* HUB NAV — same furniture block as the hub index pages */
+    .hub-nav {
+        border: 1px solid rgba(212,175,55,0.25);
+        background: rgba(20,18,10,0.8);
+        padding: 1rem 1.5rem 1.1rem;
+        margin: 0 auto 2.5rem;
+        max-width: 800px;
+        text-align: center;
+    }
+    .hub-nav-title {
+        font-family: 'Cinzel', serif;
+        color: var(--gold);
+        font-size: 0.75rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        opacity: 0.8;
+        margin-bottom: 0.6rem;
+    }
+    .hub-nav-row {
+        font-family: 'VT323', monospace;
+        font-size: 1.05rem;
+        letter-spacing: 0.08em;
+        line-height: 1.7;
+    }
+    .hub-nav-row a { color: var(--cyan); text-decoration: none; }
+    .hub-nav-row a:hover { color: #00ffae; }
+    .hub-nav-current { color: var(--gold); }
+    .hub-nav-sep { color: var(--gold-dim); margin: 0 0.55rem; }
+    /* SEARCH */
+    .search-block { max-width: 800px; margin: 0 auto 2rem; }
+    .search-form { display: flex; gap: 0.6rem; }
+    .search-input {
+        flex: 1;
+        background: rgba(20,18,10,0.85);
+        border: 1px solid rgba(212,175,55,0.35);
+        color: var(--text-bright);
+        font-family: 'Crimson Pro', Georgia, serif;
+        font-size: 1.15rem;
+        padding: 0.7rem 1rem;
+        outline: none;
+    }
+    .search-input:focus { border-color: var(--gold); box-shadow: 0 0 15px rgba(212,175,55,0.2); }
+    .search-btn {
+        background: rgba(20,18,10,0.4);
+        border: 1px solid var(--gold-dim);
+        color: var(--gold);
+        font-family: 'Cinzel', serif;
+        font-size: 0.9rem;
+        letter-spacing: 0.15em;
+        padding: 0.7rem 1.6rem;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: all 0.3s;
+    }
+    .search-btn:hover { background: var(--gold-glow); border-color: var(--gold); }
+    .search-note { font-size: 0.95rem; opacity: 0.75; margin-top: 0.9rem; }
+    .status-line {
+        font-family: 'VT323', monospace;
+        font-size: 1.05rem;
+        color: var(--cyan-dim);
+        letter-spacing: 0.06em;
+        max-width: 800px;
+        margin: 0 auto 1.5rem;
+        min-height: 1.6em;
+    }
+    /* RESULTS */
+    .results { max-width: 800px; margin: 0 auto; text-align: left; }
+    .result {
+        border: 1px solid rgba(212,175,55,0.18);
+        background: rgba(15,13,8,0.85);
+        padding: 1rem 1.3rem;
+        margin-bottom: 1rem;
+    }
+    .result-head { margin-bottom: 0.35rem; }
+    .hub-badge {
+        display: inline-block;
+        font-family: 'VT323', monospace;
+        font-size: 0.85rem;
+        letter-spacing: 0.12em;
+        color: var(--gold);
+        border: 1px solid rgba(212,175,55,0.35);
+        padding: 0.05rem 0.5rem;
+        margin-right: 0.6rem;
+        vertical-align: middle;
+        text-transform: uppercase;
+    }
+    .result-title {
+        font-family: 'Cinzel', serif;
+        font-size: 1.02rem;
+        font-weight: 600;
+        color: var(--cyan);
+        text-decoration: none;
+        vertical-align: middle;
+    }
+    .result-title:hover { color: #00ffae; }
+    .snippet { font-size: 0.97rem; opacity: 0.92; margin: 0; }
+    .snippet mark { background: rgba(212,175,55,0.35); color: var(--text-bright); padding: 0 0.1em; }
+    .empty-state {
+        border: 1px solid rgba(212,175,55,0.18);
+        background: rgba(15,13,8,0.85);
+        padding: 1.4rem 1.5rem;
+        font-style: italic;
+    }
+    footer {
+        text-align: center;
+        padding: 3rem 0 2rem;
+        font-family: 'VT323', monospace;
+        color: rgba(212,175,55,0.2);
+        letter-spacing: 0.2em;
+        font-size: 1rem;
+        border-top: 1px solid rgba(212,175,55,0.08);
+        margin-top: 4rem;
+    }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+    <header class="page-header">
+        <h1 class="page-title">Archive Search</h1>
+        <div class="page-subtitle">// One Search Across All Four Hubs //</div>
+    </header>
+
+    <nav class="hub-nav">
+        <div class="hub-nav-title">// THE FOUR HUBS OF THE ARCHIVE //</div>
+        <div class="hub-nav-row">
+            <a href="antiquity/index.html">BEFORE KEMET</a><span class="hub-nav-sep">·</span><a href="egyptology/index.html">EGYPTOLOGY</a><span class="hub-nav-sep">·</span><a href="greco-roman/index.html">GRECO-ROMAN</a><span class="hub-nav-sep">·</span><a href="arabic/index.html">ARABIC</a><span class="hub-nav-sep">·</span><span class="hub-nav-current">SEARCH</span>
+        </div>
+    </nav>
+
+    <div class="search-block">
+        <form class="search-form" id="search-form" role="search">
+            <input class="search-input" id="search-input" type="search" name="q"
+                   placeholder="Search the archive…" aria-label="Search the archive" autofocus>
+            <button class="search-btn" type="submit">Search</button>
+        </form>
+        <p class="search-note">Every term must appear on the page (AND). Titles weigh most,
+        then section headings, then the text itself. The search runs entirely in your
+        browser against a locally generated index — nothing is sent anywhere.</p>
+    </div>
+
+    <div class="status-line" id="status" aria-live="polite"></div>
+    <div class="results" id="results"></div>
+
+    <footer>LIBRETH ARCHIVE</footer>
+</div>
+
+<script>
+(function () {
+    "use strict";
+    var form = document.getElementById("search-form");
+    var input = document.getElementById("search-input");
+    var status = document.getElementById("status");
+    var resultsBox = document.getElementById("results");
+    var indexPromise = null;
+    var MAX_SHOWN = 50;
+
+    function loadIndex() {
+        if (!indexPromise) {
+            indexPromise = fetch("search-index.json").then(function (r) {
+                if (!r.ok) throw new Error("index fetch failed");
+                return r.json();
+            });
+        }
+        return indexPromise;
+    }
+
+    function tokenise(q) {
+        return q.toLowerCase().split(/[^\p{L}\p{N}_]+/u).filter(function (t) { return t.length > 0; });
+    }
+
+    function countOccurrences(haystack, needle) {
+        if (!needle) return 0;
+        return haystack.split(needle).length - 1;
+    }
+
+    function search(index, terms) {
+        var out = [];
+        for (var i = 0; i < index.length; i++) {
+            var e = index[i];
+            var title = e.t.toLowerCase();
+            var heads = e.s.join(" ").toLowerCase();
+            var body = e.x.toLowerCase();
+            var score = 0, ok = true;
+            for (var j = 0; j < terms.length; j++) {
+                var t = terms[j];
+                var tc = countOccurrences(title, t);
+                var hc = countOccurrences(heads, t);
+                var bc = countOccurrences(body, t);
+                if (tc + hc + bc === 0) { ok = false; break; }
+                score += tc * 100 + hc * 25 + Math.min(bc, 30);
+            }
+            if (ok) out.push({ score: score, entry: e });
+        }
+        out.sort(function (a, b) { return b.score - a.score; });
+        return out;
+    }
+
+    function escapeHtml(s) {
+        return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+    }
+
+    function makeSnippet(entry, terms) {
+        var body = entry.x;
+        var lower = body.toLowerCase();
+        var first = -1;
+        terms.forEach(function (t) {
+            var idx = lower.indexOf(t);
+            if (idx !== -1 && (first === -1 || idx < first)) first = idx;
+        });
+        var start = 0;
+        if (first > 0) start = Math.max(0, first - 70);
+        var raw = body.slice(start, start + 200);
+        var prefix = start > 0 ? "…" : "";
+        var suffix = (start + 200 < body.length) ? "…" : "";
+        // collect match ranges on the raw snippet
+        var rawLower = raw.toLowerCase();
+        var ranges = [];
+        terms.forEach(function (t) {
+            var pos = 0;
+            while (true) {
+                var idx = rawLower.indexOf(t, pos);
+                if (idx === -1) break;
+                ranges.push([idx, idx + t.length]);
+                pos = idx + t.length;
+            }
+        });
+        ranges.sort(function (a, b) { return a[0] - b[0] || b[1] - a[1]; });
+        var merged = [];
+        ranges.forEach(function (r) {
+            var last = merged[merged.length - 1];
+            if (last && r[0] <= last[1]) { if (r[1] > last[1]) last[1] = r[1]; }
+            else merged.push([r[0], r[1]]);
+        });
+        var html = escapeHtml(prefix), cursor = 0;
+        merged.forEach(function (r) {
+            html += escapeHtml(raw.slice(cursor, r[0]));
+            html += "<mark>" + escapeHtml(raw.slice(r[0], r[1])) + "</mark>";
+            cursor = r[1];
+        });
+        html += escapeHtml(raw.slice(cursor)) + escapeHtml(suffix);
+        return html;
+    }
+
+    function render(results, terms, query) {
+        resultsBox.innerHTML = "";
+        if (results.length === 0) {
+            status.textContent = "0 pages match “" + query + "”";
+            var empty = document.createElement("div");
+            empty.className = "empty-state";
+            empty.textContent = "No pages match — the archive does not cover everything; a gap here can be a real gap.";
+            resultsBox.appendChild(empty);
+            return;
+        }
+        var shown = results.slice(0, MAX_SHOWN);
+        status.textContent = results.length + (results.length === 1 ? " page matches" : " pages match") +
+            " “" + query + "”" + (results.length > MAX_SHOWN ? " — showing the first " + MAX_SHOWN : "");
+        shown.forEach(function (r) {
+            var e = r.entry;
+            var div = document.createElement("div");
+            div.className = "result";
+            var head = document.createElement("div");
+            head.className = "result-head";
+            var badge = document.createElement("span");
+            badge.className = "hub-badge";
+            badge.textContent = e.h;
+            var link = document.createElement("a");
+            link.className = "result-title";
+            link.href = e.u;
+            link.textContent = e.t;
+            head.appendChild(badge);
+            head.appendChild(link);
+            var snip = document.createElement("p");
+            snip.className = "snippet";
+            snip.innerHTML = makeSnippet(e, terms);
+            div.appendChild(head);
+            div.appendChild(snip);
+            resultsBox.appendChild(div);
+        });
+    }
+
+    var debounce = null;
+    function run() {
+        var query = input.value.trim();
+        var terms = tokenise(query);
+        if (terms.length === 0) {
+            status.textContent = "";
+            resultsBox.innerHTML = "";
+            return;
+        }
+        status.textContent = "Searching…";
+        loadIndex().then(function (index) {
+            render(search(index, terms), terms, query);
+        }).catch(function () {
+            status.textContent = "";
+            resultsBox.innerHTML = "";
+            var empty = document.createElement("div");
+            empty.className = "empty-state";
+            empty.textContent = "The search index could not be loaded — try reloading the page.";
+            resultsBox.appendChild(empty);
+        });
+    }
+
+    form.addEventListener("submit", function (ev) { ev.preventDefault(); run(); });
+    input.addEventListener("input", function () {
+        clearTimeout(debounce);
+        debounce = setTimeout(run, 150);
+    });
+
+    // honour ?q= in the URL so searches can be linked
+    var params = new URLSearchParams(window.location.search);
+    var q = params.get("q");
+    if (q) { input.value = q; run(); }
+})();
+</script>
+</body>
+</html>
