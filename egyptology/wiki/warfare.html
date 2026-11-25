@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WARFARE AND THE ARMY :: LIBRETH ARCHIVE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/wiki-style.css">
+    <style>
+        .page-header::before { content: '𓊪 𓆓 𓏏'; }
+
+        /* WARFARE-SPECIFIC CARDS */
+        .war-card { border-left: 3px solid rgba(180,40,40,0.45); }
+
+        /* PROCEDURE BLOCK */
+        .proc-block {
+            border: 1px solid rgba(212,175,55,0.2);
+            padding: 1.5rem 2rem;
+            margin: 1.5rem 0;
+            position: relative;
+        }
+        .proc-title {
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            color: var(--gold);
+        }
+        .proc-block ol { margin-left: 1.2rem; }
+        .proc-block li { margin-bottom: 0.6rem; line-height: 1.6; }
+
+        /* BLUE INFO BLOCK */
+        .blue-block {
+            border: 1px solid rgba(0,180,220,0.25);
+            background: rgba(0,20,35,0.7);
+            padding: 1.3rem 1.8rem;
+            margin: 2rem 0;
+        }
+        .bb-title {
+            font-family: 'VT323', monospace;
+            color: var(--cyan);
+            letter-spacing: 0.1em;
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        /* COMPARISON TABLE */
+        .cross-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.88rem; }
+        .cross-table th {
+            background: rgba(212,175,55,0.1);
+            color: var(--gold);
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.08em;
+            padding: 0.7rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(212,175,55,0.2);
+        }
+        .cross-table td {
+            padding: 0.65rem 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            vertical-align: top;
+            line-height: 1.5;
+        }
+        .cross-table tr:hover td { background: rgba(255,255,255,0.02); }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+
+    <!-- ═══════════════════════════════════════ HEADER -->
+    <header class="page-header">
+        <h1 class="page-title">WARFARE AND THE ARMY</h1>
+        <div style="font-family:'Cinzel',serif;font-size:0.95rem;color:var(--gold-dim);letter-spacing:0.3em;margin-top:0.5rem;">
+            The Soldier's Craft in Kemet · Three Thousand Years of Arms
+        </div>
+        <p class="page-subtitle">
+            // THE ARMY AS INSTITUTION :: WEAPONS AS TECHNOLOGY :: RECORDS READ CRITICALLY //
+        </p>
+        <p class="page-epithet">
+            The king on his temple wall always wins. The dispatches, the ration accounts, the broken fortresses and the soldiers' own letters tell a longer, harder story — and this article follows the second story wherever the two diverge.
+        </p>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb">
+        <a href="index.html">WIKI HOME</a> &gt; WARFARE AND THE ARMY
+    </nav>
+
+    <!-- ═══════════════════════════════════════ TABLE OF CONTENTS -->
+    <div class="toc-block">
+        <div class="toc-title">// ARCHIVE CONTENTS //</div>
+        <ul class="toc-list">
+            <li><a href="#evidence">I. Reading the Evidence — Royal Ideology and Operational Reality</a></li>
+            <li><a href="#words">II. The Vocabulary of War</a></li>
+            <li><a href="#predynastic">III. Predynastic and Early Dynastic Warfare</a></li>
+            <li><a href="#old-kingdom">IV. Old Kingdom Forces — Expeditions, Not a Standing Army</a></li>
+            <li><a href="#middle-kingdom">V. Middle Kingdom Armies and the Reunification Wars</a></li>
+            <li><a href="#fortresses">VI. The Nubian Fortress System — Buhen, Semna, and the Dispatches</a></li>
+            <li><a href="#hyksos-transfer">VII. The Second Intermediate Period and the Hyksos Transfer</a></li>
+            <li><a href="#divisions">VIII. New Kingdom Organisation — Divisions, Standards, and Order of Battle</a></li>
+            <li><a href="#command">IX. Command — Officers, Scribes, and the Paper Army</a></li>
+            <li><a href="#recruitment">X. Recruitment, Pay, Rewards, and the Gold of Valour</a></li>
+            <li><a href="#foreign-troops">XI. Foreign Troops — Medjay, Sherden, Nubians, and Auxiliaries</a></li>
+            <li><a href="#bows">XII. The Bow — Self Bow, Composite Bow, and Archery in Practice</a></li>
+            <li><a href="#hand-weapons">XIII. Hand Weapons — Spear, Axe, Dagger, Mace, and Khopesh</a></li>
+            <li><a href="#shields-armour">XIV. Shields and Armour — Protection and Its Limits</a></li>
+            <li><a href="#chariot-vehicle">XV. The Chariot as a System I — Vehicle Construction and Materials</a></li>
+            <li><a href="#chariot-horses">XVI. The Chariot as a System II — Horses, Harness, Crew, Maintenance, Limits</a></li>
+            <li><a href="#logistics">XVII. On the March — Supply, Camps, and the Arithmetic of Distance</a></li>
+            <li><a href="#river-transport">XVIII. River and Sea — Moving Armies by Water</a></li>
+            <li><a href="#sieges">XIX. Siege Warfare — Walls, Ramps, and Starvation</a></li>
+            <li><a href="#medicine">XX. Battlefield Medicine — Wounds, Treatment, and Evacuation</a></li>
+            <li><a href="#records">XXI. Campaign Records Read Critically — Megiddo, Kadesh: Poem against Bulletin</a></li>
+            <li><a href="#sea-peoples">XXII. The Sea Peoples — The Evidence at Its Real Strength</a></li>
+            <li><a href="#late-armies">XXIII. After Empire — Kushite, Saite, and Mercenary Armies</a></li>
+            <li><a href="#legacy">XXIV. Ptolemaic Armies and the Long Assessment</a></li>
+            <li><a href="#sources">XXV. Sources and Further Reading</a></li>
+        </ul>
+    </div>
+
+    <!-- ═══════════════════════════════════════ I. EVIDENCE -->
+    <section id="evidence">
+        <h2 class="section-head">I. Reading the Evidence — Royal Ideology and Operational Reality</h2>
+        <p>
+            Egyptian warfare is documented by two bodies of evidence that point in opposite directions, and the first duty of any account is to keep them separate. The first body is monumental: temple reliefs and royal inscriptions in which the king, enlarged beyond human scale, smites bound enemies, storms cities single-handed in his chariot, and receives the submission of the known world. These scenes are theology in stone. They state what kingship claimed — that the king alone upheld
+            <em>ma'at</em> against the chaos beyond the borders — and they were carved, with
+            minor variation, for three thousand years, in periods when Egypt was an empire and in periods when it could barely defend the Delta. A relief of a king smiting Libyans is evidence that the motif was required, not that the battle happened.
+        </p>
+        <p>
+            The second body of evidence is operational, and it is mostly unglamorous:
+            fortress plans and granary capacities, ration lists, letters from officers on patrol, duty rosters, weapon fragments, horse bones, workshop scenes, the autobiographies of soldiers who counted their years of service and their rewards, and the physical remains of the weapons themselves. This evidence is fragmentary
+            and heavily biased towards the <a href="new-kingdom.html" class="nl">New Kingdom</a>,
+            the one period for which Egypt fielded a large professional army abroad; but it is the evidence from which an army, as opposed to an ideology, can be reconstructed. Where the two bodies conflict — and at Kadesh, treated in Section XXI, they conflict inside a single reign — the operational evidence governs.
+        </p>
+        <p>
+            Three cautions govern everything that follows. First, numbers in royal texts are rhetorical: enemy dead are counted in heaps of severed hands in the reliefs and in round, escalating figures in the texts, and neither can be read as a body count. Second, survival is uneven: wood, leather, and textile — the main materials of Egyptian military equipment — survive almost only in tombs, so the equipment record is skewed towards royal and elite burials, above all the six chariots of Tutankhamun. Third, Egypt's army changed fundamentally at least four times in three millennia: the expeditionary levies of the Old Kingdom, the fortress-and-garrison system of the Middle Kingdom, the professional imperial army of the New Kingdom, and the mercenary-dependent armies of the Late Period are different institutions sharing a language and a kingship ideology. Treating the New Kingdom empire as "Egyptian warfare" tout court is the commonest error in popular accounts, and this article is organised against it.
+        </p>
+        <div class="blue-block">
+            <div class="bb-title">// HOW THE EVIDENCE IS WEIGHED IN THIS ARTICLE //</div>
+            <p><strong>Strongest:</strong> excavated fortresses, weapons, chariots, and horse
+            remains; administrative papyri and ostraca (dispatches, rosters, accounts); soldiers' and officers' autobiographies, read as career documents with their
+            own boasting conventions.</p>
+            <p><strong>Middle:</strong> campaign annals and topographical lists, which preserve
+            real itineraries, place-names, and booty categories inside a triumphal frame; tomb and temple battle scenes, which preserve equipment and formation detail
+            even when their narrative is formulaic.</p>
+            <p><strong>Weakest, used only as ideology:</strong> the smiting scene, the
+            bound-captive frieze, the king-alone-in-battle composition, and any casualty or
+            army figure that appears only in a royal inscription.</p>
+        </div>
+        <p>
+            The modern study of the subject rests on a small shelf of specialist works, cited in full in Section XXV: Ian Shaw's survey of warfare and weapons, Anthony Spalinger's study of war in the New Kingdom state, Robert Partridge's
+            <em>Fighting Pharaohs</em>, the fortress archaeology of the Nubian salvage
+            campaigns, and the chariot studies of M. A. Littauer and J. H. Crouwel, whose mechanical analysis of the surviving vehicles remains the foundation for everything said here about chariotry. Egyptian terms are given with their Gardiner sign-list spellings where the spelling can be composed with confidence from the standard sign values; where it cannot, the transliteration stands alone.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════ II. WORDS -->
+    <section id="words">
+        <h2 class="section-head">II. The Vocabulary of War</h2>
+        <p>
+            The Egyptian lexicon already draws the distinctions this article needs. The general word for an army or expeditionary force is
+            <i>mšꜥ</i> [Gardiner: G17-N37-D36] [𓅓𓈙𓂝] — the same word serves for a military
+            expedition and for the force that makes it, a reminder that for most of Egyptian history the "army" was an event, not a standing institution: a force was raised for a purpose and dissolved when the purpose ended. The professional infantry of
+            the New Kingdom are the
+            <i>mnfyt</i> [Gardiner: G17-N35-I9-X1] [𓅓𓈖𓆑𓏏], a word that comes to denote the
+            rank-and-file soldier as a social type, the man who follows the standard and draws rations. Archers — for most periods the decisive arm — are named from
+            their weapon: <i>pḏt</i> [Gardiner: Q3-I10-X1] [𓊪𓆓𓏏] means both "bow" and the
+            bowmen who carry it, and the "Nine Bows" is the standing expression for the totality of Egypt's foreign enemies, the peoples under the king's sandals.
+        </p>
+        <p>
+            Fighting itself is <i>ꜥḥꜣ</i> [Gardiner: D36-V28-G1] [𓂝𓎛𓄿], and the verb and its
+            derivatives run through every campaign text. The scribe who made the army
+            administrable is the <i>sš</i> [Gardiner: S29-N37] [𓋴𓈙]; the military scribe,
+            the <em>sš mšꜥ</em>, was a distinct career, and Section IX argues that he, more
+            than any weapon, is what turned a levy into an army. A fortress is a
+            <i>mnnw</i> [Gardiner: G17-N35-N35-G43] [𓅓𓈖𓈖𓅱], a word that also carries the
+            sense of a stronghold or refuge. The chariot horse-team is the
+            <i>ḥtr</i> [Gardiner: V28-X1-D21] [𓎛𓏏𓂋], literally a yoked pair, and the
+            chariot itself in later texts is the Semitic loanword
+            <i>mrkbt</i> [Gardiner: G17-D21-V31-D58-X1] [𓅓𓂋𓎡𓃀𓏏] — the word's foreign
+            origin is itself a piece of military history, marking the chariot as an imported technology that arrived with its vocabulary attached. The arrow is the
+            <i>šsr</i> [Gardiner: N37-S29-D21] [𓈙𓋴𓂋]; the retainer who followed a great
+            officer, part soldier and part household man, is the
+            <i>šmsw</i> [Gardiner: N37-G17-S29-G43] [𓈙𓅓𓋴𓅱], "follower."
+        </p>
+        <p>
+            Two titles frame the command structure. The commander of a force is its
+            <i>imy-r</i> [Gardiner: M17-G17-D21] [𓇋𓅓𓂋], "overseer" — the same civilian
+            administrative title used for overseers of works, of cattle, and of the treasury,
+            compounded as <em>imy-r mšꜥ</em>, "overseer of the army," conventionally rendered
+            "general." The compounding is the point: high command in Egypt was an administrative office before it was a battlefield one, and the men who held it were drawn from the same scribal-official class that ran the civil state. At the summit stood the king, and below him, from the New Kingdom, the king's sons and the vizier appear in military roles that blur the civil-military line entirely. The vocabulary, in short, describes an army administered like a ministry, because for most of its history that is what it was.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════ III. PREDYNASTIC -->
+    <section id="predynastic">
+        <h2 class="section-head">III. Predynastic and Early Dynastic Warfare</h2>
+        <p>
+            Organised violence in the Nile Valley predates the state. The late Predynastic cemeteries of Upper Egypt contain the weapons of a warrior stratum: maces with stone heads of disc and pear-shaped form, copper daggers, and flint knives of extraordinary workmanship. The pear-shaped macehead becomes the period's emblem of coercive power, carried into pharaonic iconography as the weapon of the smiting king; the great ceremonial maceheads of Scorpion and Narmer from Hierakonpolis are already royal monuments, showing bound captives and the counting of booty in cattle. Whether every scene on them records a specific campaign is undecidable; what they establish is that by c. 3100 BCE the iconography of kingship was already military, centuries before Egypt possessed anything describable as an army.
+        </p>
+        <p>
+            The archaeology adds a harder fact: fortification. The
+            <a href="predynastic.html" class="nl">Predynastic</a> and Early Dynastic periods
+            produce fortified enclosures and, at the Nubian frontier, evidence of Egyptian military presence tied to control of trade in gold, ivory, and ebony. The Buhen area held an Egyptian installation already in the Old Kingdom, with copper-working on the site; the First Cataract frontier at Elephantine was fortified early and remained a garrison town for three thousand years. The pattern visible from the start is the pattern of all later Egyptian strategy:
+            the Nile is the artery, the cataracts are the choke points, and the army's first job is to hold the river and the desert roads that feed it.
+        </p>
+        <p>
+            The Early Dynastic royal annals, preserved in fragmentary form on the Palermo Stone and its companions, record campaigns with the same laconic year-names used for festivals and Nile heights: a "smiting" of a named people is one way to label a year. The labels for the reigns of the first kings include fighting in the Delta, in the eastern desert, and against Nubians and Libyans — the three standing threat directions (north-east, south, west) that structure Egyptian strategic geography for the whole of pharaonic history, set out in the
+            archive's <a href="sacred-geography.html" class="nl">Sacred Geography</a>. No
+            order of battle, no unit organisation, and no credible numbers survive from this period, and none should be invented: the honest statement is that the unified state was itself partly a military product, that its kings fought, and that the machinery by which they fought is invisible until the Old Kingdom
+            texts begin.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════ IV. OLD KINGDOM -->
+    <section id="old-kingdom">
+        <h2 class="section-head">IV. Old Kingdom Forces — Expeditions, Not a Standing Army</h2>
+        <p>
+            The <a href="old-kingdom.html" class="nl">Old Kingdom</a> (c. 2686–2181 BCE)
+            had no standing army in the later sense. What it had was a repertoire: a royal household with armed retainers, provincial levies raised by the nomarchs, professional cadres of officers and scribes who organised expeditions, and a logistics system built on Nile transport that could move a force the length of the valley. Forces were assembled for a campaign, a quarrying expedition, or a trading venture under arms — the categories overlap, because a quarrying expedition to the Sinai turquoise mines or the Hatnub alabaster quarries was itself an armed operation in contested country — and dissolved afterwards. The soldiers of a levy went back to their villages; the officers went back to
+            their other offices.
+        </p>
+        <p>
+            The period's best military document is not a battle piece but a career: the autobiography of Weni, a court official of the Sixth Dynasty whose tomb text at Abydos describes, in paraphrased substance, organising and leading an army against the "Asiatic Sand-dwellers" of the southern Levant five times. Weni's account is precious precisely because its boasting is administrative. He describes an army drawn from the whole country, north and south, with contingents of Nubian allies; he describes keeping discipline so that no soldier stole from the villages on the march; he describes a combined operation in which part of the force landed by sea behind the enemy position while the main body engaged from the landward side. Even allowing for the autobiography's self-praise, the operational content — levy, discipline on the march, amphibious envelopment, Nubian auxiliaries — is coherent and consistent with everything else known of Old Kingdom capacity. Weni also led quarrying and transport expeditions; the same man, the same machinery.
+        </p>
+        <p>
+            Old Kingdom fighting further south is documented at the frontier itself. The rock inscriptions of the First Cataract region and the later-copied annals of activity in Nubia show punitive and extractive campaigns against the A-Group and early C-Group populations, aimed at the gold of Wawat and the products of the south; the reign of Sneferu is credited in the Palermo Stone tradition with a Nubian campaign bringing back captives and cattle in large, probably conventional, numbers. To the west, Libyan groups pressed on the Delta fringe and were campaigned against in turn. None of this required, or produced, a permanent military establishment: the Old Kingdom's military instrument was the state's general capacity to mobilise, feed, and transport labour, applied to war. When the central state fragmented in the First Intermediate Period, that instrument fragmented with it, into the hands of the provincial rulers whose tomb biographies, at Asyut and elsewhere, describe real civil warfare between Egyptian armies — siege, river fighting, and wounds received in the
+            service of a local lord.
+        </p>
+        <div class="card-grid">
+            <div class="war-card info-card">
+                <h4>THE OLD KINGDOM INSTRUMENT</h4>
+                <p>Levy, not legion: forces raised per expedition from provincial
+                contingents, officered by court and scribal officials, moved by river, supplied by the same granary system that fed the pyramid works, and disbanded at the campaign's end. Nubian auxiliaries served alongside Egyptians from this period onward — foreign troops are not a New Kingdom
+                innovation but a constant of Egyptian practice.</p>
+            </div>
+            <div class="war-card info-card">
+                <h4>WHAT THE TOMBS SHOW</h4>
+                <p>Old Kingdom tomb scenes of warfare are rare; the famous siege scenes
+                belong to the late Old Kingdom and First Intermediate milieu (Deshasha, and the Theban and Asyut tombs of the civil wars), showing scaling ladders, sappers at the wall base, and archers in support. Equipment in the scenes is consistent: self bow, spear, shield of hide on a wooden frame, axe, and dagger. No armour, no helmets, no cavalry, no chariots —
+                none of those things yet existed in Egypt.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════ V. MIDDLE KINGDOM -->
+    <section id="middle-kingdom">
+        <h2 class="section-head">V. Middle Kingdom Armies and the Reunification Wars</h2>
+        <p>
+            The <a href="middle-kingdom.html" class="nl">Middle Kingdom</a> was born in
+            war. The reunification under Mentuhotep II (c. 2055 BCE) closed a civil war of decades between Thebes and Herakleopolis, and the period's most eloquent military monument is a mass grave: the tomb at Deir el-Bahari excavated by Winlock, containing the bodies of some sixty soldiers of Mentuhotep's army, many with unhealed wounds — crushed skulls, arrow injuries — and linen bearing the king's name. These were not ceremonial dead. They are the physical residue of the assault warfare of the reunification, probably of a siege, and they anchor the period's military history in bodies rather than rhetoric. The Theban tomb of the general Intef and the painted and modelled evidence from Beni Hasan fill out the picture: the tomb of Khnumhotep II shows Nubian archers in Egyptian service, and the famous wooden models of Mesehti from Asyut — two companies of forty model soldiers, one of Egyptian spearmen with hide shields, one of Nubian archers — give the period's two basic troop types in three dimensions, marching in step, at the very start
+            of the Middle Kingdom.
+        </p>
+        <p>
+            The Twelfth Dynasty professionalised within limits. Campaigns in Nubia under Senusret I and Senusret III annexed Lower Nubia to the Second Cataract and held it with the fortress system of Section VI; in the north-east, Egyptian forces campaigned in the southern Levant, and the reign of Senusret III is associated with a campaign against Shechem preserved in the stela of the officer Khusobek, which describes, again in paraphrased substance, the army reaching Sekmem (Shechem), fighting, and withdrawing in order — a rare Levantine operation of the period, conducted at the end of a long supply line and not followed by annexation. Egypt's Asian posture in the Middle Kingdom was defensive at the border itself: the "Walls of the Ruler," a chain of fortresses on the eastern Delta frontier attributed to Amenemhat I in literary tradition, guarded the approaches from Asia, and the frontier was administered, watched, and reported on rather than pushed forward.
+        </p>
+        <p>
+            Recruitment remained a levy organised by district and administered by scribes; the period's military titles multiply — "overseer of the army," "commander," "soldier of the town regiment" — and a class of professional officers with fortress commands in Nubia becomes visible in the inscriptional record. What the Middle Kingdom built that was new was not a bigger field
+            army but a permanent military <em>infrastructure</em>: fortresses with
+            garrisons on rotation, a dispatch and reporting system, frontier patrols, and a fortified border in the south administered as a military province. It is the first Egyptian military system that can be studied as a system, because its paperwork partly survives.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════ VI. FORTRESSES -->
+    <section id="fortresses">
+        <h2 class="section-head">VI. The Nubian Fortress System — Buhen, Semna, and the Dispatches</h2>
+        <p>
+            Between the First and Second Cataracts, the Twelfth Dynasty built the most sophisticated fortification system of the Bronze Age. The chain — Elephantine and the First Cataract posts, then Kuban, Aniba, and north to south through the Second Cataract cluster: Buhen, Mirgissa, Askut, Shalfak, Uronarti, Semna West, Kumma, and Semna South — held the river narrows where the Nile forces all traffic through a few defensible passages. The southern frontier was fixed by Senusret III at Semna, where his boundary stelae state, in paraphrase, that the border is closed to Nubian movement northward except for controlled trade at designated posts, and order his successors to hold it. The fortresses were simultaneously strongpoints, customs posts, granaries, administrative centres, and signals stations: Stuart Tyson Smith's analysis of Askut established that the system's working purpose was the regulation of trade, population movement, and resources as much as defence against attack, and Barry Kemp's granary-capacity studies showed the magazines were sized to feed garrisons and expeditions, not besieged cities.
+        </p>
+        <h3 class="sub-head">Buhen — Anatomy of a Fortress</h3>
+        <p>
+            Buhen, at the northern end of the Second Cataract on the west bank, was excavated by W. B. Emery for the Egypt Exploration Society during the Nubian salvage campaign before the site was lost to Lake Nasser; the brick fortress could not be moved, and Emery's published plan is now the primary evidence. The inner fortress, founded under Senusret I on a site with Old Kingdom occupation beneath it, presents the mature Middle Kingdom defensive scheme:
+            a massive mudbrick enceinte with projecting rectangular towers, a parapet with loop-holes for archers, a deep rock-cut or brick-lined ditch in front of the wall, and a lower outer fortification line — a counterscarp system that forced an attacker to cross open ground under fire twice. Inside:
+            a gridded town of barrack blocks, a commander's residence, granaries, magazines, a temple, and streets laid out on the plan of a garrison, not a grown settlement. Emery estimated the inner fortress garrison by counting the archers needed to man its parapets — some eight hundred men, rising to about a thousand with officers and support — a figure to be treated as an order of magnitude, not a roster; granary-based estimates give the same general scale. A New Kingdom town later spread beyond the Middle Kingdom walls, and the fortress's violent end — Emery read its destruction layer as a Kerma assault; Smith re-read it as destruction at the Egyptian reoccupation of the early Eighteenth Dynasty — remains an adjudicated disagreement, flagged here rather than settled: the layer is real, its
+            authorship is not proven.
+        </p>
+        <h3 class="sub-head">The Semna Dispatches — A Frontier Reporting System</h3>
+        <p>
+            The system's paperwork survives in the Semna Dispatches, a papyrus of reports sent to Thebes in the late Twelfth or Thirteenth Dynasty, copies of dispatches originating from the Semna-area forts and from patrol commanders. Their content, in paraphrased substance, is routine and therefore invaluable: patrols report tracks found in the desert and whether they were followed; Nubians arriving at the forts to trade are counted and their business recorded; movements of Medjay patrolmen are logged; a fortress reports that all is well in the formula the system required. Nothing in the dispatches is heroic. They show a frontier run on surveillance, reporting discipline, and controlled contact — preventive policing rather than battle — and they show its limits with equal clarity, since patrols and dispatches could watch the desert roads but could not seal them. Papyrus Ramesseum 18, letters concerning the forts from the vizier's office, adds the other half of the circuit: inspections announced from the capital, personnel rotated from Upper Egyptian towns, a Medjay commander administering a district at Kuban. The fortress system, uniquely for the Bronze Age, can be watched
+            working.
+        </p>
+        <div class="proc-block">
+            <div class="proc-title">// PROCEDURE — HOW THE SECOND CATARACT SYSTEM WORKED //</div>
+            <ol>
+                <li><strong>Hold the narrows.</strong> Fortresses sited where the river
+                narrows force all boat traffic within bowshot of the walls; no force can
+                move up or down the Nile past the chain unobserved.</li>
+                <li><strong>Patrol the desert edges.</strong> Medjay and Egyptian patrols
+                from each fort sweep the desert roads and waterholes parallel to the
+                river, reporting tracks, numbers, and direction of travel.</li>
+                <li><strong>Report in writing.</strong> Each fort and patrol sends
+                dispatches up the chain; copies reach the vizier's office at Thebes.
+                The report is the system's nervous system.</li>
+                <li><strong>Control trade at the wall.</strong> Nubian traders are
+                admitted to designated posts (Iqen/Mirgissa is named in the boundary tradition) under supervision; movement beyond the frontier without
+                authorisation is the offence the system exists to prevent.</li>
+                <li><strong>Feed the garrison from the magazine.</strong> Granaries
+                stocked by river from Egypt proper keep the garrisons independent of
+                local supply in a land deliberately kept at arm's length.</li>
+                <li><strong>Rotate the men.</strong> Garrisons are drafted and rotated
+                from named Upper Egyptian towns; the forts are postings, not colonies, in the Middle Kingdom phase — a distinction the New Kingdom occupation
+                would later abandon.</li>
+            </ol>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════ VII. HYKSOS -->
+    <section id="hyksos-transfer">
+        <h2 class="section-head">VII. The Second Intermediate Period and the Hyksos Transfer</h2>
+        <p>
+            The Thirteenth Dynasty's weakening, the loss of Nubia to the rising kingdom of Kerma — which overran or received the surrender of the cataract forts — and the seizure of the eastern Delta and then Memphis by the Hyksos kings of Avaris divided Egypt between three powers: Hyksos in the north, the Theban Seventeenth Dynasty in the south, and Kerma in Nubia, at times in contact with Avaris against Thebes. The military balance of this
+            <a href="second-intermediate-period.html" class="nl">Second Intermediate
+            Period</a> turned on a technology gap. The Hyksos sphere, Levantine in
+            origin and connected to the military culture of the Near East, disposed of a complex of equipment Egypt did not yet have: the horse-drawn light chariot, the composite bow, improved bronze weapon forms including early sickle-swords, scale armour, and new fortification practice with sloped glacis ramparts of the type excavated at Tell el-Dab'a, ancient Avaris. The full exchange is treated in the archive's
+            <a href="hyksos-exchange.html" class="nl">Hyksos Exchange</a> article; the
+            military point here is the direction of transfer. Egypt did not invent its New Kingdom military system. It acquired the decisive parts of it from the
+            enemy it expelled.
+        </p>
+        <p>
+            The Theban war of liberation under Seqenenre Tao, Kamose, and Ahmose (c. 1560–1530 BCE) is documented with unusual immediacy. Kamose's stelae describe, in paraphrased substance, the strategic dilemma — a king in Avaris, a king in Kush, and Thebes between them — and his campaign down the Nile, intercepting a Hyksos messenger to Kush on the oasis road, carrying the war to the Delta edge. Seqenenre's mummy bears unhealed head wounds consistent with the weapons of the period, whether received in battle or execution; the physical evidence is real, its narrative reconstruction is not settled, and it is presented here as evidence of a king's violent death, not of any particular engagement. Ahmose completed the work: Avaris taken, then a three-year siege of Sharuhen in the southern Levant — the first Egyptian siege on Asian soil and the template for the imperial
+            expansion that followed.
+        </p>
+        <p>
+            The war's rank and file speak in the tomb biography of Ahmose son of Ebana, a naval officer from el-Kab whose career spans the whole liberation and the first Nubian and Syrian campaigns of the Eighteenth Dynasty. In paraphrased substance, he follows the king on foot, then receives a chariot; he fights at Avaris, at Sharuhen, in Nubia and in Syria; he is repeatedly awarded the
+            "gold of valour" and shares of captives, and is given land. His text is the
+            first full Egyptian soldier's career, and its structure — service, reward
+            in gold, captives, and land, promotion across a reign — becomes the standard
+            shape of the New Kingdom military life examined in Section X. The army that
+            emerged from the liberation wars was thus doubly transformed: equipped with
+            the chariot, the composite bow, and the new bronze work, and organised
+            around a professional officer cadre whose expectations of reward had been
+            set in a generation of continuous war.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════ VIII. DIVISIONS -->
+    <section id="divisions">
+        <h2 class="section-head">VIII. New Kingdom Organisation — Divisions, Standards, and Order of Battle</h2>
+        <p>
+            The <a href="new-kingdom.html" class="nl">New Kingdom</a> army (c. 1550–1070
+            BCE) is the only Egyptian army for which a full order of battle can be
+            reconstructed, and the reconstruction rests mainly on the Kadesh records of
+            Ramesses II and the campaign annals of Thutmose III, read against the
+            administrative and biographical material. Its largest formation was the
+            division, named for a god — Amun, Ra, Ptah, and Seth in the Kadesh order —
+            and commanded, at Kadesh, by the king and his sons. The division is
+            conventionally estimated at around five thousand men, but the figure is a
+            modern estimate built from ration and marching data, not an Egyptian
+            establishment table, and it should be used as an order of magnitude. Four
+            divisions at Kadesh would give a field army near twenty thousand; the
+            texts give no total, and any precise figure in a modern book is a
+            reconstruction wearing the dress of a fact.
+        </p>
+        <p>
+            Within the division, the army was organised in companies of roughly two
+            hundred to two hundred and fifty men under a standard-bearer — the company
+            standard, carried on a pole, was its rallying point and its identity —
+            and companies subdivided into platoons of about fifty under their own
+            officers. The structure is decimal in spirit and Egyptian in detail: the
+            smallest tactical groupings in the texts run in tens. Each division
+            combined infantry and chariotry; chariots were organised in squadrons,
+            conventionally reconstructed at twenty-five vehicles, grouped upward to
+            units of fifty and beyond, under officers titled "overseer of horses" and
+            "first charioteer of His Majesty" at the summit of the chariot arm. The
+            division marched, camped, and fought as a combined-arms body with its own
+            commander, its own god's standard, and its own train; the army was a
+            federation of divisions, and at Kadesh that federation very nearly failed,
+            because the divisions arrived on the field strung out along the line of
+            march and were engaged one at a time.
+        </p>
+        <table class="cross-table">
+            <tr><th>FORMATION</th><th>RECONSTRUCTED SIZE</th><th>COMMAND</th><th>EVIDENCE QUALITY</th></tr>
+            <tr><td>Division (named for a god)</td><td>c. 4,000–5,000</td>
+                <td>King, king's son, or senior general</td>
+                <td>Named divisions certain (Kadesh); size estimated</td></tr>
+            <tr><td>Company</td><td>c. 200–250</td>
+                <td>Standard-bearer</td>
+                <td>Good: titles and ration data converge</td></tr>
+            <tr><td>Platoon</td><td>c. 50</td>
+                <td>"Greatest of the fifty"</td>
+                <td>Title certain; exact strength inferred</td></tr>
+            <tr><td>Chariot squadron</td><td>c. 25 vehicles (50 crew)</td>
+                <td>Chariotry officer</td>
+                <td>Reconstruction from Kadesh and stable records</td></tr>
+            <tr><td>Smallest grouping</td><td>c. 10</td>
+                <td>Leader of ten</td>
+                <td>Attested in administrative usage</td></tr>
+        </table>
+        <p>
+            Two structural facts matter more than the numbers. First, the army had no
+            separate supply corps in the modern sense: each division's train of
+            donkeys, servants, and camp followers was part of its own establishment,
+            and the boundary between soldier, servant, and sutler was porous. Second,
+            the army's striking arm and its mass were different populations. The
+            chariotry was an elite of trained, expensively equipped men drawn from
+            the propertied classes — a chariot, its horses, and their upkeep cost
+            more than an infantryman earned in years — while the infantry mass was
+            levied, supplemented by foreign contingents, and expendable in the
+            accounting of the texts. Egyptian battle practice, so far as it can be
+            reconstructed, used the mass to fix and the chariotry to move: archery
+            from chariots at range, pursuit of a broken enemy, and the protection of
+            flanks and camp. Set-piece infantry shock combat of the Greek kind is
+            nowhere described, and the weapons — Section XIII — were not designed
+            for it.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════ IX. COMMAND -->
+    <section id="command">
+        <h2 class="section-head">IX. Command — Officers, Scribes, and the Paper Army</h2>
+        <p>
+            Command ran in two interlocking hierarchies: the officers who fought the
+            army and the scribes who fed, paid, moved, and accounted for it. At the
+            top, the "overseer of the army" (<em>imy-r mšꜥ</em>) and, in the late
+            Eighteenth Dynasty, the "king's deputy" and the crown prince appear as
+            army commanders; Horemheb, the last king of the dynasty, had held the
+            supreme command before his accession, and his career — scribe, general,
+            deputy, king — is the type specimen of the military-administrative
+            cursus. Below the generals stood the troop commanders, the
+            standard-bearers of the companies, the "greatest of the fifty," the
+            chariotry's overseers of horses and stablemasters, the commanders of
+            fortresses and garrison towns in Nubia and Asia, and the captains of the
+            military river fleet. Promotion ran through royal favour and recorded
+            service; the biographies show officers rising from the ranks across two
+            and three reigns, and also show sons inheriting military office, the
+            usual Egyptian compromise between merit and heredity.
+        </p>
+        <p>
+            The scribes of the army — the <em>sš mšꜥ</em> and their subordinates,
+            the scribes of the division, of the company, of the recruits, of the
+            stable — are the institution's connective tissue. They kept the duty
+            rosters and the ration accounts; they registered recruits and recorded
+            desertions; they wrote the dispatches and the booty lists; they counted
+            the severed hands after a battle, a scribal act performed on the field
+            in the reliefs, tallying the dead for the record and for the rewards
+            account. The archive's <a href="scribal-arts.html" class="nl">Scribal
+            Arts</a> article treats the profession generally; the military point is
+            that Egypt's army was literate at the level of its administration to a
+            degree no contemporary rival matched, and that this, more than any
+            weapon, is what let it hold Nubia for four centuries and garrison Asia
+            for two. An army that can be fed on paper can be kept in the field; an
+            army that cannot, disperses.
+        </p>
+        <p>
+            The literary record preserves the system's self-image, and its friction.
+            The Satire of the Trades, copied in scribal schools, contrasts the
+            scribe's comfort with the soldier's miseries — in paraphrased substance:
+            the infantryman is marched to Syria, drinks foul water, carries his
+            bread and water on his shoulder, is beaten, and comes home broken. The
+            text is a school exercise with an axe to grind, but its details of the
+            soldier's burdens match the operational record closely enough to be
+            useful evidence for conditions. The late New Kingdom papyrus Anastasi I,
+            a scribal examination in the form of a letter, quizzes a military scribe
+            on the geography of the Levantine campaign route, the composition of a
+            chariot, the ration calculations for a force, and the management of a
+            march — the army's professional knowledge, itemised as an exam. Between
+            the satire and the exam, the institution can be seen thinking about
+            itself.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════ X. RECRUITMENT -->
+    <section id="recruitment">
+        <h2 class="section-head">X. Recruitment, Pay, Rewards, and the Gold of Valour</h2>
+        <p>
+            Recruitment combined levy, heredity, and volunteering in proportions that
+            shifted with the period's demands. The standing cadre — officers,
+            chariotry, garrison troops, the royal guard — was professional and
+            increasingly hereditary; the field army's infantry mass was raised by
+            levy on the towns and districts, with quotas administered by the scribes
+            of recruits. A late Ramesside letter preserves, in paraphrased substance,
+            the mechanism at its harshest: an official is ordered to seize a quota
+            of men, and the text counts off the categories taken. Conscription fell
+            on the peasantry, and the Satire of the Trades' picture of the levy —
+            the boy taken young, marched off, and returned, if at all, as a broken
+            man — is the recruiting system's reputation among the class that
+            administered it. Foreign contingents, treated in Section XI, were in
+            part a way of buying infantry the levy could not supply.
+        </p>
+        <p>
+            The soldier's material life ran on rations and rewards. In garrison and
+            on campaign he was fed from the state magazines — bread and beer at the
+            base of every Egyptian ration system, with meat, oil, and vegetables as
+            the variable margin — and the ration accounts are among the commonest
+            military documents. Beyond subsistence stood the reward system, and it
+            was systematic. The "gold of valour," gold flies and collars presented
+            by the king, rewarded named acts of bravery; Ahmose son of Ebana lists
+            his presentations reign by reign. Captives taken in battle were allotted
+            to the men who took them, as servants and labour; booty in cattle,
+            weapons, and goods was divided by account. Land grants settled soldiers
+            on the soil, creating a military landholding class whose descendants
+            owed service — the mechanism that, centuries later, Herodotus describes
+            as the warrior class (<em>machimoi</em>) of Late Period Egypt, holding
+            their plots by hereditary tenure. The reward system was the state's
+            answer to the levy's unpopularity: service was a burden, but it was a
+            burden with a documented ladder out of the peasantry, and the
+            biographies show men climbing it.
+        </p>
+        <div class="card-grid">
+            <div class="war-card info-card">
+                <h4>THE GOLD OF VALOUR</h4>
+                <p>Gold fly pendants — the fly as an emblem of persistence in attack —
+                and gold collars and bracelets, presented by the king in person and
+                recorded in the recipient's tomb biography with the campaign named.
+                The award lists in the biographies of Ahmose son of Ebana and the
+                general Amenemhab are the fullest surviving records, and they are
+                career documents: each presentation is dated to a reign and a theatre,
+                letting the historian reconstruct a service record the state itself
+                kept in gold.</p>
+            </div>
+            <div class="war-card info-card">
+                <h4>THE HAND COUNT</h4>
+                <p>After battle, the enemy dead were tallied by severed right hands,
+                counted by scribes before the king in the reliefs and recorded in the
+                annals; Medinet Habu's records for the Sea Peoples wars add counts of
+                phalli for enemies whose custom made hands ambiguous evidence. The
+                count was an accounting act — it fixed the scale of the victory for
+                the record and the distribution of rewards — and its figures are
+                therefore official, not observed: a ledger of victory, to be read as
+                a ledger, with a ledger's incentives.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════ XI. FOREIGN TROOPS -->
+    <section id="foreign-troops">
+        <h2 class="section-head">XI. Foreign Troops — Medjay, Sherden, Nubians, and Auxiliaries</h2>
+        <p>
+            Egyptian armies were never ethnically Egyptian, at any period for which
+            evidence survives. Nubian archers serve in Old Kingdom expeditions in
+            Weni's account; Mesehti's models give a Nubian archer company as one of
+            the two standard troop types of the early Middle Kingdom; Nubian
+            contingents from Wawat, Irtjet, and the other named peoples march in the
+            reunification armies. The Medjay — originally a named Nubian people of
+            the Eastern Desert — become, across the Middle and New Kingdoms, a
+            professional category: desert patrolmen in the fortress system, then
+            scouts, skirmishers, and eventually a paramilitary police whose name
+            outlives its ethnic origin entirely. The trajectory of the word
+            <em>Medjay</em>, from people to profession, is the cleanest single
+            illustration of how the Egyptian army absorbed foreigners: not as a
+            foreign legion apart, but by turning a people's specialisation into a
+            corps.
+        </p>
+        <p>
+            The New Kingdom multiplied the pattern. The Sherden — first appearing as
+            raiders and captives in the reign of Ramesses II, one of the peoples
+            later grouped among the Sea Peoples — were settled as soldiers, appear
+            in the Kadesh order of battle in Egyptian service, and received land;
+            their distinctive horned helmets and round shields mark them in the
+            reliefs as a recognisable contingent fighting for Egypt within a
+            generation of fighting against it. Libyan contingents follow the same
+            arc a reign later: Meshwesh and other Libyan groups appear as enemies
+            under Merneptah and Ramesses III and as settled military colonists
+            thereafter — with consequences, in the Libyan military chiefdoms of the
+            Third Intermediate Period, that amount to the soldiers inheriting the
+            state. Canaanite and Syrian auxiliaries, Hurrian chariot specialists in
+            the early empire, and Nubian troops throughout complete a picture in
+            which "the Egyptian army" names an institution and a command language,
+            not a bloodline. Captives were a recruitment stream in their own right:
+            the annals' booty lists count prisoners in thousands, temple estates
+            received them as labour, and the army received them as soldiers; the
+            line between prisoner, settler, and soldier was administrative, and it
+            moved.
+        </p>
+        <p>
+            Assessment requires the caution of Section I. The reliefs exaggerate
+            ethnic distinctiveness for compositional clarity — each contingent in
+            its national dress, weapons, and hairstyle — while the administrative
+            record suggests faster assimilation: foreign soldiers with Egyptian
+            names, foreign officers with Egyptian titles, second generations
+            indistinguishable from the levy. What is certain is the scale and the
+            duration: from Weni to the Saite Greeks of Section XXIII, every
+            Egyptian army of record is a coalition, and the periods of Egyptian
+            military weakness are not the periods of foreign service but the
+            periods when the state could no longer pay, feed, or promote the
+            coalition it had built.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════ XII. BOWS -->
+    <section id="bows">
+        <h2 class="section-head">XII. The Bow — Self Bow, Composite Bow, and Archery in Practice</h2>
+        <p>
+            The bow was Egypt's decisive weapon for three thousand years, and its
+            history is a history of two technologies. The older is the self bow: a
+            single stave of wood, in Egypt most often acacia and other local
+            hardwoods, drawn in the long African tradition. Egyptian self bows were
+            long — frequently approaching the archer's height — and were used both
+            on foot and, in the early New Kingdom, from chariots. Their power came
+            from length and from the archer's strength and training; their weakness
+            was material. A single stave is limited by the wood's own elasticity,
+            and Egypt's native timbers are adequate rather than excellent bow woods.
+            The self bow equipped the mass of Egyptian archers for most of Egyptian
+            history, and Nubian archers — heirs to the longest archery tradition in
+            Africa, from the land Egypt itself called Ta-Seti, "Land of the Bow" —
+            were prized in Egyptian service from the Old Kingdom onward.
+        </p>
+        <p>
+            The composite bow arrived with the Hyksos-period transfer of Section VII
+            and changed the weapon's physics. A composite bow is a laminated
+            structure: a wooden core, horn on the belly (the side facing the archer,
+            which works in compression), and sinew on the back (which works in
+            tension), the whole glued with animal glue and often sheathed in birch
+            bark or leather. The materials store far more energy per unit length
+            than any stave, so the composite bow is short — suited to the chariot —
+            while out-ranging and out-hitting the longer self bow. Tutankhamun's
+            tomb contained both types, self bows and composites among more than two
+            dozen bows, with hundreds of arrows: the royal armoury at the moment of
+            transition, both technologies in one chest. The composite bow's costs
+            were strategic as much as financial. It required imported horn, sinew,
+            and suitable wood; it required specialist bowyers and long manufacture —
+            the glues cure slowly, and a fine composite bow is the work of months;
+            and it was vulnerable to moisture, its glue and sinew softening in damp
+            that a self bow shrugs off. Egypt adopted it for the chariot elite and
+            for picked archers, and kept the self bow for the mass: a rational
+            two-tier equipment policy that the tomb evidence displays exactly.
+        </p>
+        <div class="proc-block">
+            <div class="proc-title">// PROCEDURE — THE COMPOSITE BOW, MADE AND USED //</div>
+            <ol>
+                <li><strong>Laminate the limbs.</strong> A thin wooden core is shaped;
+                strips of horn are glued to the belly and shredded sinew, laid in
+                glue, to the back; the grip and the recurved ears are built up as
+                separate pieces. The bow is then left for the glue to cure — the
+                texts and the workshop scenes alike treat bow-making as slow,
+                specialist work.</li>
+                <li><strong>String it with effort.</strong> A composite bow at rest is
+                reflexed — it curves away from the archer — and stringing it means
+                bending it against its own set, with the leg or a second man's help
+                for the strongest bows. Egyptian scenes show the braced bow's
+                distinctive angular profile, with the string standing clear of the
+                grip.</li>
+                <li><strong>Match the arrows.</strong> Arrows (<i>šsr</i> [Gardiner:
+                N37-S29-D21] [𓈙𓋴𓂋]) are reed or light wood shafts, fletched,
+                tipped according to purpose: chisel and leaf-shaped bronze heads for
+                war in the New Kingdom, blunter forms earlier, with flint and bone
+                persisting in hunting use. Arrow weight must match bow weight; the
+                quiver and the bow case on the chariot's side carried the matched
+                set as one equipment.</li>
+                <li><strong>Draw, loose, and be supplied.</strong> Egyptian archers
+                drew to the ear and loosed in volleys on command in the set-piece
+                depictions; the binding constraint in battle was supply. An archer's
+                quiver held a few dozen arrows; sustained archery was a logistics
+                problem — arrows manufactured, bundled, transported, and issued by
+                the same scribal system that issued bread — before it was a contest
+                of aim.</li>
+            </ol>
+        </div>
+        <p>
+            Range figures in popular books should be distrusted in both directions.
+            A heavy composite bow in trained hands is effective at ranges beyond
+            one hundred and fifty metres for area fire and far less for aimed shots
+            at moving targets from a moving chariot; the Egyptian evidence gives
+            no measured ranges at all, and the honest reconstruction is tactical,
+            not ballistic: archery opened battles, covered sieges and crossings,
+            armed the chariotry's mobile fire, and in Nubian hands defended every
+            fortress parapet in this article. The bow's supremacy is visible in
+            the language itself — <i>pḏt</i> [Gardiner: Q3-I10-X1] [𓊪𓆓𓏏], bow
+            and bowmen in one word, and the Nine Bows beneath the king's feet.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════ XIII. HAND WEAPONS -->
+    <section id="hand-weapons">
+        <h2 class="section-head">XIII. Hand Weapons — Spear, Axe, Dagger, Mace, and Khopesh</h2>
+        <p>
+            The spear was the infantry's standing weapon across all periods: a
+            wooden shaft, in Egypt commonly around the height of a man for the
+            thrusting spear, tipped first with flint and copper, then with bronze,
+            and in the New Kingdom with a leaf-shaped or triangular bronze head
+            socketed or tanged to the shaft. Mesehti's spearmen carry spear and
+            shield as a pair; the spear is the weapon of the formed body, used
+            from behind the shield wall of the company's front rank, and its
+            manufacture was the armoury's bulk work — shafts by the thousand,
+            heads cast in batches, the two married in the workshop. The
+            <a href="metalworking.html" class="nl">Metalworking</a> article treats
+            the casting technology; the military point is standardisation. New
+            Kingdom spearheads cluster in a few forms and sizes, the signature of
+            state manufacture for issue, not of private purchase.
+        </p>
+        <p>
+            The axe carries the clearest evolutionary sequence in Egyptian arms.
+            The Old and Middle Kingdom battle axe is a crescentic or "duckbill"
+            blade of copper, then bronze, lashed and riveted to a straight haft —
+            a cutting weapon whose head is fixed to the haft's end. The New Kingdom
+            adds the piercing axe: a narrower blade with a socketed or strongly
+            hafted head designed to punch through the helmets and scale armour
+            that the Hyksos-period arms race had introduced. The dagger follows a
+            parallel path, from flint and copper blades of Predynastic finesse to
+            the bronze and, in royal pieces, gold-mounted daggers of the New
+            Kingdom; it was sidearm, tool, and status object at once. Behind all
+            of them stands the oldest weapon of the state: the mace, <i>ḥḏ</i>
+            [Gardiner: V28-D46] [𓎛𓂧] — the word denotes the white mace — whose
+            pear-shaped stone head, devastating and simple, had by the New Kingdom
+            become almost purely ceremonial, the weapon of the smiting scene. Its
+            battlefield replacement by axe and sword is a small, exact parable of
+            the difference between the ideology and the institution.
+        </p>
+        <h3 class="sub-head">The Khopesh — An Imported Sword, Naturalised</h3>
+        <p>
+            The khopesh, <i>ḫpš</i> [Gardiner: Aa1-Q3-N37] [𓐍𓊪𓈙], is the one
+            Egyptian weapon whose biography can be traced across cultures. Its
+            ancestor is the sickle-sword of the Levant and Mesopotamia, itself
+            descended from the epsilon axe: a weapon whose blade runs straight
+            from the hilt and then curves forward into a sickle edge, so that the
+            cutting edge is on the outside of the curve and the blow falls with
+            the weight of an axe and the draw of a sword. It reaches Egypt in the
+            Second Intermediate Period — a khopesh was buried with the Theban
+            soldierly elite of the liberation era, and Kamose's generation fought
+            with the first of them — and becomes, in the New Kingdom, the prestige
+            sword of kings and officers, cast in bronze, sometimes inlaid, and
+            wielded in the reliefs by the king himself. Its mechanics define its
+            use: the khopesh cuts and hooks — the curve can pull a shield aside
+            or catch a limb — but it does not thrust like a straight sword, and
+            Egypt never adopted the long straight thrusting sword of the later
+            Sea Peoples and Iron Age world in this period. The khopesh was also
+            never the mass weapon: spears armed the companies, and the khopesh
+            armed the men the reliefs were about. Both facts — Levantine origin,
+            elite distribution — are the Hyksos transfer working itself out in
+            bronze over two centuries.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════ XIV. SHIELDS AND ARMOUR -->
+    <section id="shields-armour">
+        <h2 class="section-head">XIV. Shields and Armour — Protection and Its Limits</h2>
+        <p>
+            Egyptian protection was, for most soldiers in most periods, a shield
+            and nothing else. The standing shield of the Old and Middle Kingdoms
+            is a large body shield of wood framed and covered with hide — the
+            cowhide patterns painted on Mesehti's models are the actual material,
+            not decoration — tall enough to cover a man from knee to chin, with a
+            rounded or gabled top, carried on a forearm strap and handgrip. Such
+            shields in a closed rank made the wall behind which the spearmen of
+            Section XIII fought, and fortress warfare produced the type's extreme
+            form: the great mantlets and siege shields under which sappers and
+            archers worked at a wall's base, shown in the siege scenes from
+            Deshasha onward. The New Kingdom lightened the infantry shield for
+            field use — smaller, rounded-top shields for troops expected to march
+            and manoeuvre — while retaining large shields for siege and garrison
+            work. The Sherden in Egyptian service carried their own round shield,
+            a foreign type adopted with the men who bore it.
+        </p>
+        <p>
+            Body armour arrives with the Hyksos-period complex and remains elite
+            equipment throughout. Its Egyptian form is the scale corselet: small
+            plates of bronze — in the earliest examples, of hardened leather —
+            sewn in overlapping rows onto a linen or leather garment, covering the
+            torso. A corselet consumed hundreds of scales and the labour to sew
+            them; the surviving and depicted examples belong to kings, officers,
+            and chariot warriors, and the "coat of mail" that the Kadesh texts
+            list among high-value booty and diplomatic gifts was a treasure item,
+            counted with the gold. Helmets follow the same distribution: rare,
+            elite, often of leather or bronze in a simple cap form, with the
+            king's Blue Crown in battle scenes functioning as ideology rather
+            than equipment description. Chariot horses, the army's most expensive
+            single items, received textile and leather barding in the later New
+            Kingdom depictions — protection for the asset, in an army that issued
+            none to the spearman. The distribution of armour is the distribution
+            of value in the institution, stated in bronze and hide: the state
+            protected what it could not replace.
+        </p>
+        <p>
+            The medical evidence of Section XX closes the argument from the other
+            side. The wound patterns in the Edwin Smith Papyrus — head wounds from
+            clubs and axes, penetrating injuries, fractures — are the injuries of
+            men fighting with little or no body protection, and the Middle Kingdom
+            mass grave at Deir el-Bahari shows the same pattern in bone. Egyptian
+            armies accepted exposure as the infantry's condition and bought their
+            protection in bulk instead: shields for the rank, walls for the
+            garrison, distance and archery for the field army, and armour only
+            where the man's training made him worth more than his corselet.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════ XV. CHARIOT VEHICLE -->
+    <section id="chariot-vehicle">
+        <h2 class="section-head">XV. The Chariot as a System I — Vehicle Construction and Materials</h2>
+        <p>
+            The Egyptian chariot must be analysed as a system — vehicle, horses,
+            harness, crew, training establishment, and supply chain — because no
+            part of it makes sense alone, and because its glamour has repeatedly
+            tempted writers to treat it as a wonder weapon rather than a
+            logistics commitment. The vehicle itself is known better than any
+            other piece of Egyptian military equipment, because six examples
+            survived in the tomb of Tutankhamun and were published in full
+            technical detail by Littauer and Crouwel, with further complete or
+            partial chariots of Thutmose IV and of Yuya and Tjuyu, and one in
+            Florence whose wood was analysed species by species. The Egyptian
+            light chariot that emerges from the evidence is a masterpiece of
+            weight discipline: a two-wheeled car for two men, built of wood,
+            leather, rawhide, and glue, with almost no metal, light enough — on
+            the usual estimate, around thirty kilograms for the car — for one man
+            to carry, and strong enough to carry two at the gallop over rough
+            ground. Every feature serves that equation.
+        </p>
+        <div class="proc-block">
+            <div class="proc-title">// PROCEDURE — ANATOMY OF THE LIGHT CHARIOT //</div>
+            <ol>
+                <li><strong>The floor frame.</strong> A D-shaped frame of bent wood,
+                open at the back for instant entry and exit, its straight rear bar
+                and curved front rail joined at projecting bosses. The floor itself
+                is a mesh of interwoven leather thongs lashed through holes in the
+                frame — a sprung floor that absorbs shock through the crew's legs,
+                the vehicle's only suspension.</li>
+                <li><strong>The body.</strong> The frame's front and sides rise to
+                about waist height, closed with thin wood boarding on the state
+                chariots — gessoed, gilded, inlaid — with leather on working cars,
+                or left open as a light rail framework. The body protects the
+                crew's legs, carries the bow case on one side and the quiver on
+                the other, and stops there: there is no seat, no armour plate, no
+                scythe, and no third crewman.</li>
+                <li><strong>The wheels.</strong> Spoked wheels about ninety
+                centimetres in diameter, turning on a fixed axle set at the very
+                rear of the floor — the rearward axle throws the crew's weight
+                partly onto the horses' backs through the pole, lightening the
+                draught and making the car quick to turn. Spoke count tracks
+                development: four spokes in the earliest Eighteenth Dynasty cars,
+                six becoming standard — Tutankhamun's all have six — with eight
+                appearing in some later depictions. Felloes are built up of bent
+                wood segments, the tyre is of leather or rawhide shrunk on, and
+                the nave is bound and lubricated with fat.</li>
+                <li><strong>The pole and yoke.</strong> A single curved draught
+                pole runs from the floor frame forward and up to the yoke, a
+                horizontal bar resting on two yoke-saddles — forked wooden
+                saddles, padded and leather-covered, sitting just in front of
+                each horse's withers and held by girth and breast straps. The
+                Egyptian yoke-saddle, the system's most argued-over component,
+                transmits draught through the saddle and the straps together;
+                Littauer and Crouwel's reconstruction, tested in modern replica
+                work, shows a harness that is efficient at the gallop for a
+                light car, whatever its theoretical imperfections.</li>
+                <li><strong>The materials ledger.</strong> The Florence chariot's
+                analysis reads like a trade manifest: elm for body, yoke, and
+                saddles; birch for axle and wheel parts; willow for the pole;
+                plum for spokes — none of them Egyptian. Add leather and rawhide
+                (local), horn and sinew for the composite bows the car carried,
+                and bronze in small fittings. A chariot corps was an import
+                programme: its timber came from Lebanon, Syria, and beyond, and
+                its existence presupposes the trade and tribute networks treated
+                in the archive's
+                <a href="trade-diplomacy.html" class="nl">Trade and Diplomacy</a> article.</li>
+            </ol>
+        </div>
+        <p>
+            Manufacture was a workshop system, depicted in New Kingdom tombs —
+            Puyemre, Menkheperresonb, Hepu among them — where carpenters steam
+            and bend the timber over forms, leatherworkers cut and stitch the
+            floors and harness, and the trades work side by side in one
+            establishment: the chariot is assembled, not built by a single craft.
+            Heat-bending is the critical process: wood for the D-frame, the
+            felloes, and the pole was bent to shape while hot and held until set,
+            a technique that gives the car its strength without weight, since a
+            bent grain follows the curve where a cut curve would shear across
+            it. The state's chariot workshops sat inside the same military
+            estate system as the stables and the arsenals, and their output, like
+            the horses', was accounted by the scribes of the stable.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════ XVI. CHARIOT HORSES -->
+    <section id="chariot-horses">
+        <h2 class="section-head">XVI. The Chariot as a System II — Horses, Harness, Crew, Maintenance, Limits</h2>
+        <p>
+            The horse was as imported as the timber. Egypt has no native horse;
+            the animal arrives in the Hyksos period, and the New Kingdom state
+            built a breeding, training, and remount establishment to sustain it:
+            royal stables at the capitals and at garrison cities — the great
+            stable complex at Piramesse, excavated in the Delta, could house
+            hundreds of horses with its own fodder stores, training grounds, and
+            workshops — overseen by the "overseers of horses" and "stablemasters"
+            of Section IX, with grooms, trainers, and veterinary knowledge that
+            the surviving horse-care texts partly preserve. A chariot team, the
+            <i>ḥtr</i> [Gardiner: V28-X1-D21] [𓎛𓏏𓂋], was a matched pair, trained
+            together to the car; horses were named, and the king's teams are
+            praised in the texts by name — the Kadesh poem names Ramesses' pair
+            in the crisis of the battle, a literary touch resting on a real
+            stable culture in which a team's quality was individual and known.
+        </p>
+        <p>
+            The crew was two: the charioteer, who drove, and the warrior, who
+            fought with the bow. The division of labour is absolute — a man
+            cannot drive a galloping pair and shoot — and the reliefs show its
+            famous solution, the driver with the reins passed round his waist or
+            held with the shield arm while the warrior shoots, and in the royal
+            version the king alone, reins knotted at his waist, bow in hand: an
+            ideological image built on a real technique that skilled drivers
+            could perform at need. Crew training was the system's true cost. A
+            chariot warrior was a professional of years — driver, archer, and
+            horse-master in one, from the propertied class that could sustain
+            the apprenticeship — and the corps could not be expanded by levy in
+            a season. The chariotry's numbers were therefore capped by the
+            training establishment, not by the treasury: Egypt's chariot arm at
+            its imperial height numbered, on the reconstructions, in the low
+            thousands of vehicles, and every vehicle lost in a bad hour at
+            Kadesh was a decade of institutional investment.
+        </p>
+        <p>
+            Maintenance was continuous and is documented in the stable records:
+            fodder issued by measure — barley and straw in quantities the
+            accountants tracked horse by horse — water, grooming, hoof care,
+            harness repair, wheelwright work on campaign, and the leather
+            floor's renewal as the thongs stretched and wore. On campaign the
+            system moved with the army: spare wheels, timber, leather, and the
+            craftsmen to use them in the train, and the chariots themselves
+            carried on boats for river movement and reassembled — the cars were
+            built to be dismantled, as Tutankhamun's tomb, which stored them in
+            pieces, demonstrates.
+        </p>
+        <div class="blue-block">
+            <div class="bb-title">// TACTICAL LIMITS — WHAT THE CHARIOT COULD NOT DO //</div>
+            <p><strong>It could not charge formed infantry.</strong> Horses will not
+            impale themselves on a steady spear line, and the Egyptian car had no
+            shock weapon — no lance couched, no mass. Against unbroken infantry the
+            chariot was a missile platform, not a battering ram.</p>
+            <p><strong>It needed ground.</strong> Broken, wet, rocky, or steep
+            terrain negated it entirely; Egyptian campaigns in the hill country of
+            Canaan and the Lebanon foothills used chariots on the plains and the
+            roads, and infantry everywhere else.</p>
+            <p><strong>It was a fair-weather, daylight, supply-hungry system.</strong>
+            Fodder bulk limited its radius more than enemy action; a chariot corps
+            at the end of a long land supply line ate its own mobility.</p>
+            <p><strong>Its real battlefield functions</strong> were mobile archery,
+            screening, flank attack against troops already engaged, the pursuit
+            that turns defeat into destruction, command and reconnaissance, and
+            the rapid movement of elite archers between threatened points — the
+            functions Schulman's analysis of the chariot's strategic value
+            established against the older tank analogy.</p>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════ XVII. LOGISTICS -->
+    <section id="logistics">
+        <h2 class="section-head">XVII. On the March — Supply, Camps, and the Arithmetic of Distance</h2>
+        <p>
+            Egyptian campaigning was governed by an arithmetic no general could
+            repeal. An army of twenty thousand men eats on the order of twenty
+            tonnes of grain a day, before a single horse is fed; a chariot corps
+            of a thousand teams doubles the problem with animals that cannot
+            graze a campaign route bare and keep working. Inside Egypt, the Nile
+            solved the problem — grain moved by boat at a fraction of land
+            transport cost, and the army marched with the fleet beside it. Abroad,
+            the army's radius was set by what donkey trains could carry between
+            depots, and the empire's Asian strategy was built to shorten that
+            radius: Thutmose III's system of coastal harbours and inland depots
+            in the Levant, stocked by annual requisition — the annals record the
+            harbours "supplied with everything" year by year — turned each
+            campaign into a movement between magazines rather than a plunge into
+            a food desert. The conquest of the coastal cities came first, and
+            stayed first in every later campaign plan, because the coast was the
+            supply line.
+        </p>
+        <p>
+            The march itself is documented in the campaign records' itineraries:
+            stages between named water points, divisions moving on parallel
+            routes where the country allowed, the vanguard and the camp guard,
+            and the fortified camp at day's end — the Kadesh reliefs give the
+            Ramesside camp in plan, a rectangular enclosure of shields and
+            palisade with the royal tent at its centre, the divisions' quarters,
+            the horse lines, and the train, a field fortification in the Roman
+            manner fifteen centuries early. Thutmose III's march to Megiddo
+            preserves the staff work: the council of war over the three routes
+            from Yehem, the king's choice of the narrow Aruna pass against his
+            officers' advice, the army filing through a defile where, the annals
+            admit, horse followed horse and man followed man — and emerging
+            intact because the enemy had deployed against the two easy roads.
+            The episode is the annals at their best: a real decision, a real
+            risk, recorded because it succeeded.
+        </p>
+        <p>
+            Water, not food, was the binding constraint on the desert routes —
+            the Sinai crossing on the Ways of Horus, the chain of wells and
+            forts from Tjaru to Gaza depicted in Seti I's Karnak reliefs as a
+            relief map of wells, forts, and canals, each named. The eastern
+            frontier system of the New Kingdom was a water system: hold the
+            wells and the army can cross; lose them and it cannot. The same
+            logic governed the western and southern deserts, where the oasis
+            roads — Kamose's intercepted messenger was caught on one — were
+            patrolled precisely because they were the only lines along which an
+            enemy, or an army, could move. Egyptian logistics, in sum, was
+            hydraulic before it was military, and its genius was administrative:
+            the annals' booty and requisition lists, dull as they read, are the
+            empire's true general staff papers.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════ XVIII. RIVER TRANSPORT -->
+    <section id="river-transport">
+        <h2 class="section-head">XVIII. River and Sea — Moving Armies by Water</h2>
+        <p>
+            The Nile was the army's first road, and Egyptian war was amphibious
+            in its bones. The boat, <i>dpt</i> [Gardiner: P1] [𓊛], in its
+            military forms — troop transports, horse transports, supply barges,
+            and the fighting ships of the late New Kingdom — moved every army
+            that campaigned in Nubia and most that campaigned anywhere. Weni's
+            Old Kingdom envelopment by sea, the Middle Kingdom's river-supplied
+            fortress chain, Ahmose son of Ebana's whole career as a fighting
+            sailor in the liberation wars, and Thutmose III's use of the
+            Levantine coast harbours are one continuous practice: the army
+            embarked, the army disembarked, and the fleet that carried it was a
+            branch of the service with its own officers, titles, and honours.
+            The archive's companion article on
+            <a href="boats-ships.html" class="nl">Boats and Ships</a> treats the
+            vessels themselves; this section treats their military employment.
+        </p>
+        <p>
+            In Nubia the river was the campaign. The cataracts broke navigation
+            into reaches, each reach a military problem: boats portaged or
+            hauled through the rapids at the right season, fortresses holding
+            the portages, and the whole Second Cataract system of Section VI
+            positioned on the breaks. Senusret III's inscriptions record the
+            clearing of a navigable channel through the First Cataract rapids —
+            military engineering in the service of the supply line, maintained
+            thereafter as infrastructure. Campaigns beyond the Second Cataract,
+            to Kerma and in the New Kingdom to the Fourth Cataract and beyond,
+            moved at the river's pace and lived off its carriage; the great
+            Nubian fortresses of the New Kingdom, and the viceroy's
+            administration at their head, are the fortress system of the Middle
+            Kingdom scaled to an empire and supplied the same way.
+        </p>
+        <p>
+            At sea, the record peaks late. Egyptian seagoing warships of the
+            early empire are attested mainly as transports and as the vehicle of
+            Weni-style landings; the purpose-built fighting fleet appears in the
+            record with the Sea Peoples crisis, when Ramesses III's Medinet Habu
+            reliefs show a naval battle in the Delta mouths — Egyptian ships
+            with fighting tops and archers engaging the Sea Peoples' vessels at
+            close quarters, in a planned ambush at the river mouth where the
+            enemy's sailing ships lost their one advantage, manoeuvre, and the
+            shore archers shot into the packed decks. The scene is triumphal art
+            and must be read with Section I's cautions, but its tactical content
+            — fight a sailing fleet in confined water, from prepared positions,
+            with missile superiority — is sound naval practice in any century,
+            and the outcome, the Delta held, is a fact independent of the art.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════ XIX. SIEGES -->
+    <section id="sieges">
+        <h2 class="section-head">XIX. Siege Warfare — Walls, Ramps, and Starvation</h2>
+        <p>
+            Most ancient war was siege war, and Egypt's record, read without the
+            triumphal varnish, is a record of sieges more often avoided,
+            negotiated, or starved than stormed. The techniques of storming were
+            known early and changed slowly: scaling ladders against the wall,
+            shown from the Old Kingdom siege scenes onward; sappers working at
+            the wall's base under mantlets to loosen the brickwork; archers
+            suppressing the parapet; and, by the New Kingdom, the battering ram
+            under a protective housing, depicted in the siege scenes of the
+            empire. Against mudbrick and stone town walls of Levantine type
+            these methods could work, at a cost the Middle Kingdom mass grave
+            displays. Against the great glacis fortifications of the Hyksos type
+            and the fortress cities of the later Levant, they usually could not
+            — and the Egyptian record says so by its silences and its durations:
+            Sharuhen held out for three years, Megiddo for seven months.
+        </p>
+        <p>
+            Megiddo (1457 BCE) is the documented type case, and its lesson is
+            logistic, not heroic. Thutmose III's army, having won the field
+            battle outside the walls, let the beaten coalition escape into the
+            city — the annals themselves record the failure, in paraphrased
+            substance blaming the troops' pause to plunder the enemy camp — and
+            then had to reduce by blockade a city it might have entered on the
+            day. The siege works were real engineering: a circumvallation,
+            described in the annals as a moat and a wooden palisade built from
+            the district's fruit trees, and a blockade maintained until hunger
+            finished what the assault had not. The booty list that closes the
+            account — hundreds of chariots, over two thousand horses, armour,
+            bows, cattle, and captives in their categories — is the siege's
+            balance sheet, and its precision is the precision of the scribes who
+            divided it. Blockade, circumvallation, and accounted surrender:
+            that, and not the ladder, is the mature Egyptian siege method, and
+            it presupposes the supply system of Section XVII — an army can only
+            starve a city if it can feed itself longer than the city can.
+        </p>
+        <p>
+            Defence had its own doctrine, visible in the fortress architecture:
+            ditch and counterscarp to break the assault's momentum, towers to
+            flank the wall face, loop-holed parapets for the archers who were
+            the wall's real weapon, granaries sized to outlast a blockade, and
+            wells or river access inside the enceinte. The Nubian fortresses
+            were never, so far as the record shows, taken by storm in their
+            Middle Kingdom heyday; they fell, when they fell, by the collapse of
+            the state behind them. The fortress and the siege are the same fact
+            seen from two sides: in a world of mudbrick walls and grain stores,
+            war at the wall was a contest of magazines, and Egypt, the greatest
+            grain state of the Bronze Age, was built to win it.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════ XX. MEDICINE -->
+    <section id="medicine">
+        <h2 class="section-head">XX. Battlefield Medicine — Wounds, Treatment, and Evacuation</h2>
+        <p>
+            Egyptian battlefield medicine is known from an unusual conjunction:
+            a surgical text that reads like a field manual, and bones that check
+            it. The Edwin Smith Papyrus — a New Kingdom copy of a much older
+            surgical treatise — organises forty-eight cases by body part, head
+            first, and a striking share of them are wounds of violence: gaping
+            head wounds, fractured skulls, broken noses, dislocated jaws,
+            vertebral injuries, penetrating chest wounds. Each case follows the
+            field surgeon's order — examination, diagnosis, prognosis in the
+            treatise's famous three grades ("an ailment I will treat," "an
+            ailment I will contend with," "an ailment not to be treated"), then
+            treatment. The archive's
+            <a href="medical-papyri.html" class="nl">Medical Papyri</a> article
+            treats the text in full; its military relevance is that its wound
+            caseload is a weapons survey in clinical form, matching the axe,
+            club, and arrow injuries of the mass graves and the mummies.
+        </p>
+        <div class="proc-block">
+            <div class="proc-title">// PROCEDURE — THE WOUNDED MAN'S PATH, AS FAR AS THE EVIDENCE RUNS //</div>
+            <ol>
+                <li><strong>First treatment at the point of wounding.</strong> The
+                Smith treatise's first measures are immediate and mechanical:
+                fresh meat bound on a wound on the first day, then lint, grease,
+                and honey dressings; splints of wood and padded linen for
+                fractures; the patient positioned and rested. These are
+                interventions for the field and the first night, not the
+                hospital.</li>
+                <li><strong>The physician's grade decides the effort.</strong> The
+                <i>swnw</i> [Gardiner: T22-W24-Z7] [𓌢𓏌𓏲], the physician, and
+                the Sekhmet priests and protectors who shared the healing
+                professions, worked within the triage the text states openly:
+                treatable wounds received the full course; hopeless ones
+                received comfort and were not consumed by futile surgery. Triage
+                is usually credited to modern war; its written form is here,
+                three and a half thousand years early.</li>
+                <li><strong>Evacuation ran on the transport system.</strong> No
+                dedicated ambulance service is attested, and none should be
+                invented. The wounded moved as the army's transport allowed — by
+                donkey and litter on land, by boat on the river, to the garrison
+                towns and temple establishments where physicians were stationed.
+                The honest statement is that evacuation existed as practice and
+                is invisible as institution.</li>
+                <li><strong>The healed bones close the file.</strong> Healed
+                fractures and survived head wounds are common in Egyptian skeletal
+                material, military and civil; men lived for years with injuries
+                the Smith text grades as contendable. Care worked, within its
+                limits, and its limits — no antisepsis beyond honey's real
+                antibacterial effect, no treatment for the penetrated abdomen or
+                the severed cord — are stated in the text's own prognoses.</li>
+            </ol>
+        </div>
+        <p>
+            Two cautions complete the section. The Smith Papyrus is a treatise,
+            not a campaign diary: it proves the knowledge existed in the
+            culture that fielded the armies, not that a surgeon stood at every
+            battle. And the magical-medical material of the other papyri —
+            incantations against wound infection and the "Asiatic disease"
+            among them — was not an alternative system but the same system's
+            other half, used by the same practitioners; the army's medicine,
+            like the army, was Egyptian entire, empirical and ritual at once,
+            and the modern reader who keeps only the empirical half is reading
+            half the record.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════ XXI. RECORDS -->
+    <section id="records">
+        <h2 class="section-head">XXI. Campaign Records Read Critically — Megiddo, Kadesh: Poem against Bulletin</h2>
+        <p>
+            Egypt left the ancient world's richest campaign literature, and its
+            two peaks teach opposite lessons in how to read it. The Annals of
+            Thutmose III at Karnak claim descent from a day-book kept on
+            campaign — the text states, in paraphrased substance, that the
+            king's victories were recorded day by day — and their texture
+            supports the claim: itineraries with dates, water points, council
+            debates, booty lists itemised by category and reign-year. The annals
+            are a triumphal inscription built on a staff archive, and the
+            historian can peel the layers apart: where the day-book shows
+            through, in the Aruna decision and the Megiddo plundering failure,
+            the record preserves facts against the monument's own interest,
+            the surest mark of a real document behind the carving.
+        </p>
+        <p>
+            Kadesh (1274 BCE) presents the harder case, because Ramesses II's
+            reign published the same battle in two distinct compositions, and
+            Egyptology's names for them state the critical problem exactly. The
+            <strong>Bulletin</strong> (or Report) is a comparatively terse prose
+            account carved beside the reliefs; the <strong>Poem</strong> (the
+            so-called Poem of Pentaur) is a long literary composition, carved on
+            temple walls across Egypt and circulated on papyrus, in which the
+            king, abandoned by his army, fights the Hittite chariotry alone
+            with his god. Read together against the Hittite evidence and the
+            battle's strategic sequel, the operational reconstruction is this:
+            the Egyptian army, marching in four divisions strung along the
+            road, was deceived by false deserters into believing the Hittite
+            army far away; the Hittite chariot force, concealed behind Kadesh,
+            struck the division of Ra in march column and routed it, then fell
+            on the division of Amun in its camp; Ramesses, with the camp's
+            troops and his household chariotry, held the position in a fighting
+            defence — the Poem's kernel of fact — until the division of Ptah
+            and a separate elite force arriving from the coast restored the
+            position. The Hittites, their chariots committed and their
+            infantry never fully engaged across the Orontes, withdrew into
+            Kadesh. Egypt claimed the victory, withdrew south, and did not take
+            Kadesh; the strategic frontier settled where it had been, and
+            sixteen years later the two empires signed the peace treaty whose
+            copies survive from both capitals.
+        </p>
+        <div class="blue-block">
+            <div class="bb-title">// POEM AGAINST BULLETIN — THE ADJUDICATION //</div>
+            <p><strong>Where they agree</strong> — the order of march, the surprise,
+            the rout of Ra, the king fighting in the camp's defence, the arrival
+            of reinforcements — the historian has the battle's skeleton.</p>
+            <p><strong>Where the Poem stands alone</strong> — the king single-handed
+            against thousands, the god Amun's hand visibly in the fight, the
+            enemy's abject pleas — the historian has the reign's theology, and
+            should cite it as theology.</p>
+            <p><strong>The verdict of the sequel</strong> is independent of both
+            texts: a drawn battle, tactically rescued and strategically
+            indecisive, converted by the most extensive publication programme
+            of any ancient battle into a personal triumph. Kadesh is therefore
+            the archive's standing lesson: the scale of a battle's publication
+            in Egypt measures the court's need, not the battle's result.</p>
+        </div>
+        <p>
+            The same critical method disciplines the rest of the record: Seti I's
+            Karnak reliefs and their named wells are a route map that archaeology
+            can check; Merneptah's "Israel Stela" is a hymn whose single
+            historical line about Israel sits inside a Libyan war account
+            preserved more soberly elsewhere; the topographical lists — hundreds
+            of Levantine place-names carved as bound captives — are intelligence
+            documents in triumphal dress, preserving the empire's gazetteer of
+            its own theatre. The records reward exactly the reading Section I
+            prescribed: trust the logistics, the itineraries, and the admissions
+            against interest; discount the body counts, the single-handed kings,
+            and the scale of publication.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════ XXII. SEA PEOPLES -->
+    <section id="sea-peoples">
+        <h2 class="section-head">XXII. The Sea Peoples — The Evidence at Its Real Strength</h2>
+        <p>
+            The Sea Peoples are the point where the Egyptian military record meets
+            the collapse of the Bronze Age world, and they must be handled at the
+            evidence's real strength — neither the invasion romance of older
+            books nor a dismissal of the Egyptian testimony. What the Egyptian
+            evidence actually establishes is this. In year 5 of Merneptah
+            (c. 1208 BCE), a Libyan invasion of the western Delta was supported
+            by allied contingents named in the inscriptions — Sherden, Shekelesh,
+            Lukka, Teresh, Ekwesh, "of the sea" in the texts' phrase — and was
+            defeated in a six-hour battle at Perire, after which the hand and
+            phallus counts were taken. In years 5, 8, and 11 of Ramesses III
+            (c. 1180s–1170s BCE), the Medinet Habu inscriptions and reliefs record
+            a Libyan war, then a combined land and sea assault by a coalition
+            named as Peleset, Tjeker, Shekelesh, Denyen, and Weshesh, moving
+            with families and ox-carts through a Levant whose great powers —
+            Hatti, Ugarit, the cities of Cyprus and the coast — were falling in
+            the same generation, and finally a second Libyan war. The year 8
+            campaign, fought in Djahy and at the Delta mouths on land and water
+            together, is presented as, and on the strategic sequel appears to
+            have been, a genuine defensive victory: the coalition did not enter
+            Egypt.
+        </p>
+        <p>
+            What the evidence does not establish must be stated with equal
+            firmness. The named groups' homelands are not proven: the equations
+            of Peleset with the Philistines of the southern Levant — who do
+            appear there, in material culture of Aegeanising type, in the
+            generation after Ramesses III — is the strongest of the identifications
+            and is still an inference from names, pottery, and later texts, not
+            an Egyptian statement. The reliefs' ship and costume details are real
+            evidence for how the coalition looked to Egyptian artists; the
+            migration model of whole peoples moving by land and sea is a model,
+            built from the ox-carts and families in the reliefs and from the
+            archaeology of destruction layers whose dating and authorship are
+            contested site by site. Ramesses III's claim to have settled
+            captured Sea Peoples in strongholds in his name is corroborated in
+            kind — the Sherden precedent of Section XI shows the mechanism — and
+            Papyrus Harris I's retrospective summary confirms that the reign's
+            wars were remembered as the empire's last successful defence. Beyond
+            that: Egypt survived the crisis that ended Hatti and Ugarit, at the
+            cost of its Asian empire within two generations, for reasons —
+            economic, climatic, internal — in which the Sea Peoples are one
+            attested factor and not a sufficient explanation. That is the
+            evidence at its real strength, and this article leaves it there.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════ XXIII. LATE ARMIES -->
+    <section id="late-armies">
+        <h2 class="section-head">XXIII. After Empire — Kushite, Saite, and Mercenary Armies</h2>
+        <p>
+            The empire's army did not survive the empire. The late New Kingdom's
+            military establishment fragmented with the state: the general
+            Herihor's assumption of power at Thebes at the dynasty's end — an
+            army commander becoming high priest and effective ruler of the
+            south — states the Third Intermediate Period's structure in one
+            career. Power devolved to regional military dynasts, pre-eminently
+            the Libyan chiefdoms descended from the settled Meshwesh soldiers
+            of Section XI, whose chiefs became the kings of the Twenty-Second
+            Dynasty: the mercenaries' grandchildren inherited the throne, the
+            terminal case of Egypt's ancient practice of settling foreign
+            soldiers on the land. Armies in this period were the retinues of
+            competing houses, and Egypt's wars were as often civil as foreign.
+        </p>
+        <p>
+            The <a href="kushite-revival.html" class="nl">Kushite revival</a> of
+            the Twenty-Fifth Dynasty reunified Egypt from the south with an army
+            whose strength was Nubian archery and a chariot and cavalry arm
+            raised in the horse country of the middle Nile — Kushite kings are
+            depicted with a pride in horses that the stable archaeology of
+            el-Kurru, with its royal horse burials, confirms as fact and not
+            only image. The Kushite army met the period's new military fact,
+            Assyria, and the verdict was decisive: Esarhaddon took Memphis in
+            671 BCE, Assurbanipal's campaigns drove Taharqa and Tanutamani
+            south, and Thebes was sacked in 663. Egyptian and Kushite arms —
+            bow, spear, chariot, and the first significant Egyptian cavalry —
+            could not match the Assyrian military system of massed archery,
+            siege engineering, and imperial logistics; the wars are the record
+            of a Bronze Age inheritance meeting an Iron Age empire.
+        </p>
+        <p>
+            The Saite Twenty-Sixth Dynasty rebuilt Egyptian power on the
+            period's standard solution, purchased foreign infantry. Greek and
+            Carian mercenaries — the "bronze-armed men from the sea" of the
+            Egyptian tradition Herodotus preserves — formed the striking force
+            of Psamtik I's reunification and were settled at the Stratopeda, the
+            Camps, in the Delta; Greek mercenaries scratched their names on the
+            legs of the Abu Simbel colossi in 591 BCE during Psamtik II's Nubian
+            campaign, the most famous soldiers' graffito of the ancient world
+            and a primary document of the mercenary system in the men's own
+            hands. Herodotus's account of the hereditary warrior class, the
+            <em>machimoi</em>, holding land by service, and of the frontier
+            garrisons at Elephantine, Daphnae, and Marea, matches the Egyptian
+            evidence in structure. The system's strength was quality bought
+            ready-made; its weakness was the ancient one, stated by the revolt
+            tradition Herodotus also preserves: a state whose striking force is
+            foreign has mortgaged its army. The Saite army campaigned in the
+            Levant against Babylon — Necho II's march north, Josiah's death at
+            Megiddo in 609, defeat at Carchemish in 605 — with competence and
+            without strategic success, and the dynasty's last decades, and the
+            Persian conquests of 525 and 343 BCE that bracket the final native
+            dynasties, close the history of the independent Egyptian army.
+            The <a href="late-period.html" class="nl">Late Period</a> article
+            carries the political narrative.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════ XXIV. LEGACY -->
+    <section id="legacy">
+        <h2 class="section-head">XXIV. Ptolemaic Armies and the Long Assessment</h2>
+        <p>
+            Under the Ptolemies, Egypt fielded a Hellenistic army — Macedonian
+            phalanx, cavalry, war elephants, and a great navy — officered by
+            Greeks and manned increasingly by Egyptians: the cleruchy settled
+            soldiers on the land in direct descent from the pharaonic military
+            land tenure of Section X, and by Raphia in 217 BCE Ptolemy IV's
+            victory over the Seleucids rested on twenty thousand Egyptian
+            infantry armed in the Macedonian manner, a decision Polybius
+            connects to the native revolts that followed, as armed and trained
+            Egyptians drew the conclusion their service suggested. The
+            <a href="ptolemaic-period.html" class="nl">Ptolemaic</a> army is a
+            Hellenistic institution on Egyptian soil, and its inclusion here is
+            for the continuity underneath: land for service, the Nile as the
+            logistics system, the fortress frontier at Elephantine, and an
+            Egyptian soldiery that outlasted every command language spoken over
+            it, into the Roman garrison of the
+            <a href="roman-period.html" class="nl">Roman period</a>.
+        </p>
+        <p>
+            The long assessment, across three thousand years, is of an army that
+            was never primarily a battlefield instrument. Egypt's military genius
+            was institutional and geographic: the fortress chain on the cataracts,
+            the dispatch system on the frontier, the scribal administration that
+            fed divisions in Asia from Levantine harbours, the reward economy
+            that turned levies into professionals and foreigners into Egyptians,
+            and a strategy that read the country's own geography — river,
+            cataract, well, and oasis road — correctly in every period. Its
+            battlefield record is correspondingly mixed: brilliant at Megiddo,
+            rescued at Kadesh, outmatched by Assyria, and dependent, in its last
+            independent centuries, on bought infantry. The weapons tell the same
+            story in material form: Egypt invented little of its decisive
+            equipment — chariot, composite bow, khopesh, and scale armour all
+            arrived from Asia — and excelled instead at absorbing, manufacturing,
+            standardising, and administering what it adopted, in bronze by the
+            thousand and in
+            <i>nbw</i> [Gardiner: N35-D58-G43-S12] [𓈖𓃀𓅱𓋞], gold, by the
+            talent, through workshops whose
+            <i>biꜣ</i> [Gardiner: N34] [𓈔], metal, was worked to patterns the
+            state prescribed. The king on the temple wall fights alone. The army
+            that actually held Egypt was a ministry with weapons — and on the
+            evidence assembled here, the ministry was the more remarkable
+            achievement.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════ XXV. SOURCES -->
+    <section id="sources">
+        <h2 class="section-head">XXV. Sources and Further Reading</h2>
+        <p>
+            This article is built from the specialist literature and the primary
+            evidence in translation; no statement of fact rests on a general
+            encyclopedia alone. The principal modern works: Ian Shaw,
+            <em>Egyptian Warfare and Weapons</em> (Shire, 1991), the standard
+            survey of weapons and organisation; Anthony J. Spalinger,
+            <em>War in Ancient Egypt: The New Kingdom</em> (Blackwell, 2005),
+            the fundamental study of the imperial army as an institution; Robert
+            B. Partridge, <em>Fighting Pharaohs: Weapons and Warfare in Ancient
+            Egypt</em> (2002); Alan R. Schulman's studies of the chariot corps
+            and of military organisation, including his reassessment of the
+            chariot's strategic value; M. A. Littauer and J. H. Crouwel,
+            <em>Chariots and Related Equipment from the Tomb of
+            Tut'ankhamun</em> (Griffith Institute, 1985) and their
+            <em>Wheeled Vehicles and Ridden Animals in the Ancient Near
+            East</em> (1979), the mechanical foundation for Sections XV–XVI.
+        </p>
+        <p>
+            For the fortresses: W. B. Emery, H. S. Smith, and A. Millard,
+            <em>The Fortress of Buhen</em> (Egypt Exploration Society, 1979);
+            Stuart Tyson Smith, <em>Askut in Nubia</em> (1995) and his studies
+            of the Second Cataract system; Carola Vogel, <em>The Fortifications
+            of Ancient Egypt 3000–1780 BC</em> (2010); Barry Kemp,
+            <em>Ancient Egypt: Anatomy of a Civilization</em>, on granary
+            capacity and garrison estimates. The Semna Dispatches are edited in
+            P. C. Smither, "The Semna Despatches," <em>Journal of Egyptian
+            Archaeology</em> 31 (1945); Papyrus Ramesseum 18 is published from
+            the Ramesseum papyri. Primary texts in translation: Miriam
+            Lichtheim, <em>Ancient Egyptian Literature</em>, vols. I–II (Weni,
+            Kamose, Ahmose son of Ebana, the Kadesh texts, the Satire of the
+            Trades); James Henry Breasted, <em>Ancient Records of Egypt</em>,
+            for the Annals of Thutmose III and the Kadesh Bulletin and Poem;
+            the Edwin Smith Papyrus in Breasted's edition (1930). Museum
+            collections drawn on: the British Museum and the Metropolitan
+            Museum of Art Egyptian departments (weapons, the Mesehti models,
+            chariot fittings), the Egyptian Museum, Cairo (the Tutankhamun
+            chariots and bows), and the Griffith Institute's Tutankhamun
+            archive for Carter's chariot records. The UCLA Encyclopedia of
+            Egyptology entries on the army, warfare, and related topics were
+            consulted for current scholarly consensus. Where the sources
+            disagree — the destruction of Buhen, the size of a division, the
+            identifications of the Sea Peoples — the disagreement is flagged in
+            the text rather than silently resolved.
+        </p>
+    </section>
+
+    <div class="glyph-marker">𓊪 𓆓 𓏏 𓐍 𓊪 𓈙</div>
+
+    <!-- ═══════════════════════════════════════ RELATED LINKS -->
+    <div class="related-links">
+        <h3>// RELATED ARCHIVES //</h3>
+        <ul>
+            <li><a href="new-kingdom.html">The New Kingdom — Egypt as Empire</a></li>
+            <li><a href="hyksos-exchange.html">The Hyksos Exchange</a></li>
+            <li><a href="second-intermediate-period.html">The Second Intermediate Period</a></li>
+            <li><a href="kushite-revival.html">The Kushite Revival</a></li>
+            <li><a href="metalworking.html">Metalworking — Copper, Bronze, Gold, Iron</a></li>
+            <li><a href="sacred-geography.html">Sacred Geography</a></li>
+            <li><a href="middle-kingdom.html">The Middle Kingdom</a></li>
+            <li><a href="old-kingdom.html">The Old Kingdom</a></li>
+            <li><a href="predynastic.html">The Predynastic Period</a></li>
+            <li><a href="late-period.html">The Late Period</a></li>
+            <li><a href="ptolemaic-period.html">The Ptolemaic Period</a></li>
+            <li><a href="roman-period.html">The Roman Period</a></li>
+            <li><a href="medical-papyri.html">The Medical Papyri</a></li>
+            <li><a href="scribal-arts.html">Scribal Arts</a></li>
+        </ul>
+    </div>
+
+    <div style="text-align:center;margin-top:2rem;">
+        <a href="index.html" class="back-btn">← RETURN TO ARCHIVE INDEX</a>
+    </div>
+
+</div><!-- /page-wrap -->
+
+<footer>
+    <p>// LIBRETH ARCHIVE :: EGYPTOLOGY DIVISION //<br>
+    <span style="font-size:1.5rem;letter-spacing:0.3rem;opacity:0.3;">𓋹 𓏤 𓈖 𓎛</span><br>
+    ALCHEMICAL RESONANCE: STABLE // THE WORK CONTINUES</p>
+</footer>
+
+</body>
+</html>
