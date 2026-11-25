@@ -766,3 +766,44 @@ textarea::placeholder {
         height: 500px;
     }
 }
+/* ============================================================
+   SITE SEARCH BAR — the .site-search form at the top of every
+   page in every hub (see egyptology/GEMINI.md, Technical
+   Conventions §4). One identical block in each hub stylesheet.
+   ============================================================ */
+.site-search {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    padding: 0 1rem;
+}
+.site-search input {
+    flex: 1;
+    min-width: 0;
+    background: var(--bg2);
+    border: 1px solid var(--gold-dim);
+    color: var(--text-bright);
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 1rem;
+    padding: 0.55rem 0.9rem;
+}
+.site-search input::placeholder { color: var(--text); opacity: 0.55; }
+.site-search input:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 12px var(--gold-glow);
+}
+.site-search button {
+    background: rgba(20,18,10,0.4);
+    border: 1px solid var(--gold-dim);
+    color: var(--gold);
+    font-family: 'VT323', monospace;
+    font-size: 1.05rem;
+    letter-spacing: 0.12em;
+    padding: 0.55rem 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.site-search button:hover { background: var(--gold-glow); border-color: var(--gold); }

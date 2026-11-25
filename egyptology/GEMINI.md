@@ -63,6 +63,16 @@ The project is structured as a high-fidelity static wiki and research hub, empha
 - **Unicode Hieroglyphs:** Final output uses Unicode characters generated via Gardiner/MdC codes.
 - **Transliteration:** Provide standard Egyptological transliteration for all key technical terms.
 
+### 4. Site Search Bar (All Hubs — Mandatory)
+- **Every page in every hub** (Egyptology, Before Kemet, Greco-Roman, Arabic) carries the archive search bar at the top of its main content — immediately inside `.page-wrap`, before `.page-header` (tool pages without `.page-wrap` place it at the top of their main container instead). **Any new page added to any hub MUST include it.**
+- **Exact markup** (one form per page, no variations):
+  ```html
+  <form class="site-search" action="REL/search.html" method="get" role="search"><input type="search" name="q" placeholder="Search the archive…" aria-label="Search the archive"><button type="submit">SEARCH</button></form>
+  ```
+- **Relative-path rule:** `REL` is the relative prefix from the page's own directory back to the repository root — `../` for pages in a hub root (e.g. `arabic/al-razi.html`), `../../` for pages one level deeper (e.g. `egyptology/wiki/alchemy.html`). The form GET-submits to the root `search.html`, which honours `?q=`.
+- **Styling:** The `.site-search` rules live in each hub's own stylesheet (one identical block per stylesheet); do not inline the styles or invent per-page variants.
+- **Index hygiene:** The bar is page furniture, not content — `build_search_index.py` (in the overhaul tools) excludes the `.site-search` container from the search index, exactly as it excludes the `.hub-nav` menu. Never index the bar's text.
+
 ---
 
 ## Persona Guidance
