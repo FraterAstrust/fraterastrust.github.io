@@ -179,9 +179,53 @@
 
             <div class="session-controls">
                 <button id="dim-btn" class="btn btn-outline" type="button">Dim screen</button>
+                <button id="restart-btn" class="btn btn-outline" type="button">Restart session</button>
                 <button id="stop-btn" class="btn btn-outline btn-stop" type="button">Stop — after return</button>
             </div>
-            <p class="session-note">Do not try to stop while deep. Return first, then stop, like waking to turn off an alarm. The safety return at 2½ hours is the only exception.</p>
+            <p class="session-note">Do not try to stop while deep. Return first, then stop, like waking to turn off an alarm. The safety return at 2½ hours is the only exception. Restart starts the calibration again from the beginning, for distraction or any other reason — your intention is kept.</p>
+
+            <details class="session-audio" open>
+                <summary>Audio controls — change these without stopping</summary>
+                <div class="controls-grid session-audio-grid">
+                    <div class="control">
+                        <label for="session-master-volume">Master volume</label>
+                        <input type="range" id="session-master-volume" min="0" max="100" value="85">
+                        <p class="control-note"><span id="session-master-volume-value">85%</span></p>
+                    </div>
+                    <div class="control">
+                        <label for="session-binaural-volume">Binaural volume</label>
+                        <input type="range" id="session-binaural-volume" min="0" max="100" value="80">
+                        <p class="control-note"><span id="session-binaural-volume-value">80%</span></p>
+                    </div>
+                    <div class="control">
+                        <label for="session-noise-volume">Drone volume</label>
+                        <input type="range" id="session-noise-volume" min="0" max="100" value="50">
+                        <p class="control-note"><span id="session-noise-volume-value">50%</span></p>
+                    </div>
+                    <div class="control">
+                        <label for="session-pulse-volume">Pulse volume</label>
+                        <input type="range" id="session-pulse-volume" min="0" max="100" value="50">
+                        <p class="control-note"><span id="session-pulse-volume-value">50%</span></p>
+                    </div>
+                    <div class="control">
+                        <label for="session-noise-choice">Holding drone</label>
+                        <select id="session-noise-choice">
+                            <option value="white" selected>White noise</option>
+                            <option value="pink">Pink noise</option>
+                        </select>
+                    </div>
+                    <div class="control">
+                        <label for="session-pulse-rate">Pulse rate <span class="unit">Hz</span></label>
+                        <input type="number" id="session-pulse-rate" value="2.5" min="1.5" max="3.5" step="0.1">
+                    </div>
+                </div>
+                <label class="switch session-pulse-switch" for="session-pulse-toggle">
+                    <input type="checkbox" id="session-pulse-toggle">
+                    <span class="switch-track" aria-hidden="true"><span class="switch-thumb"></span></span>
+                    <span class="switch-label" id="session-pulse-toggle-label">Pulse off</span>
+                </label>
+                <p class="control-note session-pulse-note">Pulse on only if you cannot flex your tensor tympani. Off if you can pulse yourself.</p>
+            </details>
         </div>
     </main>
 

@@ -28,6 +28,7 @@
     var sessionView = $('session-view');
     var beginBtn = $('begin-btn');
     var stopBtn = $('stop-btn');
+    var restartBtn = $('restart-btn');
     var dimBtn = $('dim-btn');
     var intentionInput = $('intention');
     var sessionIntention = $('session-intention');
@@ -53,6 +54,20 @@
     var noiseVolumeValue = $('noise-volume-value');
     var pulseVolumeValue = $('pulse-volume-value');
 
+    // In-session controls — same settings, reachable without stopping.
+    var sessionMasterVolume = $('session-master-volume');
+    var sessionBinauralVolume = $('session-binaural-volume');
+    var sessionNoiseVolume = $('session-noise-volume');
+    var sessionPulseVolume = $('session-pulse-volume');
+    var sessionNoiseChoice = $('session-noise-choice');
+    var sessionPulseToggle = $('session-pulse-toggle');
+    var sessionPulseToggleLabel = $('session-pulse-toggle-label');
+    var sessionPulseRate = $('session-pulse-rate');
+    var sessionMasterVolumeValue = $('session-master-volume-value');
+    var sessionBinauralVolumeValue = $('session-binaural-volume-value');
+    var sessionNoiseVolumeValue = $('session-noise-volume-value');
+    var sessionPulseVolumeValue = $('session-pulse-volume-value');
+
     // --- state -------------------------------------------------------------
     var ctx = null;
     var masterGain = null, binauralGain = null, noiseGain = null, pulseGain = null;
@@ -74,12 +89,44 @@
         return (m < 10 ? '0' + m : '' + m) + ':' + (r < 10 ? '0' + r : '' + r);
     }
 
+    function isPulseOn() {
+        return pulseToggle.checked || (sessionPulseToggle && sessionPulseToggle.checked);
+    }
+
+    function syncSessionControls() {
+        if (!sessionMasterVolume) return;
+        sessionMasterVolume.value = masterVolume.value;
+        sessionBinauralVolume.value = binauralVolume.value;
+        sessionNoiseVolume.value = noiseVolume.value;
+        sessionPulseVolume.value = pulseVolume.value;
+        sessionNoiseChoice.value = noiseChoice.value;
+        sessionPulseToggle.checked = pulseToggle.checked;
+        sessionPulseRate.value = pulseRateInput.value;
+        sessionMasterVolumeValue.textContent = masterVolume.value + '%';
+        sessionBinauralVolumeValue.textContent = binauralVolume.value + '%';
+        sessionNoiseVolumeValue.textContent = noiseVolume.value + '%';
+        sessionPulseVolumeValue.textContent = pulseVolume.value + '%';
+        sessionPulseToggleLabel.textContent = pulseToggle.checked ? 'Pulse on' : 'Pulse off';
+    }
+
+    function syncSetupControls() {
+        if (!sessionMasterVolume) return;
+        masterVolume.value = sessionMasterVolume.value;
+        binauralVolume.value = sessionBinauralVolume.value;
+        noiseVolume.value = sessionNoiseVolume.value;
+        pulseVolume.value = sessionPulseVolume.value;
+        noiseChoice.value = sessionNoiseChoice.value;
+        pulseToggle.checked = sessionPulseToggle.checked;
+        pulseRateInput.value = sessionPulseRate.value;
+    }
+
     function updateVolumeLabels() {
         masterVolumeValue.textContent = masterVolume.value + '%';
         binauralVolumeValue.textContent = binauralVolume.value + '%';
         noiseVolumeValue.textContent = noiseVolume.value + '%';
         pulseVolumeValue.textContent = pulseVolume.value + '%';
         pulseToggleLabel.textContent = pulseToggle.checked ? 'On' : 'Off';
+        if (sessionMasterVolumeValue) syncSessionControls();
         if (masterGain) masterGain.gain.setTargetAtTime((masterVolume.value / 100) * 0.9, ctx.currentTime, 0.05);
         if (binauralGain) binauralGain.gain.setTargetAtTime((binauralVolume.value / 100) * 0.85, ctx.currentTime, 0.05);
         if (noiseGain && startTime && Date.now() - startTime > calibrationMs + 300000) {
@@ -90,11 +137,36 @@
         if (pulseGain) pulseGain.gain.setTargetAtTime((pulseVolume.value / 100) * 0.9, ctx.currentTime, 0.05);
     }
 
+    function handlePulseChange() {
+        if (!ctx || stopped) return;
+        // Keep the two toggles in sync.
+        if (sessionPulseToggle) sessionPulseToggle.checked = pulseToggle.checked;
+        updateVolumeLabels();
+        if (isPulseOn() && !pulseTimer) {
+            nextPulseTime = ctx.currentTime + 0.1;
+            pulseTimer = setInterval(pulseTick, 100);
+        } else if (!isPulseOn() && pulseTimer) {
+            clearInterval(pulseTimer);
+            pulseTimer = null;
+        }
+    }
+
     masterVolume.addEventListener('input', updateVolumeLabels);
     binauralVolume.addEventListener('input', updateVolumeLabels);
     noiseVolume.addEventListener('input', updateVolumeLabels);
     pulseVolume.addEventListener('input', updateVolumeLabels);
-    pulseToggle.addEventListener('change', updateVolumeLabels);
+    pulseToggle.addEventListener('change', handlePulseChange);
+    if (sessionMasterVolume) {
+        sessionMasterVolume.addEventListener('input', function () { syncSetupControls(); updateVolumeLabels(); });
+        sessionBinauralVolume.addEventListener('input', function () { syncSetupControls(); updateVolumeLabels(); });
+        sessionNoiseVolume.addEventListener('input', function () { syncSetupControls(); updateVolumeLabels(); });
+        sessionPulseVolume.addEventListener('input', function () { syncSetupControls(); updateVolumeLabels(); });
+        sessionPulseRate.addEventListener('input', function () { syncSetupControls(); });
+        sessionPulseToggle.addEventListener('change', function () { pulseToggle.checked = sessionPulseToggle.checked; handlePulseChange(); });
+        sessionNoiseChoice.addEventListener('change', function () { noiseChoice.value = sessionNoiseChoice.value; switchNoise(); });
+    }
+    noiseChoice.addEventListener('change', function () { if (sessionNoiseChoice) sessionNoiseChoice.value = noiseChoice.value; switchNoise(); });
+    pulseRateInput.addEventListener('input', function () { if (sessionPulseRate) sessionPulseRate.value = pulseRateInput.value; });
 
     // --- noise buffers ------------------------------------------------------
     function makeWhiteBuffer(context, seconds) {
@@ -229,6 +301,30 @@
         noiseGain.gain.linearRampToValueAtTime(target, t0 + 300);
     }
 
+    function switchNoise() {
+        // Change white/pink mid-session without stopping: swap the noise
+        // source, keep the gain where it is, fade to the slider level over 10s.
+        if (!ctx || stopped || !noiseSource || !noiseGain) return;
+        try {
+            var old = noiseSource;
+            var kind = noiseChoice.value;
+            var buf = kind === 'pink' ? makePinkBuffer(ctx, 4) : makeWhiteBuffer(ctx, 4);
+            var src = ctx.createBufferSource();
+            src.buffer = buf;
+            src.loop = true;
+            var filt = ctx.createBiquadFilter();
+            filt.type = 'lowpass';
+            filt.frequency.value = kind === 'pink' ? 1200 : 3200;
+            src.connect(filt);
+            filt.connect(noiseGain);
+            src.start();
+            noiseSource = src;
+            try { old.stop(); } catch (e) { /* already stopped */ }
+            var target = (noiseVolume.value / 100) * 0.55;
+            noiseGain.gain.setTargetAtTime(target, ctx.currentTime, 3);
+        } catch (e) { /* keep the old noise playing */ }
+    }
+
     // --- pulse: 2.5 Hz thumps, grouped as double-beats -----------------------
     // Pulse rate = thumps per second. At 2.5 Hz, a double-beat ("bum-bum")
     // repeats every 0.8 s (two thumps 0.18 s apart), about 75 double-beats/min.
@@ -248,7 +344,7 @@
     }
 
     function pulseTick() {
-        if (!ctx || stopped || !pulseToggle.checked) return;
+        if (!ctx || stopped || !isPulseOn()) return;
         var rate = parseFloat(pulseRateInput.value) || 2.5;
         var pairInterval = 2 / rate; // seconds per double-beat
         var now = ctx.currentTime;
@@ -329,7 +425,7 @@
         }, 5 * 60 * 1000);
     }
 
-    beginBtn.addEventListener('click', function () {
+    function startSession() {
         if (ctx) return;
         stopped = false;
         inSafetyReturn = false;
@@ -356,23 +452,13 @@
         startNoise();
 
         nextPulseTime = ctx.currentTime + 0.1;
-        if (pulseToggle.checked) {
+        if (isPulseOn()) {
             pulseTimer = setInterval(pulseTick, 100);
         }
-        // If the toggle is switched on mid-session, start the scheduler then.
-        pulseToggle.addEventListener('change', function onPulseChange() {
-            if (!ctx || stopped) return;
-            if (pulseToggle.checked && !pulseTimer) {
-                nextPulseTime = ctx.currentTime + 0.1;
-                pulseTimer = setInterval(pulseTick, 100);
-            } else if (!pulseToggle.checked && pulseTimer) {
-                clearInterval(pulseTimer);
-                pulseTimer = null;
-            }
-        });
 
         startTime = Date.now();
         showSession();
+        syncSessionControls();
         sessionPhase.textContent = 'Calibrating';
         sessionDetail.textContent = 'Tones easing down slowly. Keep your awareness at the third-eye area.';
 
@@ -392,6 +478,39 @@
         // Safety stop with a return at 2.5 hours.
         safetyTimer = setTimeout(safetyReturn, 2.5 * 60 * 60 * 1000);
         updateVolumeLabels();
+    }
+
+    beginBtn.addEventListener('click', startSession);
+
+    restartBtn.addEventListener('click', function () {
+        // Restart from the beginning, for distraction or any other reason.
+        // Intention and settings are kept. No return to setup, no stop needed.
+        if (!ctx || stopped) return;
+        if (pulseTimer) { clearInterval(pulseTimer); pulseTimer = null; }
+        if (elapsedTimer) { clearInterval(elapsedTimer); elapsedTimer = null; }
+        if (safetyTimer) { clearTimeout(safetyTimer); safetyTimer = null; }
+        if (returnTimer) { clearTimeout(returnTimer); returnTimer = null; }
+        var oldCtx = ctx;
+        var now = oldCtx.currentTime;
+        if (masterGain) {
+            masterGain.gain.setValueAtTime(masterGain.gain.value, now);
+            masterGain.gain.linearRampToValueAtTime(0, now + 1.5);
+        }
+        stopped = true;
+        setTimeout(function () {
+            try {
+                if (oscL) oscL.stop(); if (oscR) oscR.stop();
+                if (oscL2) oscL2.stop(); if (oscR2) oscR2.stop();
+                if (noiseSource) noiseSource.stop();
+                oldCtx.close();
+            } catch (e) { /* already stopped */ }
+            ctx = null; masterGain = null; binauralGain = null; noiseGain = null; pulseGain = null;
+            oscL = null; oscR = null; oscL2 = null; oscR2 = null; noiseSource = null;
+            sessionPhase.textContent = 'Restarting';
+            sessionDetail.textContent = 'Calibration starting again from the beginning.';
+            sessionElapsed.textContent = '00:00';
+            startSession();
+        }, 1800);
     });
 
     stopBtn.addEventListener('click', function () {

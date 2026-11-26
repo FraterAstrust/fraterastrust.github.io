@@ -291,6 +291,28 @@ input[type="range"] {
     text-align: center;
 }
 
+/* Session audio controls — accessible without stopping */
+.session-audio {
+    margin-top: 1.8rem;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.02);
+    border-radius: 4px;
+    padding: 1.2rem 1.4rem;
+    text-align: left;
+}
+.session-audio summary {
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-align: center;
+}
+.session-audio-grid { margin-top: 1.2rem; margin-bottom: 0.8rem; }
+.session-pulse-switch { margin-top: 0.4rem; }
+.session-pulse-note { margin-top: 0.6rem; }
+
 /* Session view */
 #session-view { min-height: 70vh; display: flex; align-items: center; justify-content: center; }
 #session-view[hidden] { display: none; }
