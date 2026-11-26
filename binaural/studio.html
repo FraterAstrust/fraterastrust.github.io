@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binaural Studio — The Temple of the Ternary Alchemical Order</title>
+    <meta name="description" content="A quiet binaural studio for meditation. No spoken content, no simulation. A slow calibration, then a low drone that holds indefinitely. For people sent this link directly.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/binaural-style.css">
+</head>
+<body>
+
+<div class="sigil-bg" aria-hidden="true">
+    <svg class="sigil-svg" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="300" cy="300" r="260" fill="none" stroke="rgba(212,175,55,0.07)" stroke-width="1"/>
+        <circle cx="300" cy="300" r="200" fill="none" stroke="rgba(212,175,55,0.05)" stroke-width="1"/>
+        <circle cx="300" cy="300" r="140" fill="none" stroke="rgba(212,175,55,0.04)" stroke-width="1"/>
+        <polygon points="300,60 540,450 60,450" fill="none" stroke="rgba(212,175,55,0.08)" stroke-width="1"/>
+        <polygon points="300,540 60,150 540,150" fill="none" stroke="rgba(0,209,255,0.05)" stroke-width="1"/>
+        <line x1="300" y1="40" x2="300" y2="560" stroke="rgba(212,175,55,0.04)" stroke-width="1"/>
+        <line x1="40" y1="300" x2="560" y2="300" stroke="rgba(212,175,55,0.04)" stroke-width="1"/>
+    </svg>
+</div>
+
+<div class="page-wrap">
+
+    <!-- No search bar: this studio is not part of the research hub. -->
+
+    <!-- ============ SETUP ============ -->
+    <main id="setup-view">
+        <header class="page-header">
+            <div class="header-ornament">✦ ✦ ✦</div>
+            <h1 class="page-title">Binaural Studio</h1>
+            <div class="page-subtitle">Facilitate · Do Not Simulate</div>
+            <div class="header-divider"></div>
+            <p class="header-note">A tuning aid for meditation. It helps you settle into and hold the frame of mind in which an experience can unfold on its own. It does not simulate an experience, recreate imagery from one, or promise a result. Either the experience happens or it does not.</p>
+        </header>
+
+        <section class="hero-card">
+            <h2 class="section-title">Before you begin</h2>
+            <p class="section-intro">Read this once, then close your eyes and listen.</p>
+
+            <div class="field">
+                <label for="intention">Your intention <span class="field-hint">— typed, held silently, never spoken aloud</span></label>
+                <textarea id="intention" rows="2" placeholder="Write your intention here, in your own words. If you become distracted, it will stay on the screen to remind you why you are listening."></textarea>
+            </div>
+
+            <div class="locus">
+                <div class="locus-label">Locus of awareness</div>
+                <p>Keep your awareness at the third-eye area, in the centre of the head, as a locus. This is a locus, not a posture rule. Eyes closed throughout.</p>
+            </div>
+
+            <ul class="notes">
+                <li><strong>Headphones required.</strong> Binaural tones only work with separate sound in each ear. Do not use speakers.</li>
+                <li><strong>No spoken content.</strong> There is no guidance voice, no subliminal, and no affirmation anywhere in this studio.</li>
+                <li><strong>Gentle volume.</strong> Start low. Do not listen while driving, or if you are prone to seizures.</li>
+                <li><strong>No return.</strong> There is no timed ending and no return phase. Natural return comes first, then you stop the audio when you are back to waking consciousness — like waking to turn off an alarm. The only exception is the safety stop at 2½ hours.</li>
+            </ul>
+        </section>
+
+        <section class="hero-card studio-card">
+            <h2 class="section-title">Studio</h2>
+            <p class="section-intro">All sound is generated live in your browser. Nothing is recorded, uploaded, or played from a file.</p>
+
+            <div class="controls-grid">
+
+                <div class="control">
+                    <label for="calibration">Calibration length</label>
+                    <select id="calibration">
+                        <option value="15">15 minutes</option>
+                        <option value="18" selected>18 minutes</option>
+                        <option value="20">20 minutes</option>
+                    </select>
+                    <p class="control-note">A slow, automatic ramp down. After this, the drone holds indefinitely.</p>
+                </div>
+
+                <div class="control">
+                    <label for="carrier">Carrier <span class="unit">Hz</span></label>
+                    <input type="number" id="carrier" value="100" min="50" max="400" step="1">
+                    <p class="control-note">Base tone in each ear. Default 100 Hz.</p>
+                </div>
+
+                <div class="control">
+                    <label for="hold-beat">Holding binaural beat <span class="unit">Hz</span></label>
+                    <input type="number" id="hold-beat" value="4.0" min="1" max="10" step="0.1">
+                    <p class="control-note">The beat the tones settle to after calibration. Starts at 10 Hz and eases down to this. Default 4.0 Hz (theta). This is <em>not</em> the pulse — the pulse is 2.5 Hz, below.</p>
+                </div>
+
+                <div class="control">
+                    <label for="noise-choice">Holding drone</label>
+                    <select id="noise-choice">
+                        <option value="white" selected>White noise</option>
+                        <option value="pink">Pink noise</option>
+                    </select>
+                    <p class="control-note">White is the default. After calibration it fades in slowly over about five minutes and holds. Silence invites sleep; a low drone maintains awareness.</p>
+                </div>
+
+                <div class="control">
+                    <label for="master-volume">Master volume</label>
+                    <input type="range" id="master-volume" min="0" max="100" value="85">
+                    <p class="control-note"><span id="master-volume-value">85%</span> — turn everything down together if you want to listen to other media at the same time.</p>
+                </div>
+
+                <div class="control">
+                    <label for="binaural-volume">Binaural volume</label>
+                    <input type="range" id="binaural-volume" min="0" max="100" value="80">
+                    <p class="control-note"><span id="binaural-volume-value">80%</span></p>
+                </div>
+
+                <div class="control">
+                    <label for="noise-volume">Drone volume</label>
+                    <input type="range" id="noise-volume" min="0" max="100" value="50">
+                    <p class="control-note"><span id="noise-volume-value">50%</span></p>
+                </div>
+
+            </div>
+
+            <div class="pulse-box">
+                <div class="pulse-head">
+                    <h3>Pulse — heartbeat double-beat</h3>
+                    <label class="switch" for="pulse-toggle">
+                        <input type="checkbox" id="pulse-toggle">
+                        <span class="switch-track" aria-hidden="true"><span class="switch-thumb"></span></span>
+                        <span class="switch-label" id="pulse-toggle-label">Off</span>
+                    </label>
+                </div>
+                <p><strong>Off</strong> if you can flex your tensor tympani — pulse your own eardrums following your heartbeat, and stop when the experience begins to unfold. No audible cue is needed.</p>
+                <p><strong>On</strong> only if you cannot flex your tensor tympani. The audible double-beat is the substitute for the muscle action you cannot perform yourself.</p>
+                <p class="pulse-note">When on, the pulse keeps going through the hold, not fading out after calibration. In a deep experience you are fully enveloped and not aware of your auditory surroundings, so it stays underneath without pulling you out.</p>
+
+                <div class="controls-grid pulse-controls">
+                    <div class="control">
+                        <label for="pulse-rate">Pulse rate <span class="unit">Hz</span></label>
+                        <input type="number" id="pulse-rate" value="2.5" min="1.5" max="3.5" step="0.1">
+                        <p class="control-note">Thumps per second. At 2.5 Hz the double-beats repeat about 75 times a minute. Each double-beat is two soft thumps, “bum-bum”.</p>
+                    </div>
+                    <div class="control">
+                        <label for="pulse-volume">Pulse volume</label>
+                        <input type="range" id="pulse-volume" min="0" max="100" value="50">
+                        <p class="control-note"><span id="pulse-volume-value">50%</span> — turn it down if it feels too jarring.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="session-ended-note" class="ended-note" hidden></div>
+
+            <button id="begin-btn" class="btn btn-hero" type="button">Begin — headphones on, eyes closed</button>
+            <p class="begin-note">Tapping Begin starts the audio. The screen will go dark and quiet. Keep your awareness at the third-eye area.</p>
+        </section>
+
+        <footer>
+            <div class="footer-ornament">✦</div>
+            <p>© 2026 The Temple of the Ternary Alchemical Order. All rights reserved.<br>For people sent this link directly. Not linked from the landing page.</p>
+        </footer>
+    </main>
+
+    <!-- ============ SESSION ============ -->
+    <main id="session-view" hidden>
+        <div class="session-inner">
+            <div class="taijitu" aria-hidden="true">
+                <svg viewBox="-100 -100 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Taijitu, Yang above, Yin below">
+                    <circle cx="0" cy="0" r="92" fill="#0a0a0a" stroke="rgba(212,175,55,0.4)" stroke-width="1"/>
+                    <path d="M -90 0 A 90 90 0 0 1 90 0 A 45 45 0 0 1 0 0 A 45 45 0 0 0 -90 0 Z" fill="#f0e6c8"/>
+                    <circle cx="0" cy="-45" r="11" fill="#0a0a0a"/>
+                    <circle cx="0" cy="45" r="11" fill="#f0e6c8"/>
+                </svg>
+                <div class="taijitu-caption">Yang above · Yin below</div>
+            </div>
+
+            <p id="session-intention" class="session-intention"></p>
+
+            <div class="session-status">
+                <div id="session-phase" class="session-phase">Calibrating</div>
+                <div id="session-elapsed" class="session-elapsed">00:00</div>
+                <div id="session-detail" class="session-detail">Tones easing down slowly. Keep your awareness at the third-eye area.</div>
+            </div>
+
+            <div class="session-controls">
+                <button id="dim-btn" class="btn btn-outline" type="button">Dim screen</button>
+                <button id="stop-btn" class="btn btn-outline btn-stop" type="button">Stop — after return</button>
+            </div>
+            <p class="session-note">Do not try to stop while deep. Return first, then stop, like waking to turn off an alarm. The safety return at 2½ hours is the only exception.</p>
+        </div>
+    </main>
+
+</div>
+
+<script src="binaural.js" defer></script>
+</body>
+</html>
